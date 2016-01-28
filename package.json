@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mpfeil/LWL-GIS.git"
+    "url": "https://github.com/giatschool/webgis-westfalen"
   },
   "keywords": [
     "webgis",
@@ -19,12 +19,12 @@
     "westfalen",
     "lippe"
   ],
-  "author": "Matthias Pfeil",
+  "author": "Marc Dragunski",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mpfeil/LWL-GIS/issues"
+    "url": "https://github.com/giatschool/webgis-westfalen/issues"
   },
-  "homepage": "https://github.com/mpfeil/LWL-GIS",
+  "homepage": "https://github.com/giatschool/webgis-westfalen",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",

@@ -48,7 +48,9 @@ module.exports = function(grunt) {
             cwd: 'js/',
             dest: 'dist/js',
             src: [
-              '*.js'
+              '*.js',
+              'jscolor/*.js',
+              'modules/*.js'
             ]
           },
           {
@@ -80,7 +82,7 @@ module.exports = function(grunt) {
         }
       },
       js: {
-      	files: ['js/*.js'],
+      	files: ['js/*.js', 'js/jscolor/*.js', 'js/modules/*.js'],
       	tasks: ['jshint:all'],
       	options: {
       		livereload: true

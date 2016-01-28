@@ -254,14 +254,18 @@ function updateLayerVisibility(){
 }
 
 require(['esri/map',
+  'esri/dijit/Popup',
   'esri/geometry/Extent',
   'esri/SpatialReference',
   'esri/layers/OpenStreetMapLayer',
   'dojo/dom-construct',
   'dojo/query',
-  'dojo/domReady!'], function(Map, Extent, SpatialReference, OpenStreetMapLayer, domConstruct, query) {
+  'dojo/domReady!'], function(Map, Popup, Extent, SpatialReference, OpenStreetMapLayer, domConstruct, query) {
 
   addTooltips(); //the mouse-over tooltips are created programmatically
+
+  ///aus main kopiert, Matze fragen was er sich generell mit main gedacht hat
+  var popup = new esri.dijit.Popup(null, dojo.create('div')); //ini popups for diagrams
 
   initExtent = new Extent(518012, 6573584, 1286052, 6898288, new SpatialReference({
     wkid: 102100
@@ -278,7 +282,9 @@ require(['esri/map',
   map = new Map('map', {
     minZoom: 8,
     extent: initExtent,
-    sliderStyle: 'large'
+    sliderStyle: 'large',
+    logo: false,
+    infoWindow: popup
   });
 
   map.on('extent-change', reLocate);
@@ -323,13 +329,13 @@ require(['esri/map',
 
   fullExtent();
 
-  attributionDiv = query('.esriAttributionList');
-  domConstruct.place('<span class="esriAttributionLastItem" style="display: inline;">&copy; Landschaftsverband Westfalen-Lippe (LWL)<span class="esriAttributionDelim"> | </span></span>', attributionDiv[0]);
-  esriLogoDiv = query('.logo-med');
-  logoDiv = domConstruct.create('div',{
-    className: 'logo'
-  }, esriLogoDiv[0], 'before');
-  domConstruct.place('<a id="logo-ifgi" href="http://ifgi.uni-muenster.de/" target="_blank"></a>', logoDiv);
+  // attributionDiv = query('.esriAttributionList');
+  // domConstruct.place('<span class="esriAttributionLastItem" style="display: inline;">&copy; Landschaftsverband Westfalen-Lippe (LWL)<span class="esriAttributionDelim"> | </span></span>', attributionDiv[0]);
+  // esriLogoDiv = query('.logo-med');
+  // logoDiv = domConstruct.create('div',{
+  //   className: 'logo'
+  // }, esriLogoDiv[0], 'before');
+  // domConstruct.place('<a id="logo-ifgi" href="http://ifgi.uni-muenster.de/" target="_blank"></a>', logoDiv);
 });
 
 function getColor() {
