@@ -56,7 +56,7 @@ var datenEinwohner = [
 		'Data': [340202, 348655, 316974]
 	},
 	{
-    	'Name':'Minden-Lübbecke',
+    'Name':'Minden-Lübbecke',
 		'Data': [298771, 311805, 285289]
 	},
 	{

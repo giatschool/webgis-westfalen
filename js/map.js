@@ -114,11 +114,21 @@ function initLayers(){
     'esri/Color',
     'esri/layers/LabelLayer',
     'esri/layers/ArcGISDynamicMapServiceLayer',
-    'data/Globals'], function(FeatureLayer, TextSymbol, SimpleRenderer, Color, LabelLayer, ArcGISDynamicMapServiceLayer,Globals) {
+    'esri/InfoTemplate',
+    'data/Globals'], function(FeatureLayer, TextSymbol, SimpleRenderer, Color, LabelLayer, ArcGISDynamicMapServiceLayer, InfoTemplate, Globals) {
+    
+    var infoTemplate = new InfoTemplate();
+    infoTemplate.setTitle('<b>${Kreisname}</b>');
+    infoTemplate.setContent('<b>Kreisschlu: </b>${Kreisschlu}<br/>' +
+                            '<b>Sitz: </b>${Sitz}<br/>' +
+                            '<b>RegBez_cod: </b>${RegBez_cod}<br/>' +
+                            '<b>haush2010: </b>${haush2010}');
+
     featureLayer = new FeatureLayer(Globals.getFeatureLayerServer() + '/0', {
+      infoTemplate: infoTemplate,//new InfoTemplate(/*'&nbsp;', '${Kreisname}'*/),
       id: 'kreise',
       mode: FeatureLayer.MODE_ONDEMAND,
-      outFields: ['Kreisname']
+      outFields: ['*']
     });
 
     map.addLayer(featureLayer, 0);
@@ -255,17 +265,22 @@ function updateLayerVisibility(){
 
 require(['esri/map',
   'esri/dijit/Popup',
+  'esri/symbols/SimpleFillSymbol',
+  'esri/symbols/SimpleLineSymbol',
+  'esri/Color',
   'esri/geometry/Extent',
   'esri/SpatialReference',
   'esri/layers/OpenStreetMapLayer',
   'dojo/dom-construct',
-  'dojo/query',
-  'dojo/domReady!'], function(Map, Popup, Extent, SpatialReference, OpenStreetMapLayer, domConstruct, query) {
+  'dojo/domReady!'], function(Map, Popup, SimpleFillSymbol, SimpleLineSymbol, Color, Extent, SpatialReference, OpenStreetMapLayer, domConstruct) {
 
   addTooltips(); //the mouse-over tooltips are created programmatically
 
-  ///aus main kopiert, Matze fragen was er sich generell mit main gedacht hat
-  var popup = new esri.dijit.Popup(null, dojo.create('div')); //ini popups for diagrams
+  ///popUP
+  var popup = new Popup({fillSymbol: new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID,
+              new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
+              new Color([0, 85, 157]), 2), new Color([255, 255, 0, 0.25]))}, domConstruct.create('div')); //ini popups for diagrams
+  
 
   initExtent = new Extent(518012, 6573584, 1286052, 6898288, new SpatialReference({
     wkid: 102100
