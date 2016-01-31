@@ -17,7 +17,7 @@ function selectGrid(e){
         }
       }
 
-      sls = new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,new Color([255,255,255]),3);
+      sls = new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,new Color([0, 85, 157]),2);
 
       featureLayer.setSelectionSymbol(new SimpleFillSymbol().setOutline(sls).setColor(color));
     });
@@ -56,7 +56,7 @@ function selectState(e) {
 
         featureLayer.on('click', selectGrid);
 
-        sls = new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,new Color([255,255,255]),3);
+        sls = new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,new Color([0, 85, 157]),2);
 
         featureLayer.setSelectionSymbol(new SimpleFillSymbol().setOutline(sls).setColor(color));
       }

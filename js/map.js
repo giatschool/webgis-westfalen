@@ -196,8 +196,8 @@ function colorizeLayer(colorArray){
 
     var minmax = getMinMax(datenEinwohner);
 
-    bla = DataHandling.getMinMax(datenEinwohner);
-    test = DataHandling.getMinMax(datenEinwohner,2);
+    // bla = DataHandling.getMinMax(datenEinwohner);
+    // test = DataHandling.getMinMax(datenEinwohner,2);
 
     addLegendItems(legendArray); //update the Legend
   });
@@ -425,8 +425,8 @@ function layerChange(layerNr,removeLayer) {
   } else if (layerNr === 50 && (document.getElementById('baseMapChk').checked)) {
     map.addLayer(osmLayer, 0);
     require(['dojo/query'], function(query){
-      attribution = query('.esriAttributionList');
-      attribution[0].childNodes[1].innerHTML = '<a target="_blank" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende';
+      attribution = query('esriAttributionLastItem');
+      attribution.innerHTML = '<a target="_blank" © Landschaftsverband Westfalen-Lippe (LWL), href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende';
     });
     //handling checkbox for the operationalLayer
   } else if (layerNr === 60 && (document.getElementById('labelChk').checked)) {

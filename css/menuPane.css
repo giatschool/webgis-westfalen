@@ -2,7 +2,9 @@
 	position: relative;
 	width: 100%;
 	top: 0;
-	background-color: #ededed;
+	/*background-color: #ededed;*/
+	background-color: #00559D;
+    color: #FFFFFF;
 	padding: 5px;
 	font-size: small;
 }
@@ -38,6 +40,8 @@
 	border-top-style: solid;
 	border-top-width: 1px;
 	border-top-color: white;
+	background-color: #00559D;
+    color: #FFFFFF;
 }
 
 #individualClassesPane {

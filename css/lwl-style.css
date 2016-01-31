@@ -285,3 +285,19 @@ font-weight:bold;
 	height: inherit;
 	width: inherit;
 }
+
+/*popup changes*/
+.esriPopup .titlePane {
+    background-color: #00559D;
+    color: #FFFFFF;
+    line-height: 20px;
+    padding-left: 6px;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    cursor: default;
+}
+
+/*Legend div*/
+#legendDiv {
+	margin: 10px;
+}

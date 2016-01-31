@@ -50,6 +50,8 @@ module.exports = function(grunt) {
             src: [
               '*.js',
               'jscolor/*.js',
+              'jscolor/*.gif',
+              'jscolor/*.png',
               'modules/*.js'
             ]
           },
