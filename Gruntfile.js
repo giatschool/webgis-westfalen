@@ -66,6 +66,64 @@ module.exports = function(grunt) {
             ]
           }
         ]
+      },
+      html: {
+        files: [
+          {
+            expand: true,
+            dot: true,
+            cwd: './',
+            dest: 'dist',
+            src: [
+              'index.html',
+              'map.html'
+            ]
+          }
+        ]
+      },
+      js: {
+        files: [
+          {
+            expand: true,
+            dot: true,
+            cwd: 'js/',
+            dest: 'dist/js',
+            src: [
+              '*.js',
+              'jscolor/*.js',
+              'jscolor/*.gif',
+              'jscolor/*.png',
+              'modules/*.js'
+            ]
+          }
+        ] 
+      },
+      css: {
+        files: [
+          {
+            expand: true,
+            dot: true,
+            cwd: 'css/',
+            dest: 'dist/css',
+            src: [
+              '*.css'
+            ]
+          }
+        ] 
+      },
+      images: {
+        files: [
+          {
+            expand: true,
+            dot: true,
+            cwd: 'images/',
+            dest: 'dist/images',
+            src: [
+              '*.png',
+              '*.gif'
+            ]
+          }
+        ]
       }
     },
 
@@ -73,22 +131,31 @@ module.exports = function(grunt) {
     watch: {
       html: {
         files: ['index.html','map.html'],
+        tasks: ['copy:html'],
         options: {
           livereload: true
         }
       },
       css: {
         files: ['css/lwl-style.css','css/menuPane.css'],
+        tasks: ['copy:css'],
         options: {
           livereload: true
         }
       },
       js: {
       	files: ['js/*.js', 'js/jscolor/*.js', 'js/modules/*.js'],
-      	tasks: ['jshint:all'],
+      	tasks: ['jshint:all','copy:js'],
       	options: {
       		livereload: true
       	}
+      },
+      images: {
+        files: ['images/*'],
+        tasks: ['copy:images'],
+        options: {
+          livereload: true
+        }
       },
       livereload: {
         options: {
