@@ -32,8 +32,11 @@ function getMinMax(dataframe, yearIndex){
 */
 
 function getLayerData(dataframe, yearIndex){
-    var dataArray = defaultClassification;
-    var helpIndex = 0;
+  var dataArray;
+  var helpIndex = 0;
+  if (dataframe.length < 30) {
+    dataArray = defaultClassification;
+
     for (var i = dataframe.length - 1; i >= 0; i--) {
         if (dataframe[i].Name !== 'Jahre'){
             dataArray[helpIndex][0] = dataframe[i].Name;
@@ -42,6 +45,29 @@ function getLayerData(dataframe, yearIndex){
         }
     }
     return dataArray;
+
+  } else {
+    dataArray = defaultClassificationKommunen;
+
+    for (var i = dataframe.length - 1; i >= 0; i--) {
+        if (dataframe[i].Name !== 'Jahre'){
+            dataArray[helpIndex][0] = dataframe[i].Name;
+            dataArray[helpIndex][1] = dataframe[i].Data[yearIndex];
+            helpIndex++;
+        }
+    }
+    return dataArray;
+  }
+    /*var dataArray = defaultClassification;
+    
+    for (var i = dataframe.length - 1; i >= 0; i--) {
+        if (dataframe[i].Name !== 'Jahre'){
+            dataArray[helpIndex][0] = dataframe[i].Name;
+            dataArray[helpIndex][1] = dataframe[i].Data[yearIndex];
+            helpIndex++;
+        }
+    }
+    return dataArray;*/
 }
 
 

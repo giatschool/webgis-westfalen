@@ -10,7 +10,7 @@ img {
 	border-radius:6px;
 	border:1px solid #dcdcdc;
 	display:inline-block;
-	font-family:verdana;
+	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
 	padding:6px 5px;
@@ -70,8 +70,9 @@ height: 100%; width: 100%;
 margin: 0; padding: 0;
 }
 body{
-background-color: #ededed; overflow:hidden;
-font-family: verdana;
+background-color: #00559d; overflow:hidden;
+font-family: Arial;
+font-size: 16px;
 }
 .content{
 padding:0px;
@@ -170,6 +171,7 @@ font-weight:bold;
 	margin-left: -125px;
 	text-align: center;
 	white-space: nowrap;
+	font-weight: bold;
 }
 
 #timesliderMinLabel {
@@ -300,4 +302,8 @@ font-weight:bold;
 /*Legend div*/
 #legendDiv {
 	margin: 10px;
+}
+
+.esriPopup .pointer.top {
+    background: #00559D;
 }

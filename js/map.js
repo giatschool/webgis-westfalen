@@ -117,23 +117,60 @@ function initLayers(){
     'esri/InfoTemplate',
     'data/Globals'], function(FeatureLayer, TextSymbol, SimpleRenderer, Color, LabelLayer, ArcGISDynamicMapServiceLayer, InfoTemplate, Globals) {
     
-    var infoTemplate = new InfoTemplate();
-    infoTemplate.setTitle('<b>${Kreisname}</b>');
-    infoTemplate.setContent('<b>Kreisschlu: </b>${Kreisschlu}<br/>' +
-                            '<b>Sitz: </b>${Sitz}<br/>' +
-                            '<b>RegBez_cod: </b>${RegBez_cod}<br/>' +
-                            '<b>haush2010: </b>${haush2010}');
+    ///////////Kreise//////////////
 
+    //creating the infoTemplate for the "KreisLayer"
+    var infoTemplateK = new InfoTemplate();
+    infoTemplateK.setTitle('<b>${Kreisname}</b>');
+    function getInfoContent(graphic) {
+       var oberb = graphic.attributes.Oberbürgermeister;
+       if (oberb != null) {
+        return '<b>Verwaltungssitz: </b>'+graphic.attributes.Sitz+'<br/>' +
+        '<b>Oberbürgermeister: </b>'+graphic.attributes.Oberbürgermeister+'<br/>' +
+        '<b>Einwohner: </b>'+graphic.attributes.Einwohner+'<br/>' +
+        '<b>Kreisgliederung: </b>'+graphic.attributes.Kreisgliederung;
+       } else{
+        return '<b>Verwaltungssitz: </b>'+graphic.attributes.Sitz+'<br/>' +
+        '<b>Landrat: </b>'+graphic.attributes.Landrat+'<br/>' +
+        '<b>Einwohner: </b>'+graphic.attributes.Einwohner+'<br/>' +
+        '<b>Kreisgliederung: </b>'+graphic.attributes.Kreisgliederung;
+       };
+    }
+    infoTemplateK.setContent(getInfoContent);
+
+    //creating the featureLayer for the "KreisLayer"
     featureLayer = new FeatureLayer(Globals.getFeatureLayerServer() + '/0', {
-      infoTemplate: infoTemplate,//new InfoTemplate(/*'&nbsp;', '${Kreisname}'*/),
+      infoTemplate: infoTemplateK,//new InfoTemplate(/*'&nbsp;', '${Kreisname}'*/),
       id: 'kreise',
+      showLabels : true, // testing
       mode: FeatureLayer.MODE_ONDEMAND,
       outFields: ['*']
     });
 
+    //adding the featureLayer "Kreise" to the map
     map.addLayer(featureLayer, 0);
-    classify('equalInterval', 0, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor);
 
+
+    ///////////Gemeinde//////////////
+
+    //creating the infoTemplate for the "GemeindeLayer"
+    var infoTemplateG = new InfoTemplate();
+    infoTemplateG.setTitle('<b>${Name}</b>');
+    infoTemplateG.setContent('Status: '+'${Status}<br/>'+'Kreis: '+'${Kreis}');
+
+    //creating the featureLayer for the "GemeindeLayer"
+    featureLayerGemeinde = new FeatureLayer(Globals.getFeatureLayerServerGemeinde() + '/1', {
+      infoTemplate: infoTemplateG,
+      id: 'kommunen',
+      mode: FeatureLayer.MODE_ONDEMAND,
+      outFields: ['*']
+    });
+
+    //map.addLayer(featureLayerGemeinde, 1);
+
+    classify('pretty', 0, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor);
+    /*classify('equalInterval', 0, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor);*/
+    
     // create a text symbol to define the style of labels
     /*var labelField = 'Kreisname';
     var statesColor = new Color("#666");
@@ -148,9 +185,14 @@ function initLayers(){
     // add the label layer to the map
     map.addLayer(labels);*/
 
+    //operationalLayer still needs to be figured out 13.06.16
     operationalLayer = new ArcGISDynamicMapServiceLayer(Globals.getMapServer(), { 'id': 'collection' });
     featureLayer.on('update-start', showLoadingIcon);
     featureLayer.on('update-end', hideLoadingIcon);
+    //
+    featureLayerGemeinde.on('update-start', showLoadingIcon);
+    featureLayerGemeinde.on('update-end', hideLoadingIcon);
+    //
     operationalLayer.setVisibleLayers([fIDkreisnamen],true);
     map.addLayer(operationalLayer, 1);
     getLayerAttributes();
@@ -186,20 +228,41 @@ function colorizeLayer(colorArray){
            'data/DataHandling'], function(SimpleFillSymbol, UniqueValueRenderer, Color, DataHandling) {
     var defaultSymbol = new SimpleFillSymbol().setColor(new Color([255,255,255,0.5]));
 
-    var renderer = new UniqueValueRenderer(defaultSymbol, 'Kreisname');
-    for (var i = colorArray.length - 1; i >= 0; i--) {
-      renderer.addValue(colorArray[i][0], new SimpleFillSymbol().setColor(new Color(colorArray[i][1])));
+    if (colorArray.length < 30) {
+      var renderer = new UniqueValueRenderer(defaultSymbol, 'Kreisname');
+      for (var i = colorArray.length - 1; i >= 0; i--) {
+        renderer.addValue(colorArray[i][0], new SimpleFillSymbol().setColor(new Color(colorArray[i][1])));
+      }
+      featureLayer.setRenderer(renderer);
+      featureLayer.redraw();
+    } else {
+      var renderer = new UniqueValueRenderer(defaultSymbol, 'Name');
+      for (var i = colorArray.length - 1; i >= 0; i--) {
+        renderer.addValue(colorArray[i][0], new SimpleFillSymbol().setColor(new Color(colorArray[i][1])));
+      }
+      featureLayerGemeinde.setRenderer(renderer);
+      featureLayerGemeinde.redraw();
     }
 
-    featureLayer.setRenderer(renderer);
-    featureLayer.redraw();
+    /*var renderer = new UniqueValueRenderer(defaultSymbol, 'Kreisname');
+    for (var i = colorArray.length - 1; i >= 0; i--) {
+      renderer.addValue(colorArray[i][0], new SimpleFillSymbol().setColor(new Color(colorArray[i][1])));
+    }*/
 
-    var minmax = getMinMax(datenEinwohner);
+    /*featureLayer.setRenderer(renderer);
+    featureLayer.redraw();
+    //tests for adding a "GemeindeLayer"
+    featureLayerGemeinde.setRenderer(renderer);
+    featureLayerGemeinde.redraw();*/
+    // 
+    //var minmax = getMinMax(datenEinwohner); /// TODO was und wozu?
 
     // bla = DataHandling.getMinMax(datenEinwohner);
     // test = DataHandling.getMinMax(datenEinwohner,2);
 
     addLegendItems(legendArray); //update the Legend
+
+    featureLayer.setOpacity(0.6); //tests
   });
 }
 
@@ -281,8 +344,12 @@ require(['esri/map',
               new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
               new Color([0, 85, 157]), 2), new Color([255, 255, 0, 0.25]))}, domConstruct.create('div')); //ini popups for diagrams
   
-
+/*
   initExtent = new Extent(518012, 6573584, 1286052, 6898288, new SpatialReference({
+    wkid: 102100
+  })); //initial map extent*/
+
+  initExtent = new Extent(708418.3781466719,6493143.086941033,1092438.0082513783,6951765.256652067, new SpatialReference({
     wkid: 102100
   })); //initial map extent
 
@@ -331,7 +398,7 @@ require(['esri/map',
   osmLayer = new OpenStreetMapLayer();
 
   map.addLayer(osmLayer);
-  map.removeLayer(osmLayer);
+  //map.removeLayer(osmLayer);
 
   //Check if split-screen is active:
   onLoadCheck();
@@ -344,13 +411,15 @@ require(['esri/map',
 
   fullExtent();
 
-  // attributionDiv = query('.esriAttributionList');
-  // domConstruct.place('<span class="esriAttributionLastItem" style="display: inline;">&copy; Landschaftsverband Westfalen-Lippe (LWL)<span class="esriAttributionDelim"> | </span></span>', attributionDiv[0]);
-  // esriLogoDiv = query('.logo-med');
-  // logoDiv = domConstruct.create('div',{
-  //   className: 'logo'
-  // }, esriLogoDiv[0], 'before');
-  // domConstruct.place('<a id="logo-ifgi" href="http://ifgi.uni-muenster.de/" target="_blank"></a>', logoDiv);
+
+
+/*  attributionDiv = query('.esriAttributionList');
+  domConstruct.place('<span class="esriAttributionLastItem" style="display: inline;">&copy; Landschaftsverband Westfalen-Lippe (LWL)<span class="esriAttributionDelim"> | </span></span>', attributionDiv[0]);
+  esriLogoDiv = query('.logo-med');
+  logoDiv = domConstruct.create('div',{
+    className: 'logo'
+  }, esriLogoDiv[0], 'before');
+  domConstruct.place('<a id="logo-ifgi" href="http://ifgi.uni-muenster.de/" target="_blank"></a>', logoDiv);*/
 });
 
 function getColor() {
@@ -363,6 +432,7 @@ function getColor() {
  * Method for changing the active overlay layer
  */
 function layerChange(layerNr,removeLayer) {
+
 
   //enable / disable gridview button
   require(['dojo/query', 'dojo/dom-class'], function(query, domClass){
@@ -439,8 +509,40 @@ function layerChange(layerNr,removeLayer) {
     updateLayerVisibility();
   } else if (layerNr === 70 && (document.getElementById('gemeindeLayerChk').checked)) {
     map.addLayer(featureLayerGemeinde);
-  } else if (layerNr === 70 && !(document.getElementById('gemeindeLayerChk').checked)) {
+    //testing for adding GemeindeLayer 13.06.16
+    map.removeLayer(featureLayer);
+    labelVisibility = false;
+    updateLayerVisibility();
+    /*console.log(map.getLayer('kreise'));
+    console.log(map.getLayer('kommunen'));*/
+    $('#demographischPane').hide();
+    $('#soziographischPane').hide();
+    closeArrow('arrowDemographisch');
+    closeArrow('arrowSoziographisch');
+    layerChange(datenBevoelkerungsdichteKommunen,false);
+    document.getElementById('labelChk').checked = false;
+    document.getElementById('kreisLayerChk').checked = false;
+  } else if (layerNr === 80 && (document.getElementById('kreisLayerChk').checked)) {
     map.removeLayer(featureLayerGemeinde);
+    //testing for adding GemeindeLayer 13.06.16
+    map.addLayer(featureLayer);
+    $('#demographischPaneKommunen').hide();
+    $('#soziographischPaneKommunen').hide();
+    closeArrow('arrowDemographisch');
+    closeArrow('arrowSoziographisch');
+    layerChange(datenEinwohnerEntwicklung,false);
+    document.getElementById('labelChk').checked = true;
+    document.getElementById('gemeindeLayerChk').checked = false;
+    // hier nochmal nachschauen wenn label wieder fuktionieren
+    if (!(document.getElementById('labelChk').checked)) {
+        labelVisibility = false;
+        console.log('Labels ausblenden' + labelVisibility);
+        updateLayerVisibility();
+    } else {
+        labelVisibility = true;
+        updateLayerVisibility();
+    }
+    //testing for adding GemeindeLayer 13.06.16
   } else {
     //remove diagramLayer
     if (removeLayer === undefined) {
@@ -455,10 +557,25 @@ function layerChange(layerNr,removeLayer) {
         document.getElementById('konfessionenDiagramme2008Check').checked = false;
         updateLayerVisibility();
       }
+    } /*else if (layerNr === 80 ) {
+      map.addLayer(featureLayer);
+      map.removeLayer(featureLayerGemeinde);
+      labelVisibility = false;
+      updateLayerVisibility();
+      document.getElementById('labelChk').checked = false;
+      console.log(map.getLayer('kreise'));
+      console.log(map.getLayer('kommunen'));
+      $('#demographischPane').hide();
+      $('#soziographischPane').hide();
+      closeArrow('arrowDemographisch');
+      closeArrow('arrowSoziographisch');
+      layerChange(datenEinwohnerEntwicklung,false);
+      //document.getElementById('labelChk').checked = false;
     }
+*/
     currentDataframe = layerNr; //new
     getLayerAttributes(); //new
-    var colorArray = addEqualBreaksNew(0, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor); //new
+    var colorArray = pretty(0, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor); //new
     colorizeLayer(colorArray); //new
     //currentYear = years[currentLayer][initYearValues[currentLayer]];
     //activeClassification = 0;
@@ -467,6 +584,7 @@ function layerChange(layerNr,removeLayer) {
     //updateLayerVisibility();
     updateTimeslider();
   }
+featureLayerGemeinde.setOpacity(0.6);
 }
 
 /**
@@ -549,7 +667,16 @@ function initPrinter(){
  * opacity for OperationalLayer
 */
 function setFeatureLayerOpacity(opacity) {
-  featureLayer.setOpacity(opacity);
-  $('.legendColorfield').css({ opacity: opacity });
+  if (map.getLayer('kreise')) {
+        featureLayer.setOpacity(opacity);
+        $('.legendColorfield').css({ opacity: opacity });
+      } else {
+        featureLayerGemeinde.setOpacity(opacity);
+        $('.legendColorfield').css({ opacity: opacity });
+      }
+  /*featureLayer.setOpacity(opacity);
+  $('.legendColorfield').css({ opacity: opacity });*/
 }
+
+
 /* jshint ignore:end */

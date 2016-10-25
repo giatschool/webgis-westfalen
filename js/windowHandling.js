@@ -27,15 +27,24 @@ function hidePane(layer){
 	}
 	else {
 		if (layer === '#menuPane-grid') {
-			fl = map.getLayer('kreise');
-			fl.clearSelection();
+			/*fl = map.getLayer('kreise');
+			fl.clearSelection();*/
+			//testing for implementing "GemeindeLayer"
+			if (map.getLayer('kommunen')) {
+				flG = map.getLayer('kommunen');
+				flG.clearSelection();
+			} else {
+				fl = map.getLayer('kreise');
+				fl.clearSelection();
+			}
 		}
 		$(layer).hide('slow');
 	}
 }
 
 function showPane(layer){
-	console.log(layer);
+	console.log(document.getElementById(layer));
+	
 	if (document.getElementById(layer).style.display === 'block'){
 		hidePane('#'+layer);
 	}
@@ -92,24 +101,41 @@ function switchClassificationPane(toClassPane){
 }
 
 function switchLayerPane(toClassPane){
-	if (toClassPane === 'demographisch' && document.getElementById('demographischPane').style.display === 'block') {
+	if (toClassPane === 'demographisch' && document.getElementById('demographischPane').style.display === 'block' || document.getElementById('demographischPaneKommunen').style.display === 'block') {
 		$('#demographischPane').slideUp('slow');
+		$('#demographischPaneKommunen').slideUp('slow');
 		closeArrow('arrowDemographisch');
 	}
-	else if (toClassPane === 'demographisch'){
+	else if (toClassPane === 'demographisch' && map.getLayer('kreise')){
 		$('#demographischPane').slideDown('slow');
+		$('#einwohner_entwicklungCheck').prop('checked', true);
 		$('#soziographischPane').slideUp('slow');
 		openArrow('arrowDemographisch');
 		closeArrow('arrowSoziographisch');
 	}
-	if (toClassPane === 'soziographisch' && document.getElementById('soziographischPane').style.display === 'block') {
+	else if (toClassPane === 'demographisch' && map.getLayer('kommunen')) {
+		$('#demographischPaneKommunen').slideDown('slow');
+		$('#bevoelkerungsdichteKommunenCheck').prop('checked', true);
 		$('#soziographischPane').slideUp('slow');
+		openArrow('arrowDemographisch');
 		closeArrow('arrowSoziographisch');
 	}
-	else if (toClassPane === 'soziographisch'){
+	if (toClassPane === 'soziographisch' && document.getElementById('soziographischPane').style.display === 'block' || document.getElementById('soziographischPaneKommunen').style.display === 'block') {
+		$('#soziographischPane').slideUp('slow');
+		$('#soziographischPaneKommunen').slideUp('slow');
+		closeArrow('arrowSoziographisch');
+	}
+	else if (toClassPane === 'soziographisch' && map.getLayer('kreise')){
 		$('#soziographischPane').slideDown('slow');
 		$('#demographischPane').slideUp('slow');
 		openArrow('arrowSoziographisch');
 		closeArrow('arrowDemographisch');
 	}
+	else if (toClassPane === 'soziographisch' && map.getLayer('kommunen')) {
+		$('#soziographischPaneKommunen').slideDown('slow');
+		$('#soziographischPane').slideUp('slow');
+		openArrow('arrowSoziographisch');
+		closeArrow('arrowDemographisch');
+	}
 }
+
