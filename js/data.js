@@ -720,7 +720,7 @@ var defaultClassificationKommunen = [  ///testing for "KommunenLayer" //// Allge
 
 var allLayerAttributes = [
 	//[dataset, 'Title (String)', 'Value (String)', 'Legend-description']
-	/*[datenEinwohner, 'Einwohner', '', ''],*/
+	[datenEinwohner, 'Einwohner-Entwicklung Absolut', '', ''],
 	[datenEinwohnerEntwicklung, 'Einwohner-Entwicklung', '&#037;', ''],
 	[datenBevoelkerungsdichte, 'Bevölkerungsdichte', '', 'Einheit: Einwohner pro km&sup2;'],
 	[datenAltersgruppen, 'Altersgruppen 2011', '&#037;', ''],
@@ -745,10 +745,10 @@ var allLayerAttributes = [
 	[datenBIP, 'Bruttoinlandsprodukt (BIP)  je Erwerbstätigen in Euro', '&euro;', ''],
 	[datenPendlersaldo, 'Pendlersaldo', '', ''],
 	[datenKonfessionen, 'Konfessionen 2011', '&#037;', ''],
-	[datenEinwohnerKommunen, 'Einwohner-Entwicklung', '', ''], //testing new "GemeindeLayer"
+	[datenEinwohnerKommunen, 'Einwohner-Entwicklung Absolut', '', ''], //testing new "GemeindeLayer"
 	[datenEinwohnerEntwicklungKommunen, 'Einwohner-Entwicklung', '&#037;', ''],
 	[datenBevoelkerungsdichteKommunen, 'Bevölkerungsdichte', '', 'Einheit: Einwohner pro km&sup2;'],  //testing new "GemeindeLayer"
-	[datenAltersgruppenKommunen, 'Altersgruppen 2015', '', ''], //testing new "GemeindeLayer"
+	[datenAltersgruppenKommunen, 'Altersgruppen 2015', '&#037;', ''], //testing new "GemeindeLayer"
 	[datenSterberateKommunen, 'Sterberate', '&permil;', ''], //testing new "GemeindeLayer"
 	[datenGeburtenrateKommunen, 'Geburtenrate', '&permil;', 'je 1.000 Einwohner (&permil;)'],
 	[datenMigrationenNichtdeutscheKommunen, 'Zu-/Fortzüge (Nichtdeutsche)', '&permil;', ''], //testing new "GemeindeLayer" 

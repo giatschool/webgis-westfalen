@@ -129,7 +129,7 @@
             </div>
             <div align="left" style="font-size:1em">
                     <input type="checkbox" id="kreisLayerChk" name="Layer" value="Kreise" onchange="layerChange(80)" autocomplete="off" checked="checked">
-                        <label for="kreisLayerChk">Kreißansicht</label>
+                        <label for="kreisLayerChk">Kreisansicht</label>
             </div>
         </form>
         <div class="menuPaneContent">
@@ -139,6 +139,16 @@
                         <img id="arrowDemographisch" class="submenuArrow" src="images/arrow20.png"> Demographische Daten
                     </div>
                     <div id="demographischPaneKommunen" class="menuPaneContent">
+                        <div>
+                            <input type="radio" id="einwohner_AbsolutCheck" name="Layer" checked=true value="Einwohner-Entwicklung" onchange="layerChange(datenEinwohnerKommunen)">
+                            <label for="einwohnerInfo">Einwohner-Entwicklung Absolut </label>
+                            <a id="einwohnerInfo" class="help">
+                                <img src="images/Help_sm.png">
+                            </a>
+                            <a class="gridview">
+                                <img src="images/grid_sm.png">
+                            </a>
+                        </div>
                         <div>
                             <input type="radio" id="einwohner_entwicklungKommunenCheck" name="Layer" checked=true value="Einwohner-Entwicklung" onchange="layerChange(datenEinwohnerEntwicklungKommunen)">
                             <label for="einwohner_entwicklungkomunenCheck">Einwohner-Entwicklung </label>
@@ -222,13 +232,16 @@
                         </div> -->
                     </div>
                     <div id="demographischPane" class="menuPaneContent">
-                        <!-- <div>
-                <input type="radio" id="einwohnerCheck" name="Layer" value="Einwohner" checked=true onchange="layerChange(datenEinwohner)">
-                <label for="einwohnerCheck">Einwohner </label>
-                <a id="einwohnerInfo" style="cursor: help;">
-                  <img src="images/Help_sm.png">
-                </a>
-              </div> -->
+                        <div>
+                            <input type="radio" id="einwohner_AbsolutCheck" name="Layer" checked=true value="Einwohner-Entwicklung" onchange="layerChange(datenEinwohner)">
+                            <label for="einwohnerInfo">Einwohner-Entwicklung Absolut </label>
+                            <a id="einwohnerInfoAbsolut" class="help">
+                                <img src="images/Help_sm.png">
+                            </a>
+                            <a class="gridview">
+                                <img src="images/grid_sm.png">
+                            </a>
+                        </div>
                         <div>
                             <input type="radio" id="einwohner_entwicklungCheck" name="Layer" checked=true value="Einwohner-Entwicklung" onchange="layerChange(datenEinwohnerEntwicklung)">
                             <label for="einwohner_entwicklungCheck">Einwohner-Entwicklung </label>
@@ -307,7 +320,7 @@
                         </div>
                     </div>
                     <div class="menuPane-head subMenuPane" onClick="switchLayerPane('soziographisch')" style="font-style:italic;">
-                        <img id="arrowSoziographisch" class="submenuArrow" src="images/arrow20.png"> Soziographische Daten
+                        <img id="arrowSoziographisch" class="submenuArrow" src="images/arrow20.png"> Sozioökonomische Daten
                     </div>
                     <div id="soziographischPaneKommunen" class="menuPaneContent">
                     <!-- anfang neuer kommunaler soziographischPane -->
@@ -805,3 +818,5 @@
 </body>
 
 </html>
+
+

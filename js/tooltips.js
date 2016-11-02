@@ -118,15 +118,15 @@ function addTooltips() {
     //Layers:
     //Einwohner Layer
     new Tooltip({
-      connectId: ['einwohnerInfo'],
-      label: 'Einwohner in den Jahren 1990,<br>2012 und 2030 (Prognose)<br><b>Einheit: </b>Absolute Zahlen',
+      connectId: ['einwohnerInfoAbsolut'],
+      label: 'Einwohner in den Jahren 1990,<br>2015 und 2040 (Prognose)<br><b>Einheit: </b>Absolute Zahlen',
       showDelay: 0
     });
 
     //Einwohner-Entwicklung Layer
     new Tooltip({
       connectId: ['einwohner_entwicklungInfo'],
-      label: 'Entwicklung der Einwohnerzahlen in<br>den Zeiträumen 1990 - 2012 und<br>2012 - 2030 (Prognose)<br><b>Einheit: </b>Zu-/Abnahmen in &#037;',
+      label: 'Entwicklung der Einwohnerzahlen in<br>den Zeiträumen 1990 - 2015 und<br>2015 - 2040 (Prognose)<br><b>Einheit: </b>Zu-/Abnahmen in &#037;',
       showDelay: 0
     });
 
@@ -328,6 +328,12 @@ function addTooltips() {
     });
 
     ////////Tooltips für die Kommunale ansicht/////////////
+    new Tooltip({
+      connectId: ['einwohnerInfo'],
+      label: 'Einwohner in den Jahren 1990,<br>2015 und 2040 (Prognose)<br><b>Einheit: </b>Absolute Zahlen',
+      showDelay: 0
+    });
+
     //Einwohner-Entwicklung Layer
     new Tooltip({
       connectId: ['einwohner_entwicklungInfoKommunal'],
@@ -345,14 +351,14 @@ function addTooltips() {
     //Migrationen Nichtdeutsch Layer
     new Tooltip({
       connectId: ['NichtdeutscheKommunenInfo'],
-      label: 'Zu-/Fortzüge von Nichtdeutschen<br>der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>&permil;',
+      label: 'Zu-/Fortzüge von Nichtdeutschen<br>der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>&#37;',
       showDelay: 0
     });
 
     //Migrationen Gesamt Layer
     new Tooltip({
       connectId: ['migrationen_gesamtInfoKommunal'],
-      label: 'Zu-/Fortzüge <br>der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>&permil;',
+      label: 'Zu-/Fortzüge <br>der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>&#37;',
       showDelay: 0
     });
 
