@@ -16,4 +16,13 @@ LWL-GIS
 - Überprüfen ab welcher zoomstufe die Layer verschwinden.
 - drag&drop future feature
 
-- legende von px auf em umstellen.
+
+- timeslider rechts starten - DONE
+- Kreise Bevölkerungsdichte 2012 auskommentieren - DONE
+- Altersgruppen diagramme 2011 in 2015 ändern - DONE
+- nochmal alle tooltips überarbeiten
+- Layer Gemeidneansicht auch mit einwohner entwicklung starten lassen anpassen an die csv reihenfolge
+- reihenfolge der themen vereinheitlichen inklusive legenden
+- Pflegeheim Personal hinzufügen
+- Erwerbstätige hat noch keinen tooltip
+- kreise sozioökonomie es fehelen datensätze verfügbares einkommen der privaten haushalte beschäftigte 2014

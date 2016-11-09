@@ -252,7 +252,7 @@
                                 <img src="images/grid_sm.png">
                             </a>
                         </div>
-                        <div>
+                        <!-- <div>
                             <input type="radio" id="bevoelkerungsdichteCheck" name="Layer" value="Bev&ouml;lkerungsdichte" onchange="layerChange(datenBevoelkerungsdichte)">
                             <label for="bevoelkerungsdichteCheck">Bev&ouml;lkerungsdichte </label>
                             <a id="bevoelkerungsdichteInfo" class="help">
@@ -261,7 +261,7 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
-                        </div>
+                        </div> -->
                         <div>
                             <input type="radio" id="altersgruppenCheck" name="Layer" value="Altersgruppen" onchange="layerChange(datenAltersgruppen)">
                             <label for="altersgruppenCheck">Altersgruppen </label>
@@ -271,12 +271,12 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
-                            <br> &nbsp;&nbsp;&nbsp;
+                            <!-- <br> &nbsp;&nbsp;&nbsp; DIAGRAMME VORERST RAUS!
                             <input type="checkbox" id="altersgruppenDiagramme2011Check" value="Altersgruppen Diagramme 2011" onchange="layerChange(fIDaltersgruppenDiagramme2011)">
                             <label for="altersgruppenDiagramme2011Check">Diagramme 2011</label>
                             <a id="altersgruppenDiagramme2011Info" class="help">
                                 <img src="images/Help_sm.png">
-                            </a>
+                            </a> -->
                         </div>
                         <div>
                             <input type="radio" id="geburtenrateCheck" name="Layer" value="Geburtenrate" onchange="layerChange(datenGeburtenrate)">
@@ -377,7 +377,7 @@
                         <!-- ende neuer kommunaler soziographischPane -->
                     </div>
                     <div id="soziographischPane" class="menuPaneContent">
-                        <div>
+                        <!-- <div>
                             <input type="radio" id="pflegebeduerftigeCheck" name="Layer" value="Pflegebed&uuml;rftige" onchange="layerChange(datenPflegebeduerftige)">
                             <label for="pflegebeduerftigeCheck">Pflegebed&uuml;rftige </label>
                             <a id="pflegebeduerftigeInfo" class="help">
@@ -386,7 +386,7 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
-                        </div>
+                        </div> -->
                         <div>
                             <input type="radio" id="pflegebeduerftigeCheck" name="Layer" value="Pflegebed&uuml;rftige in Pflegeheimen 2007 - 2013" onchange="layerChange(datenPflegebeduerftigePflegeheim)">
                             <label for="pflegebeduerftigeCheck">Pflegebed&uuml;rftige in Pflegeheimen</label>
@@ -397,7 +397,7 @@
                                 <img src="images/grid_sm.png">
                             </a>
                         </div>
-                        <div>
+                        <!-- <div>
                             <input type="radio" id="pflegeeinrichtungenCheck" name="Layer" value="Pflegeeinrichtungen" onchange="layerChange(datenPflegeeinrichtungen)">
                             <label for="pflegeeinrichtungenCheck">Pflegeplätze </label>
                             <a id="pflegeeinrichtungenInfo" class="help">
@@ -406,7 +406,7 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
-                        </div>
+                        </div> -->
                         <div>
                             <input type="radio" id="haushaltsgroessenCheck" name="Layer" value="Haushaltsgr&ouml;ssen" onchange="layerChange(datenHaushaltsgroesse)">
                             <label for="haushaltsgroessenCheck">Haushaltsgrößen </label>
@@ -437,7 +437,7 @@
                                 <img src="images/grid_sm.png">
                             </a>
                         </div>
-                        <div>
+                        <!-- <div>
                             <input type="radio" id="migrationshintergrundCheck" name="Layer" value="Migrationshintergrund" onchange="layerChange(datenMigranten)">
                             <label for="migrationshintergrundCheck">Menschen mit Migrationshintergrund </label>
                             <a id="migrationshintergrundInfo" class="help">
@@ -446,7 +446,7 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
-                        </div>
+                        </div> -->
                         <div>
                             <input type="radio" id="einkommenCheck" name="Layer" value="Einkommen" onchange="layerChange(datenEinkommen)">
                             <label for="einkommenCheck">Einkommen </label>
@@ -546,12 +546,12 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
-                            <br> &nbsp;&nbsp;&nbsp;
+                            <!-- <br> &nbsp;&nbsp;&nbsp; DIAGRAMME VOERST AUSKOMMENTIERT
                             <input type="checkbox" id="konfessionenDiagramme2008Check" value="Konfessionen Diagramme 2008 - 2010" onchange="layerChange(fIDkonfessionenDiagramme20082010)">
                             <label for="konfessionenDiagramme2008Check">Diagramme 2011</label>
                             <a id="konfessionenDiagramme2008Info" style="cursor: help;">
                                 <img src="images/Help_sm.png">
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </form>
@@ -808,8 +808,8 @@
     <div id="mapLoading">
         <img src="images/loading_map.gif"></img>
     </div>
-    <div id="copyrightLwl">
-        © Landschaftsverband Westfalen-Lippe (LWL)
+    <div id="copyrightLwl"> <!-- Link im neuen Tab -->
+        <a href="http://www.lwl.org/LWL/Kultur/geko" target="_blank"> © Geographische Kommission für Westfalen </a>
     </div>
     <a href="http://ifgi.uni-muenster.de/" target="_blank" id="ifgi_logo_map" style="position: absolute; right:10px; bottom:2px; z-index: 2; height:45px;">
         <img src="images/ifgi_logo_map.png">

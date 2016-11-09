@@ -511,9 +511,8 @@ function layerChange(layerNr,removeLayer) {
     labelVisibility = false;
     console.log('Labels ausblenden' + labelVisibility);
     updateLayerVisibility();
-  } else if (layerNr === 70 && (document.getElementById('gemeindeLayerChk').checked)) {
+  } else if (layerNr === 70 && (document.getElementById('gemeindeLayerChk').checked)) { //nochmal alle funktionen prüfen!!!
     map.addLayer(featureLayerGemeinde);
-    //testing for adding GemeindeLayer 13.06.16
     map.removeLayer(featureLayer);
     labelVisibility = false;
     updateLayerVisibility();
@@ -546,9 +545,9 @@ function layerChange(layerNr,removeLayer) {
         labelVisibility = true;
         updateLayerVisibility();
     }
-    //testing for adding GemeindeLayer 13.06.16
-  } else {
-    //remove diagramLayer
+    //
+  } else { 
+   /* //remove diagramLayer
     if (removeLayer === undefined) {
       if (layerNr !== fIDaltersgruppenDiagramme2011 && layerNr !== fIDkonfessionenDiagramme20082010) {
         if (diagramLayer !== null) {
@@ -561,7 +560,11 @@ function layerChange(layerNr,removeLayer) {
         document.getElementById('konfessionenDiagramme2008Check').checked = false;
         updateLayerVisibility();
       }
-    } /*else if (layerNr === 80 ) {
+    }*/
+
+
+
+     /*else if (layerNr === 80 ) {
       map.addLayer(featureLayer);
       map.removeLayer(featureLayerGemeinde);
       labelVisibility = false;

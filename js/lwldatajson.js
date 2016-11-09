@@ -407,7 +407,7 @@ var datenBevoelkerungsdichte = [
 var datenAltersgruppen = [
   {
     'Name':'Jahre',
-    'Data': ['0 - 18', '18 - 30', '30 - 65', '> 65']
+    'Data': ['0 - 17', '18 - 29', '30 - 64', '> 65']
   },
   {
     'Name':'Bottrop',
@@ -2062,7 +2062,7 @@ var datenSingleHaushalte = [
 var datenNichtdeutsche = [
   {
     'Name': 'Jahre',
-    'Data': [2000, 2009, 2011, 2013, 2015]
+    'Data': [2007, 2009, 2011, 2013, 2015]
   }, {
     'Name': 'Bottrop',
     'Data': [9.4, 9.1, 7.7, 8.1, 9.7]
@@ -2789,7 +2789,7 @@ var datenKonfessionen = [
 var datenAbschlüsse = [
   {
   'Name': 'Jahre',
-  'Data': ['Berufsausbildung im dualen System', 'Fachschulabschluss', 'Fachhochschulabschluss- / Hochschulabschluss / Promotion', 'kein beruflicher Bildungsabschluss', 'keine Angabe']
+  'Data': ['Berufsausbildung im dualen System', 'Fachschulabschluss', 'Fachhochschul- / Hochschulabschluss / Promotion', 'kein beruflicher Bildungsabschluss', 'keine Angabe']
   },
   {
     'Name': 'Bottrop',

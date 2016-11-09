@@ -11,7 +11,7 @@ function updateTimeslider(){
 	    	minimum:0,
 	    	maximum:getYearsArray(currentDataframe).length-1,
 	    	onChange:function(val){ yearChange(val); },
-	    	value:0,
+	    	value:getYearsArray(currentDataframe).length-1,
 	    	discreteValues:getYearsArray(currentDataframe).length,
 	    	showButtons:true,
 	    	intermediateChanges:true,
@@ -53,7 +53,7 @@ function createTimeslider(){
 	    	minimum:0,
 	    	maximum:getYearsArray(currentDataframe).length-1,
 	    	onChange:function(val){ yearChange(val); },
-	    	value:0,
+	    	value:getYearsArray(currentDataframe).length-1,
 	    	discreteValues:getYearsArray(currentDataframe).length,
 	    	showButtons:true,
 	    	intermediateChanges:true,
@@ -61,7 +61,7 @@ function createTimeslider(){
 	    	style:{width:'20%', height:'20px'}
 		}, 'timeslider');
 		updateTimeslider();
-		timeslider.set({value:0});
+		timeslider.set({value:getYearsArray(currentDataframe).length-1});
 	});
 	document.getElementById('timesliderValue').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[0];
 	document.getElementById('legendTheme').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[0];

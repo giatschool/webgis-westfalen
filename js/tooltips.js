@@ -140,7 +140,7 @@ function addTooltips() {
     //Altersgruppen Layer
     new Tooltip({
       connectId: ['altersgruppenInfo'],
-      label: 'Altersgruppen im Jahr 2011<br><b>Einheit: </b>Anteile in &#037;',
+      label: 'Altersgruppen im Jahr 2015<br><b>Einheit: </b>Anteile in &#037;',
       showDelay: 0
     });
 
@@ -189,7 +189,7 @@ function addTooltips() {
     //Pflegebedürftige in Pflegeheimen 2007 – 2013 Layer
     new Tooltip({
       connectId: ['pflegebeduerftigePflegeheimInfo'],
-      label: 'Pflegebedürftige in Pflegeheimen: Veränderung im Zeitraum 2007 – 2013 in </b>&permil;',
+      label: 'Pflegebedürftige in Pflegeheimen: Veränderung im Zeitraum 2007 - 2013 in </b>&#037;',
       showDelay: 0
     });
 
@@ -231,7 +231,7 @@ function addTooltips() {
     //Einkommen Layer
     new Tooltip({
       connectId: ['einkommenInfo'],
-      label: 'Verfügbares Einkommen der <br>privaten Haushalte <b>Einheit: </b>&euro; je Einwohner',
+      label: 'Verfügbares Einkommen der <br>privaten Haushalte <br><b>Einheit: </b>Euro je Einwohner',
       showDelay: 0
     });
 
@@ -245,28 +245,28 @@ function addTooltips() {
     //Arbeitslosenquote Layer
     new Tooltip({
       connectId: ['arbeitslosenquoteInfo'],
-      label: 'Arbeitslosenqoute in &#037;',
+      label: 'Arbeitslosenquote in &#037;',
       showDelay: 0
     });
 
     //Arbeitslosenquote25 Layer
     new Tooltip({
       connectId: ['arbeitslosenquote25Info'],
-      label: 'Arbeitslosenqoute der unter 25-jährigen in &#037;',
+      label: 'Arbeitslosenquote der unter 25-Jährigen in &#037;',
       showDelay: 0
     });
 
     //Arbeitslosenquote55 Layer
     new Tooltip({
       connectId: ['arbeitslosenquote55Info'],
-      label: 'Arbeitslosenqoute der über 55-jährigen in &#037;',
+      label: 'Arbeitslosenquote der über 55-Jährigen in &#037;',
       showDelay: 0
     });
 
     //ArbeitslosenquoteND Layer
     new Tooltip({
       connectId: ['arbeitslosenquoteNDInfo'],
-      label: 'Arbeitslosenqoute der Nichtdeutschen in &#037;',
+      label: 'Arbeitslosenquote der Nichtdeutschen in &#037;',
       showDelay: 0
     });
 

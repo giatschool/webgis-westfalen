@@ -6,7 +6,7 @@
 	background-color: #00559D;
     color: #FFFFFF;
 	padding: 5px;
-	font-size: small;
+	font-size: large;
 	font-weight: bold;
 }
 
@@ -47,6 +47,7 @@
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    font-size: small;
 }
 
 #individualClassesPane {
@@ -89,7 +90,7 @@
 	left: 65px;
 	bottom: 55px;
 	top: auto;
-	width: 21em;
+	width: 25em;
 }
 
 #menuPane-classes {
