@@ -186,6 +186,13 @@ function addTooltips() {
       showDelay: 0
     });
 
+    //PflegeheimPersonal
+    new Tooltip({
+      connectId: ['pflegeheimPersonalInfo'],
+      label: 'Personal in Pflegeheimen: Veränderung im Zeitraum  in <br>2007 – 2013<br><b>Einheit: </b>&#037;',
+      showDelay: 0
+    });
+
     //Pflegebedürftige in Pflegeheimen 2007 – 2013 Layer
     new Tooltip({
       connectId: ['pflegebeduerftigePflegeheimInfo'],
@@ -274,6 +281,13 @@ function addTooltips() {
     new Tooltip({
       connectId: ['erwerbstätigenInfo'],
       label: 'Anteil der Erwerbstätigen an der Gesamtbevölkerung in &#037;',
+      showDelay: 0
+    });
+
+    //Beschäftigte Layer
+    new Tooltip({
+      connectId: ['beschäftigteKreisInfo'],
+      label: 'Zahl der sozialversicherungspflichtig Beschäftigten nach Wirtschaftsbereichen im Jahr 2014',
       showDelay: 0
     });
 

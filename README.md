@@ -23,6 +23,6 @@ LWL-GIS
 - nochmal alle tooltips überarbeiten
 - Layer Gemeidneansicht auch mit einwohner entwicklung starten lassen anpassen an die csv reihenfolge
 - reihenfolge der themen vereinheitlichen inklusive legenden
-- Pflegeheim Personal hinzufügen
+- Pflegeheim Personal hinzufügen - DONE
 - Erwerbstätige hat noch keinen tooltip
-- kreise sozioökonomie es fehelen datensätze verfügbares einkommen der privaten haushalte beschäftigte 2014
+- kreise sozioökonomie es fehelen datensätze verfügbares einkommen der privaten haushalte

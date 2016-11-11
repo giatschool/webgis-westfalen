@@ -742,9 +742,11 @@ var allLayerAttributes = [
 	[datenArbeitslosenquote55, 'Arbeitslosenquote über 55 Jahre', '&#037;', ''],
 	[datenArbeitslosenquoteND, 'Arbeitslosenquote Nichtdeutsche', '&#037;', ''],
 	[datenErwerbstätige, 'Erwerbstätigen', '&#037;', ''],
+	[datenBeschäftigte, 'Beschäftigte 2014', '', ''],
 	[datenBIP, 'Bruttoinlandsprodukt (BIP)', '&euro;', ''],
 	[datenPendlersaldo, 'Pendlersaldo', '', ''],
 	[datenKonfessionen, 'Konfessionen 2011', '&#037;', ''],
+	[datenPflegeheimPersonal, 'Personal in Pflegeheimen 2007 - 2013', '&#037;', ''],
 	[datenEinwohnerKommunen, 'Einwohner-Entwicklung Absolut', '', ''], //testing new "GemeindeLayer"
 	[datenEinwohnerEntwicklungKommunen, 'Einwohner-Entwicklung', '&#037;', ''],
 	[datenBevoelkerungsdichteKommunen, 'Bevölkerungsdichte', '', 'Einheit: Einwohner pro km&sup2;'],  //testing new "GemeindeLayer"

@@ -396,6 +396,15 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                        </div><div>
+                            <input type="radio" id="pflegeheimPersonalCheck" name="Layer" value="Personal in Pflegeheimen 2007 - 2013" onchange="layerChange(datenPflegeheimPersonal)">
+                            <label for="pflegeheimPersonalCheck">Personal in Pflegeheimen</label>
+                            <a id="pflegeheimPersonalInfo" class="help">
+                                <img src="images/Help_sm.png">
+                            </a>
+                            <a class="gridview disabled">
+                                <img src="images/grid_sm.png">
+                            </a>
                         </div>
                         <!-- <div>
                             <input type="radio" id="pflegeeinrichtungenCheck" name="Layer" value="Pflegeeinrichtungen" onchange="layerChange(datenPflegeeinrichtungen)">
@@ -518,6 +527,16 @@
                             </a>
                         </div>
                         <div>
+                            <input type="radio" id="beschäftigteCheck" name="Layer" value="Beschäftigte" onchange="layerChange(datenBeschäftigte)">
+                            <label for="beschäftigteCheck">Beschäftigte 2014</label>
+                            <a id="beschäftigteKreisInfo" class="help">
+                                <img src="images/Help_sm.png" class="help">
+                            </a>
+                            <a class="gridview disabled">
+                                <img src="images/grid_sm.png">
+                            </a>
+                        </div>
+                        <div>
                             <input type="radio" id="bipCheck" name="Layer" value="BIP" onchange="layerChange(datenBIP)">
                             <label for="bipCheck">Bruttoinlandsprodukt</label>
                             <a id="bipInfo" class="help">
@@ -572,9 +591,9 @@
                     <input type="checkbox" id="baseMapChk" name="Layer" value="Basemap" onchange="layerChange(50)" checked="checked">
                     <!-- autocomplete="off" -->
                     <label for="baseMapChk">Hintergrundkarte einblenden</label>
-                    <br>
+                    <!-- <br> VORERST AUSKOMMENTIERT BIS ArcGIS SERVER WIEDER LÄUFT
                     <input type="checkbox" id="labelChk" name="Layer" value="Label" onchange="layerChange(60)" checked="checked">
-                    <label for="labelChk">Beschriftungen einblenden</label>
+                    <label for="labelChk">Beschriftungen einblenden</label> -->
                 </div>
             </form>
         </div>

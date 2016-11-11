@@ -3429,6 +3429,94 @@ var datenBIP = [
   }
 ];
 
+var datenPflegeheimPersonal = [
+  {
+    'Name': 'Jahre',
+    'Data': ['']
+  }, {
+    'Name': 'Bottrop',
+    'Data': [18.6]
+  }, {
+    'Name': 'Gelsenkirchen',
+    'Data': [8.2]
+  }, {
+    'Name': 'Münster',
+    'Data': [3.6]
+  }, {
+    'Name': 'Borken',
+    'Data': [12.5]
+  }, {
+    'Name': 'Coesfeld',
+    'Data': [19]
+  }, {
+    'Name': 'Recklinghausen',
+    'Data': [19.7, ]
+  }, {
+    'Name': 'Steinfurt',
+    'Data': [16.7]
+  }, {
+    'Name': 'Warendorf',
+    'Data': [36.8]
+  }, {
+    'Name': 'Bielefeld',
+    'Data': [4.5]
+  }, {
+    'Name': 'Gütersloh',
+    'Data': [15.5]
+  }, {
+    'Name': 'Herford',
+    'Data': [20.9]
+  }, {
+    'Name': 'Höxter',
+    'Data': [18.2]
+  }, {
+    'Name': 'Lippe',
+    'Data': [7.9]
+  }, {
+    'Name': 'Minden-Lübbecke',
+    'Data': [20.7]
+  }, {
+    'Name': 'Paderborn',
+    'Data': [16.5]
+  }, {
+    'Name': 'Bochum',
+    'Data': [3]
+  }, {
+    'Name': 'Dortmund',
+    'Data': [23.5]
+  }, {
+    'Name': 'Hagen',
+    'Data': [19.1]
+  }, {
+    'Name': 'Hamm',
+    'Data': [35.6]
+  }, {
+    'Name': 'Herne',
+    'Data': [13.6]
+  }, {
+    'Name': 'Ennepe-Ruhr-Kreis',
+    'Data': [15.2]
+  }, {
+    'Name': 'Hochsauerlandkreis',
+    'Data': [10.5]
+  }, {
+    'Name': 'Märkischer Kreis',
+    'Data': [21.7]
+  }, {
+    'Name': 'Olpe',
+    'Data': [43.4]
+  }, {
+    'Name': 'Siegen-Wittgenstein',
+    'Data': [22.8]
+  }, {
+    'Name': 'Soest',
+    'Data': [15.5]
+  }, {
+    'Name': 'Unna',
+    'Data': [21.7]
+  }
+];
+
 var datenPendlersaldo = [
   {
     'Name': 'Jahre',
@@ -3517,244 +3605,740 @@ var datenPendlersaldo = [
   }
 ];
 
+var datenBeschäftigte =[
+  {
+    'Name': 'Jahre',
+    'Data': ['Land- und Forstwirtschaft, Fischerei', 'Produzierendes Gewerbe', 'Handel, Gastgewerbe, Verkehr', 'Sonstige Dienstleistungen']
+  },
+  {'Name':'Bottrop','Data': [139, 10352, 6995, 14903]},
+{'Name':'Gelsenkirchen','Data': [47, 20692, 14318, 41089]},
+{'Name':'Münster','Data': [640, 20460, 28300, 103947]},
+{'Name':'Borken','Data': [1574, 55000, 28567, 45939]},
+{'Name':'Coesfeld','Data': [1250, 18941, 14880, 26700]},
+{'Name':'Recklinghausen','Data': [749, 38677, 34453, 81130]},
+{'Name':'Steinfurt','Data': [1340, 48496, 37114, 55692]},
+{'Name':'Warendorf','Data': [1058, 36163, 15799, 31973]},
+{'Name':'Bielefeld','Data': [233, 32006, 32678, 75924]},
+{'Name':'Gütersloh','Data': [945, 68706, 32877, 51190]},
+{'Name':'Herford','Data': [382, 37010, 20337, 30073]},
+{'Name':'Höxter','Data': [408, 15282, 8985, 17491]},
+{'Name':'Lippe','Data': [797, 39147, 20616, 45842]},
+{'Name':'Minden-Lübbecke','Data': [615, 41614, 24659, 52581]},
+{'Name':'Paderborn','Data': [787, 36275, 22184, 50426]},
+{'Name':'Bochum','Data': [37, 27910, 28804, 71407]},
+{'Name':'Dortmund','Data': [106, 40790, 50487, 121232]},
+{'Name':'Hagen','Data': [133, 19680, 16216, 31929]},
+{'Name':'Hamm','Data': [79, 13876, 14199, 25812]},
+{'Name':'Herne','Data': [25, 11178, 9602, 22601]},
+{'Name':'Ennepe-Ruhr-Kreis','Data': [246, 39740, 20370, 40395]},
+{'Name':'Hochsauerlandkreis','Data': [797, 40972, 17878, 37721]},
+{'Name':'Märkischer Kreis','Data': [378, 79604, 23616, 50387]},
+{'Name':'Olpe','Data': [273, 29856, 7282, 16387]},
+{'Name':'Siegen-Wittgenstein','Data': [301, 47193, 21402, 39753]},
+{'Name':'Soest','Data': [1580, 40776, 21314, 40874]},
+{'Name':'Unna','Data': [423, 33885, 34168, 47811]},
+];
+
 var datenEinwohnerKommunen = [
   {
     'Name': 'Jahre',
     'Data': [1990, 2015, 2040]
-  }, 
-  {'Name':'Bottrop','Data': [118936, 117143, 105875]},
-{'Name':'Gelsenkirchen','Data': [293714, 260368, 248100]},
-{'Name':'Münster','Data': [259438, 310039, 349353]},
-{'Name':'Ahaus','Data': [31202, 39277, 38092]},
-{'Name':'Bocholt','Data': [68936, 71443, 61647]},
-{'Name':'Borken','Data': [36049, 42272, 35688]},
-{'Name':'Gescher','Data': [15002, 17118, 15410]},
-{'Name':'Gronau','Data': [40687, 47010, 46274]},
-{'Name':'Heek','Data': [7120, 8505, 9334]},
-{'Name':'Heiden','Data': [6888, 8152, 7068]},
-{'Name':'Isselburg','Data': [10084, 10736, 9665]},
-{'Name':'Legden','Data': [5621, 7254, 7103]},
-{'Name':'Raesfeld','Data': [9323, 11378, 10094]},
-{'Name':'Reken','Data': [11689, 14532, 13453]},
-{'Name':'Rhede','Data': [16952, 19284, 16841]},
-{'Name':'Schöppingen','Data': [5732, 7280, 8062]},
-{'Name':'Stadtlohn','Data': [17713, 20411, 18920]},
-{'Name':'Südlohn','Data': [7787, 9134, 7953]},
-{'Name':'Velen','Data': [10374, 13192, 11848]},
-{'Name':'Vreden','Data': [19421, 22688, 22147]},
-{'Name':'Ascheberg','Data': [12778, 15253, 15633]},
-{'Name':'Billerbeck','Data': [9991, 11593, 10569]},
-{'Name':'Coesfeld','Data': [32739, 36116, 33041]},
-{'Name':'Dülmen','Data': [40496, 46613, 41699]},
-{'Name':'Havixbeck','Data': [10212, 11689, 12254]},
-{'Name':'Lüdinghausen','Data': [20152, 24263, 23229]},
-{'Name':'Nordkirchen','Data': [8359, 9781, 7935]},
-{'Name':'Nottuln','Data': [15748, 19436, 18597]},
-{'Name':'Olfen','Data': [8732, 12490, 12952]},
-{'Name':'Rosendahl','Data': [9693, 10712, 9991]},
-{'Name':'Senden','Data': [15341, 20455, 22709]},
-{'Name':'Castrop-Rauxel','Data': [79037, 74220, 67695]},
-{'Name':'Datteln','Data': [36876, 34521, 29655]},
-{'Name':'Dorsten','Data': [78035, 75431, 66960]},
-{'Name':'Gladbeck','Data': [80267, 75455, 74777]},
-{'Name':'Haltern am See','Data': [34025, 38020, 34290]},
-{'Name':'Herten','Data': [69245, 61163, 52746]},
-{'Name':'Marl','Data': [91467, 83926, 71633]},
-{'Name':'Oer-Erkenschwick','Data': [28222, 31387, 31153]},
-{'Name':'Recklinghausen','Data': [125060, 114330, 106742]},
-{'Name':'Waltrop','Data': [29354, 29354, 27209]},
-{'Name':'Altenberge','Data': [7852, 10315, 11822]},
-{'Name':'Emsdetten','Data': [31930, 36320, 33097]},
-{'Name':'Greven','Data': [31010, 36674, 40845]},
-{'Name':'Hörstel','Data': [15772, 19995, 17835]},
-{'Name':'Hopsten','Data': [6059, 7642, 7509]},
-{'Name':'Horstmar','Data': [6040, 6447, 5747]},
-{'Name':'Ibbenbüren','Data': [44643, 50935, 50562]},
-{'Name':'Ladbergen','Data': [5797, 6694, 6002]},
-{'Name':'Laer','Data': [5300, 6721, 7668]},
-{'Name':'Lengerich','Data': [21045, 22461, 20370]},
-{'Name':'Lienen','Data': [8194, 8559, 7813]},
-{'Name':'Lotte','Data': [10593, 14175, 17420]},
-{'Name':'Metelen','Data': [5904, 6461, 6823]},
-{'Name':'Mettingen','Data': [10776, 11815, 10319]},
-{'Name':'Neuenkirchen','Data': [11773, 13743, 11735]},
-{'Name':'Nordwalde','Data': [8612, 9388, 9312]},
-{'Name':'Ochtrup','Data': [17460, 19599, 19741]},
-{'Name':'Recke','Data': [10026, 11363, 8711]},
-{'Name':'Rheine','Data': [70452, 74852, 72184]},
-{'Name':'Saerbeck','Data': [5124, 7191, 7582]},
-{'Name':'Steinfurt','Data': [31484, 33682, 30455]},
-{'Name':'Tecklenburg','Data': [8980, 9062, 8040]},
-{'Name':'Westerkappeln','Data': [9317, 11178, 9979]},
-{'Name':'Wettringen','Data': [6802, 8102, 8622]},
-{'Name':'Ahlen','Data': [54169, 52287, 48264]},
-{'Name':'Beckum','Data': [36772, 36560, 31674]},
-{'Name':'Beelen','Data': [5156, 6380, 5627]},
-{'Name':'Drensteinfurt','Data': [12127, 15542, 18554]},
-{'Name':'Ennigerloh','Data': [19534, 20037, 17231]},
-{'Name':'Everswinkel','Data': [7976, 9583, 10960]},
-{'Name':'Oelde','Data': [27759, 29299, 28912]},
-{'Name':'Ostbevern','Data': [7341, 10873, 11879]},
-{'Name':'Sassenberg','Data': [10214, 14403, 13914]},
-{'Name':'Sendenhorst','Data': [11409, 13218, 13765]},
-{'Name':'Telgte','Data': [17358, 19557, 19755]},
-{'Name':'Wadersloh','Data': [12121, 12443, 11088]},
-{'Name':'Warendorf','Data': [35092, 37249, 32875]},
-{'Name':'Bielefeld','Data': [319037, 333090, 336623]},
-{'Name':'Borgholzhausen','Data': [7872, 8801, 7905]},
-{'Name':'Gütersloh','Data': [86807, 97586, 99216]},
-{'Name':'Halle (Westf.)','Data': [18841, 21709, 20083]},
-{'Name':'Harsewinkel','Data': [20135, 24769, 25616]},
-{'Name':'Herzebrock-Clarholz','Data': [13351, 15965, 16355]},
-{'Name':'Langenberg','Data': [7026, 8375, 7303]},
-{'Name':'Rheda-Wiedenbrück','Data': [38327, 48000, 50655]},
-{'Name':'Rietberg','Data': [24138, 29436, 30534]},
-{'Name':'Schloß Holte-Stukenbrock','Data': [21402, 27092, 25206]},
-{'Name':'Steinhagen','Data': [17303, 20749, 19869]},
-{'Name':'Verl','Data': [19771, 25512, 27115]},
-{'Name':'Versmold','Data': [18231, 21230, 19354]},
-{'Name':'Werther (Westf.)','Data': [10625, 11418, 11787]},
-{'Name':'Bünde','Data': [40524, 45615, 43096]},
-{'Name':'Enger','Data': [17194, 20658, 21358]},
-{'Name':'Herford','Data': [63893, 66521, 63359]},
-{'Name':'Hiddenhausen','Data': [19945, 19758, 16466]},
-{'Name':'Kirchlengern','Data': [14849, 16085, 13664]},
-{'Name':'Löhne','Data': [38557, 40086, 36141]},
-{'Name':'Rödinghausen','Data': [8700, 9717, 7294]},
-{'Name':'Spenge','Data': [14977, 14768, 12336]},
-{'Name':'Vlotho','Data': [19592, 18914, 16294]},
-{'Name':'Bad Driburg','Data': [17525, 18699, 14627]},
-{'Name':'Beverungen','Data': [15240, 13442, 11004]},
-{'Name':'Borgentreich','Data': [9376, 9497, 7372]},
-{'Name':'Brakel','Data': [15743, 16586, 13116]},
-{'Name':'Höxter','Data': [33079, 29589, 25898]},
-{'Name':'Marienmünster','Data': [5145, 5125, 3742]},
-{'Name':'Nieheim','Data': [6725, 6254, 6138]},
-{'Name':'Steinheim','Data': [12609, 12922, 10486]},
-{'Name':'Warburg','Data': [22562, 23629, 20761]},
-{'Name':'Willebadessen','Data': [8234, 8267, 6876]},
-{'Name':'Augustdorf','Data': [8464, 9828, 10261]},
-{'Name':'Bad Salzuflen','Data': [53771, 53341, 48545]},
-{'Name':'Barntrup','Data': [8989, 8846, 7111]},
-{'Name':'Blomberg','Data': [15158, 15370, 12896]},
-{'Name':'Detmold','Data': [70074, 74817, 66816]},
-{'Name':'Dörentrup','Data': [8226, 7970, 6605]},
-{'Name':'Extertal','Data': [12606, 11522, 8421]},
-{'Name':'Horn-Bad Meinberg','Data': [17409, 17126, 14493]},
-{'Name':'Kalletal','Data': [14522, 13914, 10698]},
-{'Name':'Lage','Data': [34317, 35120, 32939]},
-{'Name':'Lemgo','Data': [39485, 41276, 34789]},
-{'Name':'Leopoldshöhe','Data': [13744, 16401, 17885]},
-{'Name':'Lügde','Data': [11248, 9751, 6141]},
-{'Name':'Oerlinghausen','Data': [15689, 17616, 15843]},
-{'Name':'Schieder-Schwalenberg','Data': [8865, 8708, 6834]},
-{'Name':'Schlangen','Data': [7635, 9144, 9454]},
-{'Name':'Bad Oeynhausen','Data': [46475, 48990, 45844]},
-{'Name':'Espelkamp','Data': [26101, 24921, 23402]},
-{'Name':'Hille','Data': [14727, 15916, 14339]},
-{'Name':'Hüllhorst','Data': [11747, 13271, 12219]},
-{'Name':'Lübbecke','Data': [23695, 25462, 23883]},
-{'Name':'Minden','Data': [78145, 81598, 74985]},
-{'Name':'Petershagen','Data': [24543, 25663, 20921]},
-{'Name':'Porta Westfalica','Data': [35061, 35430, 32590]},
-{'Name':'Preußisch Oldendorf','Data': [10974, 12647, 11198]},
-{'Name':'Rahden','Data': [14109, 15581, 12511]},
-{'Name':'Stemwede','Data': [13194, 13571, 10146]},
-{'Name':'Altenbeken','Data': [7632, 9294, 6485]},
-{'Name':'Bad Lippspringe','Data': [12860, 15572, 12406]},
-{'Name':'Borchen','Data': [11071, 13447, 12671]},
-{'Name':'Büren','Data': [18748, 21772, 21081]},
-{'Name':'Delbrück','Data': [24247, 31964, 34509]},
-{'Name':'Hövelhof','Data': [13346, 16080, 16915]},
-{'Name':'Lichtenau','Data': [9791, 10589, 10240]},
-{'Name':'Paderborn','Data': [120680, 148126, 155467]},
-{'Name':'Salzkotten','Data': [20495, 25186, 21791]},
-{'Name':'Wünnenberg','Data': [10226, 12302, 12518]},
-{'Name':'Bochum','Data': [396486, 364742, 345390]},
-{'Name':'Dortmund','Data': [599055, 586181, 605141]},
-{'Name':'Hagen','Data': [214449, 189044, 168006]},
-{'Name':'Hamm','Data': [179639, 179397, 175202]},
-{'Name':'Herne','Data': [178132, 155851, 148620]},
-{'Name':'Breckerfeld','Data': [8318, 9004, 8110]},
-{'Name':'Ennepetal','Data': [34270, 29926, 25259]},
-{'Name':'Gevelsberg','Data': [33217, 31315, 27129]},
-{'Name':'Hattingen','Data': [58241, 54834, 54260]},
-{'Name':'Herdecke','Data': [26184, 22818, 18576]},
-{'Name':'Schwelm','Data': [30394, 28330, 23185]},
-{'Name':'Sprockhövel','Data': [24505, 25205, 23741]},
-{'Name':'Wetter (Ruhr)','Data': [28880, 27822, 25435]},
-{'Name':'Witten','Data': [105403, 96700, 91344]},
-{'Name':'Arnsberg','Data': [75864, 73784, 62711]},
-{'Name':'Bestwig','Data': [11571, 11170, 10441]},
-{'Name':'Brilon','Data': [25303, 26232, 20785]},
-{'Name':'Eslohe (Sauerland)','Data': [8862, 8942, 8538]},
-{'Name':'Hallenberg','Data': [4845, 4541, 3524]},
-{'Name':'Marsberg','Data': [21124, 19968, 15310]},
-{'Name':'Medebach','Data': [7560, 7938, 6498]},
-{'Name':'Meschede','Data': [31715, 30119, 23114]},
-{'Name':'Olsberg','Data': [15227, 14874, 11884]},
-{'Name':'Schmallenberg','Data': [25077, 25230, 22064]},
-{'Name':'Sundern (Sauerland)','Data': [27250, 28166, 25198]},
-{'Name':'Winterberg','Data': [14229, 12798, 10056]},
-{'Name':'Altena','Data': [24053, 17375, 12051]},
-{'Name':'Balve','Data': [11416, 11602, 9018]},
-{'Name':'Halver','Data': [16260, 16117, 12852]},
-{'Name':'Hemer','Data': [34412, 33535, 31437]},
-{'Name':'Herscheid','Data': [7141, 7217, 4940]},
-{'Name':'Iserlohn','Data': [96314, 93537, 77914]},
-{'Name':'Kierspe','Data': [16257, 16300, 13236]},
-{'Name':'Lüdenscheid','Data': [79401, 73354, 59797]},
-{'Name':'Meinerzhagen','Data': [19907, 20670, 16833]},
-{'Name':'Menden (Sauerland)','Data': [56527, 53485, 40392]},
-{'Name':'Nachrodt-Wiblingwerde','Data': [6469, 6644, 4823]},
-{'Name':'Neuenrade','Data': [11679, 12024, 10463]},
-{'Name':'Plettenberg','Data': [29083, 25781, 19696]},
-{'Name':'Schalksmühle','Data': [12232, 10528, 8343]},
-{'Name':'Werdohl','Data': [21875, 18002, 15384]},
-{'Name':'Attendorn','Data': [22736, 24676, 22540]},
-{'Name':'Drolshagen','Data': [11095, 11874, 10872]},
-{'Name':'Finnentrop','Data': [17253, 17258, 14182]},
-{'Name':'Kirchhundem','Data': [12202, 11854, 10140]},
-{'Name':'Lennestadt','Data': [26468, 26073, 21123]},
-{'Name':'Olpe','Data': [23785, 24757, 22898]},
-{'Name':'Wenden','Data': [16932, 19873, 18520]},
-{'Name':'Bad Berleburg','Data': [20471, 19774, 16094]},
-{'Name':'Burbach','Data': [14017, 14969, 13673]},
-{'Name':'Erndtebrück','Data': [8001, 7206, 6291]},
-{'Name':'Freudenberg','Data': [17079, 17929, 15671]},
-{'Name':'Hilchenbach','Data': [15905, 15169, 12035]},
-{'Name':'Kreuztal','Data': [30885, 31500, 30815]},
-{'Name':'Bad Laasphe','Data': [15139, 14276, 11267]},
-{'Name':'Netphen','Data': [23293, 23393, 20421]},
-{'Name':'Neunkirchen','Data': [14461, 13717, 11545]},
-{'Name':'Siegen','Data': [109174, 102355, 99478]},
-{'Name':'Wilnsdorf','Data': [20497, 20512, 17986]},
-{'Name':'Anröchte','Data': [9587, 10557, 9606]},
-{'Name':'Bad Sassendorf','Data': [10147, 11931, 10964]},
-{'Name':'Ense','Data': [10040, 12442, 12318]},
-{'Name':'Erwitte','Data': [13849, 16128, 13932]},
-{'Name':'Geseke','Data': [17733, 21070, 20174]},
-{'Name':'Lippetal','Data': [11155, 12027, 10852]},
-{'Name':'Lippstadt','Data': [62345, 67233, 65832]},
-{'Name':'Möhnesee','Data': [9104, 11608, 10624]},
-{'Name':'Rüthen','Data': [11253, 11095, 7685]},
-{'Name':'Soest','Data': [42602, 47974, 46741]},
-{'Name':'Warstein','Data': [28363, 25407, 19576]},
-{'Name':'Welver','Data': [10772, 12140, 11046]},
-{'Name':'Werl','Data': [28554, 30638, 27269]},
-{'Name':'Wickede (Ruhr)','Data': [11829, 12745, 10073]},
-{'Name':'Bergkamen','Data': [49761, 47803, 43443]},
-{'Name':'Bönen','Data': [18391, 18059, 15638]},
-{'Name':'Fröndenberg/Ruhr','Data': [21252, 20961, 18693]},
-{'Name':'Holzwickede','Data': [16402, 17085, 16619]},
-{'Name':'Kamen','Data': [46160, 43868, 38806]},
-{'Name':'Lünen','Data': [87845, 85867, 80395]},
-{'Name':'Schwerte','Data': [50696, 46723, 44237]},
-{'Name':'Selm','Data': [24891, 26603, 22996]},
-{'Name':'Unna','Data': [61552, 59111, 51571]},
-{'Name':'Werne','Data': [29484, 29955, 23906]}
+  }, {
+    'Name': 'Bottrop',
+    'Data': [118936, 117143, 105875]
+  }, {
+    'Name': 'Gelsenkirchen',
+    'Data': [293714, 260368, 248100]
+  }, {
+    'Name': 'Münster',
+    'Data': [259438, 310039, 349353]
+  }, {
+    'Name': 'Ahaus',
+    'Data': [31202, 39277, 38092]
+  }, {
+    'Name': 'Bocholt',
+    'Data': [68936, 71443, 61647]
+  }, {
+    'Name': 'Borken',
+    'Data': [36049, 42272, 35688]
+  }, {
+    'Name': 'Gescher',
+    'Data': [15002, 17118, 15410]
+  }, {
+    'Name': 'Gronau',
+    'Data': [40687, 47010, 46274]
+  }, {
+    'Name': 'Heek',
+    'Data': [7120, 8505, 9334]
+  }, {
+    'Name': 'Heiden',
+    'Data': [6888, 8152, 7068]
+  }, {
+    'Name': 'Isselburg',
+    'Data': [10084, 10736, 9665]
+  }, {
+    'Name': 'Legden',
+    'Data': [5621, 7254, 7103]
+  }, {
+    'Name': 'Raesfeld',
+    'Data': [9323, 11378, 10094]
+  }, {
+    'Name': 'Reken',
+    'Data': [11689, 14532, 13453]
+  }, {
+    'Name': 'Rhede',
+    'Data': [16952, 19284, 16841]
+  }, {
+    'Name': 'Schöppingen',
+    'Data': [5732, 7280, 8062]
+  }, {
+    'Name': 'Stadtlohn',
+    'Data': [17713, 20411, 18920]
+  }, {
+    'Name': 'Südlohn',
+    'Data': [7787, 9134, 7953]
+  }, {
+    'Name': 'Velen',
+    'Data': [10374, 13192, 11848]
+  }, {
+    'Name': 'Vreden',
+    'Data': [19421, 22688, 22147]
+  }, {
+    'Name': 'Ascheberg',
+    'Data': [12778, 15253, 15633]
+  }, {
+    'Name': 'Billerbeck',
+    'Data': [9991, 11593, 10569]
+  }, {
+    'Name': 'Coesfeld',
+    'Data': [32739, 36116, 33041]
+  }, {
+    'Name': 'Dülmen',
+    'Data': [40496, 46613, 41699]
+  }, {
+    'Name': 'Havixbeck',
+    'Data': [10212, 11689, 12254]
+  }, {
+    'Name': 'Lüdinghausen',
+    'Data': [20152, 24263, 23229]
+  }, {
+    'Name': 'Nordkirchen',
+    'Data': [8359, 9781, 7935]
+  }, {
+    'Name': 'Nottuln',
+    'Data': [15748, 19436, 18597]
+  }, {
+    'Name': 'Olfen',
+    'Data': [8732, 12490, 12952]
+  }, {
+    'Name': 'Rosendahl',
+    'Data': [9693, 10712, 9991]
+  }, {
+    'Name': 'Senden',
+    'Data': [15341, 20455, 22709]
+  }, {
+    'Name': 'Castrop-Rauxel',
+    'Data': [79037, 74220, 67695]
+  }, {
+    'Name': 'Datteln',
+    'Data': [36876, 34521, 29655]
+  }, {
+    'Name': 'Dorsten',
+    'Data': [78035, 75431, 66960]
+  }, {
+    'Name': 'Gladbeck',
+    'Data': [80267, 75455, 74777]
+  }, {
+    'Name': 'Haltern am See',
+    'Data': [34025, 38020, 34290]
+  }, {
+    'Name': 'Herten',
+    'Data': [69245, 61163, 52746]
+  }, {
+    'Name': 'Marl',
+    'Data': [91467, 83926, 71633]
+  }, {
+    'Name': 'Oer-Erkenschwick',
+    'Data': [28222, 31387, 31153]
+  }, {
+    'Name': 'Recklinghausen',
+    'Data': [125060, 114330, 106742]
+  }, {
+    'Name': 'Waltrop',
+    'Data': [29354, 29354, 27209]
+  }, {
+    'Name': 'Altenberge',
+    'Data': [7852, 10315, 11822]
+  }, {
+    'Name': 'Emsdetten',
+    'Data': [31930, 36320, 33097]
+  }, {
+    'Name': 'Greven',
+    'Data': [31010, 36674, 40845]
+  }, {
+    'Name': 'Hörstel',
+    'Data': [15772, 19995, 17835]
+  }, {
+    'Name': 'Hopsten',
+    'Data': [6059, 7642, 7509]
+  }, {
+    'Name': 'Horstmar',
+    'Data': [6040, 6447, 5747]
+  }, {
+    'Name': 'Ibbenbüren',
+    'Data': [44643, 50935, 50562]
+  }, {
+    'Name': 'Ladbergen',
+    'Data': [5797, 6694, 6002]
+  }, {
+    'Name': 'Laer',
+    'Data': [5300, 6721, 7668]
+  }, {
+    'Name': 'Lengerich',
+    'Data': [21045, 22461, 20370]
+  }, {
+    'Name': 'Lienen',
+    'Data': [8194, 8559, 7813]
+  }, {
+    'Name': 'Lotte',
+    'Data': [10593, 14175, 17420]
+  }, {
+    'Name': 'Metelen',
+    'Data': [5904, 6461, 6823]
+  }, {
+    'Name': 'Mettingen',
+    'Data': [10776, 11815, 10319]
+  }, {
+    'Name': 'Neuenkirchen',
+    'Data': [11773, 13743, 11735]
+  }, {
+    'Name': 'Nordwalde',
+    'Data': [8612, 9388, 9312]
+  }, {
+    'Name': 'Ochtrup',
+    'Data': [17460, 19599, 19741]
+  }, {
+    'Name': 'Recke',
+    'Data': [10026, 11363, 8711]
+  }, {
+    'Name': 'Rheine',
+    'Data': [70452, 74852, 72184]
+  }, {
+    'Name': 'Saerbeck',
+    'Data': [5124, 7191, 7582]
+  }, {
+    'Name': 'Steinfurt',
+    'Data': [31484, 33682, 30455]
+  }, {
+    'Name': 'Tecklenburg',
+    'Data': [8980, 9062, 8040]
+  }, {
+    'Name': 'Westerkappeln',
+    'Data': [9317, 11178, 9979]
+  }, {
+    'Name': 'Wettringen',
+    'Data': [6802, 8102, 8622]
+  }, {
+    'Name': 'Ahlen',
+    'Data': [54169, 52287, 48264]
+  }, {
+    'Name': 'Beckum',
+    'Data': [36772, 36560, 31674]
+  }, {
+    'Name': 'Beelen',
+    'Data': [5156, 6380, 5627]
+  }, {
+    'Name': 'Drensteinfurt',
+    'Data': [12127, 15542, 18554]
+  }, {
+    'Name': 'Ennigerloh',
+    'Data': [19534, 20037, 17231]
+  }, {
+    'Name': 'Everswinkel',
+    'Data': [7976, 9583, 10960]
+  }, {
+    'Name': 'Oelde',
+    'Data': [27759, 29299, 28912]
+  }, {
+    'Name': 'Ostbevern',
+    'Data': [7341, 10873, 11879]
+  }, {
+    'Name': 'Sassenberg',
+    'Data': [10214, 14403, 13914]
+  }, {
+    'Name': 'Sendenhorst',
+    'Data': [11409, 13218, 13765]
+  }, {
+    'Name': 'Telgte',
+    'Data': [17358, 19557, 19755]
+  }, {
+    'Name': 'Wadersloh',
+    'Data': [12121, 12443, 11088]
+  }, {
+    'Name': 'Warendorf',
+    'Data': [35092, 37249, 32875]
+  }, {
+    'Name': 'Bielefeld',
+    'Data': [319037, 333090, 336623]
+  }, {
+    'Name': 'Borgholzhausen',
+    'Data': [7872, 8801, 7905]
+  }, {
+    'Name': 'Gütersloh',
+    'Data': [86807, 97586, 99216]
+  }, {
+    'Name': 'Halle (Westf.)',
+    'Data': [18841, 21709, 20083]
+  }, {
+    'Name': 'Harsewinkel',
+    'Data': [20135, 24769, 25616]
+  }, {
+    'Name': 'Herzebrock-Clarholz',
+    'Data': [13351, 15965, 16355]
+  }, {
+    'Name': 'Langenberg',
+    'Data': [7026, 8375, 7303]
+  }, {
+    'Name': 'Rheda-Wiedenbrück',
+    'Data': [38327, 48000, 50655]
+  }, {
+    'Name': 'Rietberg',
+    'Data': [24138, 29436, 30534]
+  }, {
+    'Name': 'Schloß Holte-Stukenbrock',
+    'Data': [21402, 27092, 25206]
+  }, {
+    'Name': 'Steinhagen',
+    'Data': [17303, 20749, 19869]
+  }, {
+    'Name': 'Verl',
+    'Data': [19771, 25512, 27115]
+  }, {
+    'Name': 'Versmold',
+    'Data': [18231, 21230, 19354]
+  }, {
+    'Name': 'Werther (Westf.)',
+    'Data': [10625, 11418, 11787]
+  }, {
+    'Name': 'Bünde',
+    'Data': [40524, 45615, 43096]
+  }, {
+    'Name': 'Enger',
+    'Data': [17194, 20658, 21358]
+  }, {
+    'Name': 'Herford',
+    'Data': [63893, 66521, 63359]
+  }, {
+    'Name': 'Hiddenhausen',
+    'Data': [19945, 19758, 16466]
+  }, {
+    'Name': 'Kirchlengern',
+    'Data': [14849, 16085, 13664]
+  }, {
+    'Name': 'Löhne',
+    'Data': [38557, 40086, 36141]
+  }, {
+    'Name': 'Rödinghausen',
+    'Data': [8700, 9717, 7294]
+  }, {
+    'Name': 'Spenge',
+    'Data': [14977, 14768, 12336]
+  }, {
+    'Name': 'Vlotho',
+    'Data': [19592, 18914, 16294]
+  }, {
+    'Name': 'Bad Driburg',
+    'Data': [17525, 18699, 14627]
+  }, {
+    'Name': 'Beverungen',
+    'Data': [15240, 13442, 11004]
+  }, {
+    'Name': 'Borgentreich',
+    'Data': [9376, 9497, 7372]
+  }, {
+    'Name': 'Brakel',
+    'Data': [15743, 16586, 13116]
+  }, {
+    'Name': 'Höxter',
+    'Data': [33079, 29589, 25898]
+  }, {
+    'Name': 'Marienmünster',
+    'Data': [5145, 5125, 3742]
+  }, {
+    'Name': 'Nieheim',
+    'Data': [6725, 6254, 6138]
+  }, {
+    'Name': 'Steinheim',
+    'Data': [12609, 12922, 10486]
+  }, {
+    'Name': 'Warburg',
+    'Data': [22562, 23629, 20761]
+  }, {
+    'Name': 'Willebadessen',
+    'Data': [8234, 8267, 6876]
+  }, {
+    'Name': 'Augustdorf',
+    'Data': [8464, 9828, 10261]
+  }, {
+    'Name': 'Bad Salzuflen',
+    'Data': [53771, 53341, 48545]
+  }, {
+    'Name': 'Barntrup',
+    'Data': [8989, 8846, 7111]
+  }, {
+    'Name': 'Blomberg',
+    'Data': [15158, 15370, 12896]
+  }, {
+    'Name': 'Detmold',
+    'Data': [70074, 74817, 66816]
+  }, {
+    'Name': 'Dörentrup',
+    'Data': [8226, 7970, 6605]
+  }, {
+    'Name': 'Extertal',
+    'Data': [12606, 11522, 8421]
+  }, {
+    'Name': 'Horn-Bad Meinberg',
+    'Data': [17409, 17126, 14493]
+  }, {
+    'Name': 'Kalletal',
+    'Data': [14522, 13914, 10698]
+  }, {
+    'Name': 'Lage',
+    'Data': [34317, 35120, 32939]
+  }, {
+    'Name': 'Lemgo',
+    'Data': [39485, 41276, 34789]
+  }, {
+    'Name': 'Leopoldshöhe',
+    'Data': [13744, 16401, 17885]
+  }, {
+    'Name': 'Lügde',
+    'Data': [11248, 9751, 6141]
+  }, {
+    'Name': 'Oerlinghausen',
+    'Data': [15689, 17616, 15843]
+  }, {
+    'Name': 'Schieder-Schwalenberg',
+    'Data': [8865, 8708, 6834]
+  }, {
+    'Name': 'Schlangen',
+    'Data': [7635, 9144, 9454]
+  }, {
+    'Name': 'Bad Oeynhausen',
+    'Data': [46475, 48990, 45844]
+  }, {
+    'Name': 'Espelkamp',
+    'Data': [26101, 24921, 23402]
+  }, {
+    'Name': 'Hille',
+    'Data': [14727, 15916, 14339]
+  }, {
+    'Name': 'Hüllhorst',
+    'Data': [11747, 13271, 12219]
+  }, {
+    'Name': 'Lübbecke',
+    'Data': [23695, 25462, 23883]
+  }, {
+    'Name': 'Minden',
+    'Data': [78145, 81598, 74985]
+  }, {
+    'Name': 'Petershagen',
+    'Data': [24543, 25663, 20921]
+  }, {
+    'Name': 'Porta Westfalica',
+    'Data': [35061, 35430, 32590]
+  }, {
+    'Name': 'Preußisch Oldendorf',
+    'Data': [10974, 12647, 11198]
+  }, {
+    'Name': 'Rahden',
+    'Data': [14109, 15581, 12511]
+  }, {
+    'Name': 'Stemwede',
+    'Data': [13194, 13571, 10146]
+  }, {
+    'Name': 'Altenbeken',
+    'Data': [7632, 9294, 6485]
+  }, {
+    'Name': 'Bad Lippspringe',
+    'Data': [12860, 15572, 12406]
+  }, {
+    'Name': 'Borchen',
+    'Data': [11071, 13447, 12671]
+  }, {
+    'Name': 'Büren',
+    'Data': [18748, 21772, 21081]
+  }, {
+    'Name': 'Delbrück',
+    'Data': [24247, 31964, 34509]
+  }, {
+    'Name': 'Hövelhof',
+    'Data': [13346, 16080, 16915]
+  }, {
+    'Name': 'Lichtenau',
+    'Data': [9791, 10589, 10240]
+  }, {
+    'Name': 'Paderborn',
+    'Data': [120680, 148126, 155467]
+  }, {
+    'Name': 'Salzkotten',
+    'Data': [20495, 25186, 21791]
+  }, {
+    'Name': 'Wünnenberg',
+    'Data': [10226, 12302, 12518]
+  }, {
+    'Name': 'Bochum',
+    'Data': [396486, 364742, 345390]
+  }, {
+    'Name': 'Dortmund',
+    'Data': [599055, 586181, 605141]
+  }, {
+    'Name': 'Hagen',
+    'Data': [214449, 189044, 168006]
+  }, {
+    'Name': 'Hamm',
+    'Data': [179639, 179397, 175202]
+  }, {
+    'Name': 'Herne',
+    'Data': [178132, 155851, 148620]
+  }, {
+    'Name': 'Breckerfeld',
+    'Data': [8318, 9004, 8110]
+  }, {
+    'Name': 'Ennepetal',
+    'Data': [34270, 29926, 25259]
+  }, {
+    'Name': 'Gevelsberg',
+    'Data': [33217, 31315, 27129]
+  }, {
+    'Name': 'Hattingen',
+    'Data': [58241, 54834, 54260]
+  }, {
+    'Name': 'Herdecke',
+    'Data': [26184, 22818, 18576]
+  }, {
+    'Name': 'Schwelm',
+    'Data': [30394, 28330, 23185]
+  }, {
+    'Name': 'Sprockhövel',
+    'Data': [24505, 25205, 23741]
+  }, {
+    'Name': 'Wetter (Ruhr)',
+    'Data': [28880, 27822, 25435]
+  }, {
+    'Name': 'Witten',
+    'Data': [105403, 96700, 91344]
+  }, {
+    'Name': 'Arnsberg',
+    'Data': [75864, 73784, 62711]
+  }, {
+    'Name': 'Bestwig',
+    'Data': [11571, 11170, 10441]
+  }, {
+    'Name': 'Brilon',
+    'Data': [25303, 26232, 20785]
+  }, {
+    'Name': 'Eslohe (Sauerland)',
+    'Data': [8862, 8942, 8538]
+  }, {
+    'Name': 'Hallenberg',
+    'Data': [4845, 4541, 3524]
+  }, {
+    'Name': 'Marsberg',
+    'Data': [21124, 19968, 15310]
+  }, {
+    'Name': 'Medebach',
+    'Data': [7560, 7938, 6498]
+  }, {
+    'Name': 'Meschede',
+    'Data': [31715, 30119, 23114]
+  }, {
+    'Name': 'Olsberg',
+    'Data': [15227, 14874, 11884]
+  }, {
+    'Name': 'Schmallenberg',
+    'Data': [25077, 25230, 22064]
+  }, {
+    'Name': 'Sundern (Sauerland)',
+    'Data': [27250, 28166, 25198]
+  }, {
+    'Name': 'Winterberg',
+    'Data': [14229, 12798, 10056]
+  }, {
+    'Name': 'Altena',
+    'Data': [24053, 17375, 12051]
+  }, {
+    'Name': 'Balve',
+    'Data': [11416, 11602, 9018]
+  }, {
+    'Name': 'Halver',
+    'Data': [16260, 16117, 12852]
+  }, {
+    'Name': 'Hemer',
+    'Data': [34412, 33535, 31437]
+  }, {
+    'Name': 'Herscheid',
+    'Data': [7141, 7217, 4940]
+  }, {
+    'Name': 'Iserlohn',
+    'Data': [96314, 93537, 77914]
+  }, {
+    'Name': 'Kierspe',
+    'Data': [16257, 16300, 13236]
+  }, {
+    'Name': 'Lüdenscheid',
+    'Data': [79401, 73354, 59797]
+  }, {
+    'Name': 'Meinerzhagen',
+    'Data': [19907, 20670, 16833]
+  }, {
+    'Name': 'Menden (Sauerland)',
+    'Data': [56527, 53485, 40392]
+  }, {
+    'Name': 'Nachrodt-Wiblingwerde',
+    'Data': [6469, 6644, 4823]
+  }, {
+    'Name': 'Neuenrade',
+    'Data': [11679, 12024, 10463]
+  }, {
+    'Name': 'Plettenberg',
+    'Data': [29083, 25781, 19696]
+  }, {
+    'Name': 'Schalksmühle',
+    'Data': [12232, 10528, 8343]
+  }, {
+    'Name': 'Werdohl',
+    'Data': [21875, 18002, 15384]
+  }, {
+    'Name': 'Attendorn',
+    'Data': [22736, 24676, 22540]
+  }, {
+    'Name': 'Drolshagen',
+    'Data': [11095, 11874, 10872]
+  }, {
+    'Name': 'Finnentrop',
+    'Data': [17253, 17258, 14182]
+  }, {
+    'Name': 'Kirchhundem',
+    'Data': [12202, 11854, 10140]
+  }, {
+    'Name': 'Lennestadt',
+    'Data': [26468, 26073, 21123]
+  }, {
+    'Name': 'Olpe',
+    'Data': [23785, 24757, 22898]
+  }, {
+    'Name': 'Wenden',
+    'Data': [16932, 19873, 18520]
+  }, {
+    'Name': 'Bad Berleburg',
+    'Data': [20471, 19774, 16094]
+  }, {
+    'Name': 'Burbach',
+    'Data': [14017, 14969, 13673]
+  }, {
+    'Name': 'Erndtebrück',
+    'Data': [8001, 7206, 6291]
+  }, {
+    'Name': 'Freudenberg',
+    'Data': [17079, 17929, 15671]
+  }, {
+    'Name': 'Hilchenbach',
+    'Data': [15905, 15169, 12035]
+  }, {
+    'Name': 'Kreuztal',
+    'Data': [30885, 31500, 30815]
+  }, {
+    'Name': 'Bad Laasphe',
+    'Data': [15139, 14276, 11267]
+  }, {
+    'Name': 'Netphen',
+    'Data': [23293, 23393, 20421]
+  }, {
+    'Name': 'Neunkirchen',
+    'Data': [14461, 13717, 11545]
+  }, {
+    'Name': 'Siegen',
+    'Data': [109174, 102355, 99478]
+  }, {
+    'Name': 'Wilnsdorf',
+    'Data': [20497, 20512, 17986]
+  }, {
+    'Name': 'Anröchte',
+    'Data': [9587, 10557, 9606]
+  }, {
+    'Name': 'Bad Sassendorf',
+    'Data': [10147, 11931, 10964]
+  }, {
+    'Name': 'Ense',
+    'Data': [10040, 12442, 12318]
+  }, {
+    'Name': 'Erwitte',
+    'Data': [13849, 16128, 13932]
+  }, {
+    'Name': 'Geseke',
+    'Data': [17733, 21070, 20174]
+  }, {
+    'Name': 'Lippetal',
+    'Data': [11155, 12027, 10852]
+  }, {
+    'Name': 'Lippstadt',
+    'Data': [62345, 67233, 65832]
+  }, {
+    'Name': 'Möhnesee',
+    'Data': [9104, 11608, 10624]
+  }, {
+    'Name': 'Rüthen',
+    'Data': [11253, 11095, 7685]
+  }, {
+    'Name': 'Soest',
+    'Data': [42602, 47974, 46741]
+  }, {
+    'Name': 'Warstein',
+    'Data': [28363, 25407, 19576]
+  }, {
+    'Name': 'Welver',
+    'Data': [10772, 12140, 11046]
+  }, {
+    'Name': 'Werl',
+    'Data': [28554, 30638, 27269]
+  }, {
+    'Name': 'Wickede (Ruhr)',
+    'Data': [11829, 12745, 10073]
+  }, {
+    'Name': 'Bergkamen',
+    'Data': [49761, 47803, 43443]
+  }, {
+    'Name': 'Bönen',
+    'Data': [18391, 18059, 15638]
+  }, {
+    'Name': 'Fröndenberg/Ruhr',
+    'Data': [21252, 20961, 18693]
+  }, {
+    'Name': 'Holzwickede',
+    'Data': [16402, 17085, 16619]
+  }, {
+    'Name': 'Kamen',
+    'Data': [46160, 43868, 38806]
+  }, {
+    'Name': 'Lünen',
+    'Data': [87845, 85867, 80395]
+  }, {
+    'Name': 'Schwerte',
+    'Data': [50696, 46723, 44237]
+  }, {
+    'Name': 'Selm',
+    'Data': [24891, 26603, 22996]
+  }, {
+    'Name': 'Unna',
+    'Data': [61552, 59111, 51571]
+  }, {
+    'Name': 'Werne',
+    'Data': [29484, 29955, 23906]
+  }
 
-]; 
+];
 
 
 
