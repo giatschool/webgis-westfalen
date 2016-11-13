@@ -1,11 +1,11 @@
 define([], function() {
 
   //the MapServer for the whole app:
-  var mapServer = 'http://giv-learn2.uni-muenster.de/ArcGIS/rest/services/LWL/lwl_service/MapServer';
+  var mapServer = 'https://giv-learn2.uni-muenster.de/ArcGIS/rest/services/LWL/lwl_service/MapServer';
 
   //the Server for the feature Layer:
   var featureLayerServer = 'https://services1.arcgis.com/W47q82gM5Y2xNen1/arcgis/rest/services/westfalen_kreise/FeatureServer';
-  var fLGemeinde = 'http://services1.arcgis.com/W47q82gM5Y2xNen1/ArcGIS/rest/services/westfalen_kommunen/FeatureServer';
+  var fLGemeinde = 'https://services1.arcgis.com/W47q82gM5Y2xNen1/ArcGIS/rest/services/westfalen_kommunen/FeatureServer';
 
   var map, initExtent, osmLayer, operationalLayer;
   var currentDataframe = datenEinwohnerEntwicklung;
