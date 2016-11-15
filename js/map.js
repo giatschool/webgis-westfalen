@@ -4,7 +4,7 @@ var diagramLayer = null; // the active clickable diagram layer
 var printCounter = 0; //counter for the printer widget
 
 var map, initExtent, osmLayer, featureLayerGemeinde, featureLayer, operationalLayer;
-var currentDataframe = datenEinwohnerEntwicklung;
+var currentDataframe = datenEinwohner;
 var autoClassesStartColor = 'FFF880';
 var autoClassesEndColor = 'EA3313';
 var autoClassesBreaks = 3;
@@ -409,7 +409,7 @@ require(['esri/map',
 
   //setup the timeslider:
   createTimeslider();
-  yearChange(0); //set the init-year to 2012
+  yearChange(0); //set the init-year to 2012  WARUM?!
 
   fullExtent();
 
@@ -511,21 +511,21 @@ function layerChange(layerNr,removeLayer) {
     labelVisibility = false;
     console.log('Labels ausblenden' + labelVisibility);
     updateLayerVisibility();
-  } else if (layerNr === 70 && (document.getElementById('gemeindeLayerChk').checked)) { //nochmal alle funktionen prüfen!!!
+  } else if (layerNr === 70 && (document.getElementById('kreisLayerChk').checked)) { //nochmal alle funktionen prüfen!!!
     map.addLayer(featureLayerGemeinde);
     map.removeLayer(featureLayer);
     labelVisibility = false;
     updateLayerVisibility();
-    /*console.log(map.getLayer('kreise'));
+    /*console.log(map.getLayer('kreise'));  
     console.log(map.getLayer('kommunen'));*/
     $('#demographischPane').hide();
     $('#soziographischPane').hide();
     closeArrow('arrowDemographisch');
     closeArrow('arrowSoziographisch');
-    layerChange(datenBevoelkerungsdichteKommunen,false);
-    document.getElementById('labelChk').checked = false;
+    layerChange(datenEinwohnerKommunen,false);
+    //$('labelChk').prop('checked', false);
     document.getElementById('kreisLayerChk').checked = false;
-  } else if (layerNr === 80 && (document.getElementById('kreisLayerChk').checked)) {
+  } else if (layerNr === 80 && (document.getElementById('gemeindeLayerChk').checked)) {
     map.removeLayer(featureLayerGemeinde);
     //testing for adding GemeindeLayer 13.06.16
     map.addLayer(featureLayer);
@@ -533,18 +533,19 @@ function layerChange(layerNr,removeLayer) {
     $('#soziographischPaneKommunen').hide();
     closeArrow('arrowDemographisch');
     closeArrow('arrowSoziographisch');
-    layerChange(datenEinwohnerEntwicklung,false);
-    document.getElementById('labelChk').checked = true;
+    layerChange(datenEinwohner,false);
+    $('labelChk').prop('checked', true);
+    //$('kreisLayerChk').prop('checked', true);
     document.getElementById('gemeindeLayerChk').checked = false;
     // hier nochmal nachschauen wenn label wieder fuktionieren
-    if (!(document.getElementById('labelChk').checked)) {
+    /*if (!(document.getElementById('labelChk').checked)) {
         labelVisibility = false;
         console.log('Labels ausblenden' + labelVisibility);
         updateLayerVisibility();
     } else {
         labelVisibility = true;
         updateLayerVisibility();
-    }
+    }*/
     //
   } else { 
    /* //remove diagramLayer

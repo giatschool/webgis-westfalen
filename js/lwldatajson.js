@@ -3517,6 +3517,8 @@ var datenPflegeheimPersonal = [
   }
 ];
 
+
+
 var datenPendlersaldo = [
   {
     'Name': 'Jahre',
@@ -3605,39 +3607,91 @@ var datenPendlersaldo = [
   }
 ];
 
-var datenBeschäftigte =[
-  {
-    'Name': 'Jahre',
-    'Data': ['Land- und Forstwirtschaft, Fischerei', 'Produzierendes Gewerbe', 'Handel, Gastgewerbe, Verkehr', 'Sonstige Dienstleistungen']
-  },
-  {'Name':'Bottrop','Data': [139, 10352, 6995, 14903]},
-{'Name':'Gelsenkirchen','Data': [47, 20692, 14318, 41089]},
-{'Name':'Münster','Data': [640, 20460, 28300, 103947]},
-{'Name':'Borken','Data': [1574, 55000, 28567, 45939]},
-{'Name':'Coesfeld','Data': [1250, 18941, 14880, 26700]},
-{'Name':'Recklinghausen','Data': [749, 38677, 34453, 81130]},
-{'Name':'Steinfurt','Data': [1340, 48496, 37114, 55692]},
-{'Name':'Warendorf','Data': [1058, 36163, 15799, 31973]},
-{'Name':'Bielefeld','Data': [233, 32006, 32678, 75924]},
-{'Name':'Gütersloh','Data': [945, 68706, 32877, 51190]},
-{'Name':'Herford','Data': [382, 37010, 20337, 30073]},
-{'Name':'Höxter','Data': [408, 15282, 8985, 17491]},
-{'Name':'Lippe','Data': [797, 39147, 20616, 45842]},
-{'Name':'Minden-Lübbecke','Data': [615, 41614, 24659, 52581]},
-{'Name':'Paderborn','Data': [787, 36275, 22184, 50426]},
-{'Name':'Bochum','Data': [37, 27910, 28804, 71407]},
-{'Name':'Dortmund','Data': [106, 40790, 50487, 121232]},
-{'Name':'Hagen','Data': [133, 19680, 16216, 31929]},
-{'Name':'Hamm','Data': [79, 13876, 14199, 25812]},
-{'Name':'Herne','Data': [25, 11178, 9602, 22601]},
-{'Name':'Ennepe-Ruhr-Kreis','Data': [246, 39740, 20370, 40395]},
-{'Name':'Hochsauerlandkreis','Data': [797, 40972, 17878, 37721]},
-{'Name':'Märkischer Kreis','Data': [378, 79604, 23616, 50387]},
-{'Name':'Olpe','Data': [273, 29856, 7282, 16387]},
-{'Name':'Siegen-Wittgenstein','Data': [301, 47193, 21402, 39753]},
-{'Name':'Soest','Data': [1580, 40776, 21314, 40874]},
-{'Name':'Unna','Data': [423, 33885, 34168, 47811]},
-];
+var datenBeschäftigte = [{
+  'Name': 'Jahre',
+  'Data': ['Land- und Forstwirtschaft, Fischerei', 'Produzierendes Gewerbe', 'Handel, Gastgewerbe, Verkehr', 'Sonstige Dienstleistungen']
+}, {
+  'Name': 'Bottrop',
+  'Data': [139, 10352, 6995, 14903]
+}, {
+  'Name': 'Gelsenkirchen',
+  'Data': [47, 20692, 14318, 41089]
+}, {
+  'Name': 'Münster',
+  'Data': [640, 20460, 28300, 103947]
+}, {
+  'Name': 'Borken',
+  'Data': [1574, 55000, 28567, 45939]
+}, {
+  'Name': 'Coesfeld',
+  'Data': [1250, 18941, 14880, 26700]
+}, {
+  'Name': 'Recklinghausen',
+  'Data': [749, 38677, 34453, 81130]
+}, {
+  'Name': 'Steinfurt',
+  'Data': [1340, 48496, 37114, 55692]
+}, {
+  'Name': 'Warendorf',
+  'Data': [1058, 36163, 15799, 31973]
+}, {
+  'Name': 'Bielefeld',
+  'Data': [233, 32006, 32678, 75924]
+}, {
+  'Name': 'Gütersloh',
+  'Data': [945, 68706, 32877, 51190]
+}, {
+  'Name': 'Herford',
+  'Data': [382, 37010, 20337, 30073]
+}, {
+  'Name': 'Höxter',
+  'Data': [408, 15282, 8985, 17491]
+}, {
+  'Name': 'Lippe',
+  'Data': [797, 39147, 20616, 45842]
+}, {
+  'Name': 'Minden-Lübbecke',
+  'Data': [615, 41614, 24659, 52581]
+}, {
+  'Name': 'Paderborn',
+  'Data': [787, 36275, 22184, 50426]
+}, {
+  'Name': 'Bochum',
+  'Data': [37, 27910, 28804, 71407]
+}, {
+  'Name': 'Dortmund',
+  'Data': [106, 40790, 50487, 121232]
+}, {
+  'Name': 'Hagen',
+  'Data': [133, 19680, 16216, 31929]
+}, {
+  'Name': 'Hamm',
+  'Data': [79, 13876, 14199, 25812]
+}, {
+  'Name': 'Herne',
+  'Data': [25, 11178, 9602, 22601]
+}, {
+  'Name': 'Ennepe-Ruhr-Kreis',
+  'Data': [246, 39740, 20370, 40395]
+}, {
+  'Name': 'Hochsauerlandkreis',
+  'Data': [797, 40972, 17878, 37721]
+}, {
+  'Name': 'Märkischer Kreis',
+  'Data': [378, 79604, 23616, 50387]
+}, {
+  'Name': 'Olpe',
+  'Data': [273, 29856, 7282, 16387]
+}, {
+  'Name': 'Siegen-Wittgenstein',
+  'Data': [301, 47193, 21402, 39753]
+}, {
+  'Name': 'Soest',
+  'Data': [1580, 40776, 21314, 40874]
+}, {
+  'Name': 'Unna',
+  'Data': [423, 33885, 34168, 47811]
+}, ];
 
 var datenEinwohnerKommunen = [
   {

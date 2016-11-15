@@ -108,14 +108,14 @@ function switchLayerPane(toClassPane){
 	}
 	else if (toClassPane === 'demographisch' && map.getLayer('kreise')){
 		$('#demographischPane').slideDown('slow');
-		$('#einwohner_entwicklungCheck').prop('checked', true);
+		$('#einwohner_AbsolutCheck').prop('checked', true);
 		$('#soziographischPane').slideUp('slow');
 		openArrow('arrowDemographisch');
 		closeArrow('arrowSoziographisch');
 	}
 	else if (toClassPane === 'demographisch' && map.getLayer('kommunen')) {
 		$('#demographischPaneKommunen').slideDown('slow');
-		$('#bevoelkerungsdichteKommunenCheck').prop('checked', true);
+		$('#einwohner_AbsolutCheckK').prop('checked', true);
 		$('#soziographischPane').slideUp('slow');
 		openArrow('arrowDemographisch');
 		closeArrow('arrowSoziographisch');
