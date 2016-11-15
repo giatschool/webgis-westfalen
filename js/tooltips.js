@@ -154,28 +154,28 @@ function addTooltips() {
     //Geburtenrate Layer
     new Tooltip({
       connectId: ['geburtenrateInfo'],
-      label: 'Geburtenrate der Jahre 2007 - 2011 und 2010 - 2013<br>im Durchschnitt<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Geburtenrate der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
     //Sterberate Layer
     new Tooltip({
       connectId: ['sterberateInfo'],
-      label: 'Sterberate der Jahre 2007 - 2011 und 2010 - 2013<br>im Durchschnitt<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Sterberate der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
     //Migrationen Layer
     new Tooltip({
       connectId: ['migrationen_gesamtInfo'],
-      label: 'Zu-/Fortzüge der gesamten<br>Bevölkerung der Jahre 2007 - 2011 und 2010 - 2013<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Zu-/Fortzüge der gesamten<br>Bevölkerung der der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
     //Migrationen Nichtdeutsch Layer
     new Tooltip({
       connectId: ['migrationen_nichtdeutschInfo'],
-      label: 'Zu-/Fortzüge von Nichtdeutschen<br>der Jahre 2007 - 2011 und 2010 - 2013<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Zu-/Fortzüge von Nichtdeutschen<br>der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
@@ -210,21 +210,21 @@ function addTooltips() {
     //Haushaltsgroessen Layer
     new Tooltip({
       connectId: ['haushaltsgroessenInfo'],
-      label: 'Durchschnittliche Haushaltsgrößen<br>der Privathaushalte der Jahre 2007 - 2013',
+      label: 'Durchschnittliche Haushaltsgrößen der Privathaushalte',
       showDelay: 0
     });
 
     //Single-Haushalte Layer
     new Tooltip({
       connectId: ['single_haushalteInfo'],
-      label: 'Single-Haushalte im Jahr<br>2007, 2009, 2011 und 2013 (=Ein-Personen-Haushalte)<br><b>Einheit: </b>Anteile an allen<br>Privathaushalten in &#037;',
+      label: 'Anteil der Single-Haushalte (= Ein-Personen-Haushalte) an allen Privathaushalten in &#037;',
       showDelay: 0
     });
 
     //Nichtdeutsche Layer
     new Tooltip({
       connectId: ['nichtdeutscheInfo'],
-      label: 'Nichtdeutsche im Jahr 2007, 2009, 2011 und 2013<br><b>Einheit: </b>Anteile an der<br>Gesamtbevölkerung in &#037;',
+      label: 'Nichtdeutsche: Anteil an der Gesamtbevölkerung in &#037;',
       showDelay: 0
     });
 
@@ -308,7 +308,7 @@ function addTooltips() {
     //Konfessionen Layer
     new Tooltip({
       connectId: ['konfessionenInfo'],
-      label: 'Konfessionen im Durchschnitt<br>der Jahre 2008 - 2010<br><b>Einheit: </b>Anteile in &#037;',
+      label: 'Konfessionszugehörigkeit: Anteile an der Gesamtbevölkerung im Jahr 2011 in &#037;',
       showDelay: 0
     });
 
