@@ -65,8 +65,4 @@ function createTimeslider(){
 	});
 	document.getElementById('timesliderValue').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[getYearsArray(currentDataframe).length-1];
 	document.getElementById('legendTheme').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[getYearsArray(currentDataframe).length-1];
-	console.log(layerAttributes[1])
-	console.log(getYearsArray(currentDataframe).length-1)
-	console.log(getYearsArray(currentDataframe)[2])
-	console.log(getYearsArray(currentDataframe)[getYearsArray(currentDataframe).length-1])
 }

@@ -15,10 +15,6 @@ LWL-GIS
 - drag&drop future feature
 - bevölkerungsdichte nochmal schauen und header timeslider ist noch stand early statt stand 3
 
-- timeslider rechts starten - DONE (somethings bugged)
 - Kreise Bevölkerungsdichte 2012 auskommentieren - DONE
 - Altersgruppen diagramme 2011 in 2015 ändern - DONE
-- nochmal alle tooltips überarbeiten
-- Layer Gemeidneansicht auch mit einwohner entwicklung starten lassen anpassen an die csv reihenfolge
-- reihenfolge der themen vereinheitlichen inklusive legenden
-- Erwerbstätige hat noch keinen tooltip
+

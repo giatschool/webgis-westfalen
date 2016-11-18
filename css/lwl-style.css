@@ -307,3 +307,11 @@ font-weight:bold;
 .esriPopup .pointer.top {
     background: #00559D;
 }
+
+a {
+    color: black;
+    font-size:15px;
+}
+
+a:visited {color:#00559D;}
+a:hover {color:black}
