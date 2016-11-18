@@ -583,7 +583,7 @@ function layerChange(layerNr,removeLayer) {
 */
     currentDataframe = layerNr; //new
     getLayerAttributes(); //new
-    var colorArray = pretty(0, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor); //new
+    var colorArray = pretty(getYearsArray(currentDataframe).length-1, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor); //new
     colorizeLayer(colorArray); //new
     //currentYear = years[currentLayer][initYearValues[currentLayer]];
     //activeClassification = 0;

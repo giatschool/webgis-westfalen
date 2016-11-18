@@ -20,8 +20,8 @@ function updateTimeslider(){
 		});
 		var appendix = '';
 		if (layerAttributes[1].indexOf('Altersgruppe') !== -1) {appendix = ' J.';}
-		document.getElementById('legendTheme').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[0] + appendix;
-		document.getElementById('timesliderValue').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[0] + appendix;
+		document.getElementById('legendTheme').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[getYearsArray(currentDataframe).length-1] + appendix;
+		document.getElementById('timesliderValue').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[getYearsArray(currentDataframe).length-1] + appendix;
 		document.getElementById('timesliderMinLabel').innerHTML = getYearsArray(currentDataframe)[0];
 		document.getElementById('timesliderMaxLabel').innerHTML = getYearsArray(currentDataframe)[getYearsArray(currentDataframe).length-1];
 	}
@@ -32,8 +32,8 @@ function updateTimeslider(){
 			document.getElementById('legendTheme').innerHTML = layerAttributes[1];
 		}
 		else {
-			document.getElementById('timesliderValue').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[0];
-			document.getElementById('legendTheme').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[0];
+			document.getElementById('timesliderValue').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[getYearsArray(currentDataframe).length-1];
+			document.getElementById('legendTheme').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[getYearsArray(currentDataframe).length-1];
 		}
 	}
 	else {
@@ -63,6 +63,10 @@ function createTimeslider(){
 		updateTimeslider();
 		timeslider.set({value:getYearsArray(currentDataframe).length-1});
 	});
-	document.getElementById('timesliderValue').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[0];
-	document.getElementById('legendTheme').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[0];
+	document.getElementById('timesliderValue').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[getYearsArray(currentDataframe).length-1];
+	document.getElementById('legendTheme').innerHTML = layerAttributes[1] + ': ' + getYearsArray(currentDataframe)[getYearsArray(currentDataframe).length-1];
+	console.log(layerAttributes[1])
+	console.log(getYearsArray(currentDataframe).length-1)
+	console.log(getYearsArray(currentDataframe)[2])
+	console.log(getYearsArray(currentDataframe)[getYearsArray(currentDataframe).length-1])
 }
