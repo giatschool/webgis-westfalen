@@ -5,11 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
     <link rel="SHORTCUT ICON" href="images/favicon.ico">
-    <link rel="stylesheet" href="https://js.arcgis.com/3.15/dojo/resources/dojo.css">
-    <link rel="stylesheet" href="https://js.arcgis.com/3.15/dgrid/css/dgrid.css">
-    <link rel="stylesheet" href="https://js.arcgis.com/3.15/dgrid/css/skins/tundra.css">
-    <link rel="stylesheet" href="https://js.arcgis.com/3.15/dijit/themes/tundra/tundra.css">
-    <link rel="stylesheet" href="https://js.arcgis.com/3.15/esri/css/esri.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.18/dojo/resources/dojo.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.18/dgrid/css/dgrid.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.18/dgrid/css/skins/tundra.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.18/dijit/themes/tundra/tundra.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/css/esri.css">
     <link rel="stylesheet" href="css/lwl-style.css">
     <link rel="stylesheet" href="css/menuPane.css">
     <!--dojo config settings-->
@@ -26,7 +26,7 @@
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     <!-- ArcGIS Server Script -->
-    <script type="text/javascript" src="https://js.arcgis.com/3.15/"></script>
+    <script type="text/javascript" src="https://js.arcgis.com/3.18/"></script>
     <!-- Menu behaviour (icons, sliding etc.) -->
     <script type="text/javascript" src="js/compareWindows.js"></script>
     <script type="text/javascript" src="js/lwldatajson.js"></script>
@@ -124,21 +124,14 @@
         </div>
         <form style="padding: 0.5em">
             <div align="left" style="font-size:1em">
-            
-            <!-- <radiogroup>
+            <br>
+            <radiogroup>
                 <input type="radio" id="gemeindeLayerChk" name="Layer" value="Gemeinde" onclick="layerChange(70)">
                         <label for="gemeindeLayerChk">Gemeindeansicht</label>
                 <br>
                 <input type="radio" id="kreisLayerChk" name="Layer" value="Kreise" onclick="layerChange(80)" checked="checked">
                         <label for="kreisLayerChk">Kreisansicht</label> 
-            </radiogroup> -->
-                <br>
-                    <input type="checkbox" id="gemeindeLayerChk" name="Layer" value="Gemeinde" onchange="layerChange(70)" autocomplete="off">
-                        <label for="gemeindeLayerChk">Gemeindeansicht</label>
-            </div>
-            <div align="left" style="font-size:1em">
-                    <input type="checkbox" id="kreisLayerChk" name="Layer" value="Kreise" onchange="layerChange(80)" autocomplete="off" checked="checked">
-                        <label for="kreisLayerChk">Kreisansicht</label>
+            </radiogroup>
             </div>
         </form>
         <div class="menuPaneContent">

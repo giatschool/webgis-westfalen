@@ -439,7 +439,7 @@ function layerChange(layerNr,removeLayer) {
 
 
   //enable / disable gridview button
-  require(['dojo/query', 'dojo/dom-class'], function(query, domClass){
+  /*require(['dojo/query', 'dojo/dom-class'], function(query, domClass){
     query('input[type="radio"]').forEach(function(node,index,arr){
       gridview = query('a.gridview',node.parentElement);
       if (node.checked) {
@@ -448,7 +448,7 @@ function layerChange(layerNr,removeLayer) {
         domClass.add(gridview[0],'disabled');
       }
     });
-  });
+  });*/
 
   //disconnect and connect click handlers for diagrams based on checkboxes
   if (layerNr === fIDaltersgruppenDiagramme2011 && !(document.getElementById('altersgruppenDiagramme2011Check').checked)) {
@@ -511,13 +511,11 @@ function layerChange(layerNr,removeLayer) {
     labelVisibility = false;
     console.log('Labels ausblenden' + labelVisibility);
     updateLayerVisibility();
-  } else if (layerNr === 70 && (document.getElementById('kreisLayerChk').checked)) { //nochmal alle funktionen prüfen!!!
+  } else if (layerNr === 70 ) { //nochmal alle funktionen prüfen!!!
     map.addLayer(featureLayerGemeinde);
     map.removeLayer(featureLayer);
     labelVisibility = false;
     updateLayerVisibility();
-    /*console.log(map.getLayer('kreise'));  
-    console.log(map.getLayer('kommunen'));*/
     $('#demographischPane').hide();
     $('#soziographischPane').hide();
     closeArrow('arrowDemographisch');
@@ -525,7 +523,7 @@ function layerChange(layerNr,removeLayer) {
     layerChange(datenEinwohnerKommunen,false);
     //$('labelChk').prop('checked', false);
     document.getElementById('kreisLayerChk').checked = false;
-  } else if (layerNr === 80 && (document.getElementById('gemeindeLayerChk').checked)) {
+  } else if (layerNr === 80 ) {
     map.removeLayer(featureLayerGemeinde);
     //testing for adding GemeindeLayer 13.06.16
     map.addLayer(featureLayer);
@@ -535,8 +533,6 @@ function layerChange(layerNr,removeLayer) {
     closeArrow('arrowSoziographisch');
     layerChange(datenEinwohner,false);
     $('labelChk').prop('checked', true);
-    //$('kreisLayerChk').prop('checked', true);
-    document.getElementById('gemeindeLayerChk').checked = false;
     // hier nochmal nachschauen wenn label wieder fuktionieren
     /*if (!(document.getElementById('labelChk').checked)) {
         labelVisibility = false;
