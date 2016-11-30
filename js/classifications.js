@@ -477,6 +477,7 @@ function createColorArrayByLegendArray(legendArray){
             }
             else {
                 if (classificationArray[i][1] >= legendArray[j][1] && classificationArray[i][1] <= legendArray[j][2] && found !== true){
+                    console.log(legendArray);
                     console.log(legendArray[j][1] + ' / ' + classificationArray[i][1] + ' / ' + legendArray[j][2]);
                     classificationArray[i][1] = [dojo.colorFromHex('#' + legendArray[j][0]).r, dojo.colorFromHex('#' + legendArray[j][0]).g, dojo.colorFromHex('#' + legendArray[j][0]).b, dojo.colorFromHex('#' + legendArray[j][0]).a];
                     found = true;

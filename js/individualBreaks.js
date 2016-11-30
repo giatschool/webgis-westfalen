@@ -34,8 +34,13 @@ function addIndivBreakField() {
     var breakColor = document.createElement('td');
     var idField = 'cp' + breakCount;
     var valueField = 'myValue' + breakCount;
-    breakColor.innerHTML = '<input class="color {valueElement:' + valueField + '}" id="' + idField + '" style="width:37px;" value="Farbe">';
-    breakEntry.appendChild(breakColor);
+    var input = document.createElement('INPUT');
+    input.setAttribute('style', 'width: 37px;');
+    var picker = new jscolor(input, {
+            valueElement:valueField,
+            value: 'fff880'
+        });
+    breakEntry.appendChild(input);
 
     var breakColorUnvis = document.createElement('td');
     breakColorUnvis.innerHTML = '<input id="' + valueField + '" style="width:0px; visibility:hidden;">';
@@ -50,7 +55,9 @@ function addIndivBreakField() {
 
     breaksList.appendChild(breakEntry);
 
-    jscolor.init();
+    //jscolor.init();
+    //jsc.init();
+
 }
 
 function remIndivBreakField(count) {

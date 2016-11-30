@@ -143,7 +143,7 @@
                     <div id="demographischPaneKommunen" class="menuPaneContent">
                         <div>
                             <input type="radio" id="einwohner_AbsolutCheckK" name="Layer" checked=true value="Einwohner-Entwicklung" onchange="layerChange(datenEinwohnerKommunen)">
-                            <label for="einwohnerInfo">Einwohner-Entwicklung Absolut </label>
+                            <label for="einwohnerInfo">Einwohner-Entwicklung (absolut) </label>
                             <a id="einwohnerInfo" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
@@ -202,9 +202,9 @@
                             </a>
                         </div>
                         <div>
-                            <input type="radio" id="MigrationenNichtdeutscheKommunenCheck" name="Layer" value="Migrationen Nichtdeutsch" onchange="layerChange(datenMigrationenNichtdeutscheKommunen)">
-                            <label for="MigrationenNichtdeutscheKommunenCheck">Zu-/Fortzüge Nichtdeutsche </label>
-                            <a id="migrationen_nichtdeutschInfoKommunal" class="help">
+                            <input type="radio" id="MigrationenGesamtKommunenCheck" name="Layer" value="Migrationen Gesamt" onchange="layerChange(datenMigrationenGesamtKommunen)">
+                            <label for="MigrationenGesamtKommunenCheck">Zu-/Fortzüge (gesamt) </label>
+                            <a id="migrationen_gesamtInfoKommunal" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
                             <a class="gridview disabled">
@@ -212,9 +212,9 @@
                             </a>
                         </div>
                         <div>
-                            <input type="radio" id="MigrationenGesamtKommunenCheck" name="Layer" value="Migrationen Gesamt" onchange="layerChange(datenMigrationenGesamtKommunen)">
-                            <label for="MigrationenGesamtKommunenCheck">Zu-/Fortzüge Gesamt </label>
-                            <a id="migrationen_gesamtInfoKommunal" class="help">
+                            <input type="radio" id="MigrationenNichtdeutscheKommunenCheck" name="Layer" value="Migrationen Nichtdeutsch" onchange="layerChange(datenMigrationenNichtdeutscheKommunen)">
+                            <label for="MigrationenNichtdeutscheKommunenCheck">Zu-/Fortzüge (Nichtdeutsche) </label>
+                            <a id="migrationen_nichtdeutschInfoKommunal" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
                             <a class="gridview disabled">
@@ -236,7 +236,7 @@
                     <div id="demographischPane" class="menuPaneContent">
                         <div>
                             <input type="radio" id="einwohner_AbsolutCheck" name="Layer" checked=true value="Einwohner-Entwicklung" onchange="layerChange(datenEinwohner)">
-                            <label for="einwohnerInfo">Einwohner-Entwicklung Absolut </label>
+                            <label for="einwohnerInfo">Einwohner-Entwicklung (absolut) </label>
                             <a id="einwohnerInfoAbsolut" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
@@ -254,7 +254,7 @@
                                 <img src="images/grid_sm.png">
                             </a>
                         </div>
-                        <!-- <div>
+                        <div>
                             <input type="radio" id="bevoelkerungsdichteCheck" name="Layer" value="Bev&ouml;lkerungsdichte" onchange="layerChange(datenBevoelkerungsdichte)">
                             <label for="bevoelkerungsdichteCheck">Bev&ouml;lkerungsdichte </label>
                             <a id="bevoelkerungsdichteInfo" class="help">
@@ -263,7 +263,7 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
-                        </div> -->
+                        </div>
                         <div>
                             <input type="radio" id="altersgruppenCheck" name="Layer" value="Altersgruppen" onchange="layerChange(datenAltersgruppen)">
                             <label for="altersgruppenCheck">Altersgruppen </label>
@@ -302,7 +302,7 @@
                         </div>
                         <div>
                             <input type="radio" id="migrationen_gesamtCheck" name="Layer" value="Migrationen Gesamt" onchange="layerChange(datenMigrationenGesamt)">
-                            <label for="migrationen_gesamtCheck">Zu-/Fortzüge gesamt </label>
+                            <label for="migrationen_gesamtCheck">Zu-/Fortzüge (gesamt) </label>
                             <a id="migrationen_gesamtInfo" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
@@ -312,7 +312,7 @@
                         </div>
                         <div>
                             <input type="radio" id="migrationen_nichtdeutschCheck" name="Layer" value="Migrationen Nichtdeutsch" onchange="layerChange(datenMigrationenNichtdeutsche)">
-                            <label for="migrationen_nichtdeutschCheck">Zu-/Fortzüge Nichtdeutsche </label>
+                            <label for="migrationen_nichtdeutschCheck">Zu-/Fortzüge (Nichtdeutsche) </label>
                             <a id="migrationen_nichtdeutschInfo" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
@@ -439,9 +439,9 @@
                             </a>
                         </div>
                         <div>
-                            <input type="radio" id="nichtdeutscheCheck" name="Layer" value="Nichtdeutsche" onchange="layerChange(datenNichtdeutsche)">
-                            <label for="nichtdeutscheCheck">Nichtdeutsche </label>
-                            <a id="nichtdeutscheInfo" class="help">
+                            <input type="radio" id="NichtdeutscheCheck" name="Layer" value="Nichtdeutsche" onchange="layerChange(datenNichtdeutsche)">
+                            <label for="NichtdeutscheCheck">Nichtdeutsche </label>
+                            <a id="NichtdeutscheInfo" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
                             <a class="gridview disabled">
@@ -451,7 +451,7 @@
                         <div>
                             <input type="radio" id="konfessionenCheck" name="Layer" value="Konfessionen" onchange="layerChange(datenKonfessionen)">
                             <label for="konfessionenCheck">Konfessionen </label>
-                            <a id="konfessionenInfo" class="help">
+                            <a id="konfessionenGInfo" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
                             <a class="gridview disabled">
@@ -516,7 +516,7 @@
                         </div>
                          <div>
                             <input type="radio" id="arbeitslosenquoteNDCheck" name="Layer" value="Arbeitslosenquote Nichtdeutsche" onchange="layerChange(datenArbeitslosenquoteND)">
-                            <label for="arbeitslosenquoteNDCheck">Arbeitslose Nichtdeutsche</label>
+                            <label for="arbeitslosenquoteNDCheck">Arbeitslosenquote Nichtdeutsche</label>
                             <a id="arbeitslosenquoteNDInfo" class="help">
                                 <img src="images/Help_sm.png" class="help">
                             </a>
@@ -526,7 +526,7 @@
                         </div>
                         <div>
                             <input type="radio" id="beschäftigteCheck" name="Layer" value="Beschäftigte" onchange="layerChange(datenBeschäftigte)">
-                            <label for="beschäftigteCheck">Beschäftigte 2014</label>
+                            <label for="beschäftigteCheck">Beschäftigte</label>
                             <a id="beschäftigteKreisInfo" class="help">
                                 <img src="images/Help_sm.png" class="help">
                             </a>

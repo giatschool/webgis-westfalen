@@ -17,4 +17,6 @@ LWL-GIS
 
 - Kreise Bevölkerungsdichte 2012 auskommentieren - DONE
 - Altersgruppen diagramme 2011 in 2015 ändern - DONE
+- Auswahl anschauen / erstmal non-checked alle.
+- legendenfarbe auch transparent, am besten koppeln mit gesamt transparenz
 

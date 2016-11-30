@@ -133,7 +133,7 @@ function addTooltips() {
     //Bevoelkerungsdichte Layer
     new Tooltip({
       connectId: ['bevoelkerungsdichteInfo'],
-      label: 'Bevölkerungsdichte in den Jahren 2012 und 2013<br><b>Einheit: </b>Einwohner pro km&sup2;',
+      label: 'Bevölkerungsdichte in den Jahren 2012, 2013 und 2015<br><b>Einheit: </b>Einwohner pro km&sup2;',
       showDelay: 0
     });
 
@@ -168,14 +168,14 @@ function addTooltips() {
     //Migrationen Layer
     new Tooltip({
       connectId: ['migrationen_gesamtInfo'],
-      label: 'Zu-/Fortzüge der gesamten<br>Bevölkerung der der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Zu-/Fortzüge der gesamten Bevölkerung der der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
     //Migrationen Nichtdeutsch Layer
     new Tooltip({
       connectId: ['migrationen_nichtdeutschInfo'],
-      label: 'Zu-/Fortzüge von Nichtdeutschen<br>der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Zu-/Fortzüge von Nichtdeutschen der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
@@ -189,14 +189,14 @@ function addTooltips() {
     //PflegeheimPersonal
     new Tooltip({
       connectId: ['pflegeheimPersonalInfo'],
-      label: 'Personal in Pflegeheimen: Veränderung im Zeitraum  in <br>2007 – 2013<br><b>Einheit: </b>&#037;',
+      label: 'Personal in Pflegeheimen: Veränderung im Zeitraum 2007 – 2013 in &#037;',
       showDelay: 0
     });
 
     //Pflegebedürftige in Pflegeheimen 2007 – 2013 Layer
     new Tooltip({
       connectId: ['pflegebeduerftigePflegeheimInfo'],
-      label: 'Pflegebedürftige in Pflegeheimen: Veränderung im Zeitraum 2007 - 2013 in </b>&#037;',
+      label: 'Pflegebedürftige in Pflegeheimen: Veränderung im Zeitraum 2007 - 2013 in &#037;',
       showDelay: 0
     });
 
@@ -223,7 +223,7 @@ function addTooltips() {
 
     //Nichtdeutsche Layer
     new Tooltip({
-      connectId: ['nichtdeutscheInfo'],
+      connectId: ['NichtdeutscheInfo'],
       label: 'Nichtdeutsche: Anteil an der Gesamtbevölkerung in &#037;',
       showDelay: 0
     });
@@ -279,7 +279,7 @@ function addTooltips() {
 
     //Erwerbstätigen Layer
     new Tooltip({
-      connectId: ['erwerbstätigenInfo'],
+      connectId: ['erwerbstätigeInfo'],
       label: 'Anteil der Erwerbstätigen an der Gesamtbevölkerung in &#037;',
       showDelay: 0
     });
@@ -307,7 +307,7 @@ function addTooltips() {
 
     //Konfessionen Layer
     new Tooltip({
-      connectId: ['konfessionenInfo'],
+      connectId: ['konfessionenGInfo'],
       label: 'Konfessionszugehörigkeit: Anteile an der Gesamtbevölkerung im Jahr 2011 in &#037;',
       showDelay: 0
     });
@@ -358,21 +358,21 @@ function addTooltips() {
     //Bevoelkerungsdichte Layer
     new Tooltip({
       connectId: ['bevoelkerungsdichteInfoKommunal'],
-      label: 'Bevölkerungsdichte im Jahr 2012<br><b>Einheit: </b>Einwohner pro km&sup2;',
+      label: 'Bevölkerungsdichte im Jahr 2015<br><b>Einheit: </b>Einwohner pro km&sup2;',
       showDelay: 0
     });
 
     //Migrationen Nichtdeutsch Layer
     new Tooltip({
-      connectId: ['NichtdeutscheKommunenInfo'],
-      label: 'Zu-/Fortzüge von Nichtdeutschen<br>der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>&#37;',
+      connectId: ['migrationen_nichtdeutschInfoKommunal'],
+      label: 'Zu-/Fortzüge von Nichtdeutschen<br>der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
     //Migrationen Gesamt Layer
     new Tooltip({
       connectId: ['migrationen_gesamtInfoKommunal'],
-      label: 'Zu-/Fortzüge <br>der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>&#37;',
+      label: 'Zu-/Fortzüge der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
@@ -386,7 +386,7 @@ function addTooltips() {
     //Geburtenrate Layer
     new Tooltip({
       connectId: ['geburtenrateInfoKommunal'],
-      label: 'Geburtenrate der Jahre 2007, 2009, 2011, 2013 und 2015<br>im Durchschnitt<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Geburtenrate der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
@@ -400,7 +400,7 @@ function addTooltips() {
     //Einkommen Layer
     new Tooltip({
       connectId: ['EinkommenKommunenCheckInfo'],
-      label: 'Verfügbares Einkommen der privaten Haushalte<br><b>Einheit: </b> &euro; je Einwohner',
+      label: 'Verfügbares Einkommen der privaten Haushalte<br><b>Einheit: </b> Euro je Einwohner',
       showDelay: 0
     });
 

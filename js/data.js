@@ -9,13 +9,13 @@ var attributeFields = [ 'Kreisname',
                         'geburtenrate_.geburtenrate',
                         'sterberate_.sterberate',
                         'migration_gesamt_.migrationengesamt',
-                        'migration_nichtdeutsch_.migrationennichtdeutsche',
+                        'migration_nichtdeutsch_.migrationenNichtdeutsche',
                         '',
                         'pflegebeduerftige_.pflegebeduerftige',
                         'pflegeeinrichtungen_.pflegeeinrichtungen',
                         'haush',
                         'single_haushalte_.single_Haushalte',
-                        'nichtdeutsche_.nichtdeutsche',
+                        'Nichtdeutsche_.Nichtdeutsche',
                         'migranten_.migranten',
                         'einkommen_.einkommen',
                         'konfessionen_.',
@@ -720,11 +720,11 @@ var defaultClassificationKommunen = [  ///testing for "KommunenLayer" //// Allge
 
 var allLayerAttributes = [
 	//[dataset, 'Title (String)', 'Value (String)', 'Legend-description']
-	[datenEinwohner, 'Einwohner-Entwicklung Absolut', '', ''],
+	[datenEinwohner, 'Einwohner-Entwicklung (absolut)', '', ''],
 	[datenEinwohnerEntwicklung, 'Einwohner-Entwicklung', '&#037;', ''],
 	[datenBevoelkerungsdichte, 'Bevölkerungsdichte', '', 'Einheit: Einwohner pro km&sup2;'],
 	[datenAltersgruppen, 'Altersgruppen 2015', '&#037;', ''],
-	[datenGeburtenrate, 'Geburtenrate', '&permil;', 'je 1.000 Einwohner (&permil;)'],
+	[datenGeburtenrate, 'Geburtenrate', '&permil;', 'Einheit: je 1.000 Einwohner (&permil;)'],
 	[datenSterberate, 'Sterberate', '&permil;', 'je 1.000 Einwohner (&permil;)'],
 	[datenMigrationenGesamt, 'Zu-/Fortzüge (gesamt)', '&permil;', 'je 1.000 Einwohner (&permil;)'],
 	[datenMigrationenNichtdeutsche, 'Zu-/Fortzüge (Nichtdeutsche)', '&permil;', 'je 1.000 Einwohner (&permil;)'],
@@ -735,28 +735,28 @@ var allLayerAttributes = [
 	[datenSingleHaushalte, 'Single-Haushalte', '&#037;', ''],
 	[datenNichtdeutsche, 'Nichtdeutsche', '&#037;', ''],
 	[datenMigranten, 'Menschen mit Migrationshintergrund', '&#037;', ''],
-	[datenEinkommen, 'Einkommen', '&euro;', 'Einheit: &euro; je Einwohner'],
+	[datenEinkommen, 'Einkommen', '&euro;', 'Einheit: Euro je Einwohner'],
 	[datenAbschlüsse, 'Abschlüsse 2013', '&#037;', ''],
 	[datenArbeitslosenquote, 'Arbeitslosenquote', '&#037;', ''],
 	[datenArbeitslosenquote25, 'Arbeitslosenquote unter 25 Jahre', '&#037;', ''],
 	[datenArbeitslosenquote55, 'Arbeitslosenquote über 55 Jahre', '&#037;', ''],
 	[datenArbeitslosenquoteND, 'Arbeitslosenquote Nichtdeutsche', '&#037;', ''],
-	[datenErwerbstätige, 'Erwerbstätigen', '&#037;', ''],
+	[datenErwerbstätige, 'Erwerbstätige', '&#037;', ''],
 	[datenBeschäftigte, 'Beschäftigte 2014', '', ''],
 	[datenBIP, 'Bruttoinlandsprodukt (BIP)', '&euro;', ''],
 	[datenPendlersaldo, 'Pendlersaldo', '', ''],
 	[datenKonfessionen, 'Konfessionen 2011', '&#037;', ''],
-	[datenPflegeheimPersonal, 'Personal in Pflegeheimen 2007 - 2013', '&#037;', ''],
+	[datenPflegeheimPersonal, 'Personal in Pflegeheimen: 2007 - 2013', '&#037;', ''],
 	[datenEinwohnerKommunen, 'Einwohner-Entwicklung Absolut', '', ''], //testing new "GemeindeLayer"
 	[datenEinwohnerEntwicklungKommunen, 'Einwohner-Entwicklung', '&#037;', ''],
 	[datenBevoelkerungsdichteKommunen, 'Bevölkerungsdichte', '', 'Einheit: Einwohner pro km&sup2;'],  //testing new "GemeindeLayer"
 	[datenAltersgruppenKommunen, 'Altersgruppen 2015', '&#037;', ''], //testing new "GemeindeLayer"
 	[datenSterberateKommunen, 'Sterberate', '&permil;', ''], //testing new "GemeindeLayer"
-	[datenGeburtenrateKommunen, 'Geburtenrate', '&permil;', 'je 1.000 Einwohner (&permil;)'],
+	[datenGeburtenrateKommunen, 'Geburtenrate', '&permil;', 'Einheit: je 1.000 Einwohner (&permil;)'],
 	[datenMigrationenNichtdeutscheKommunen, 'Zu-/Fortzüge (Nichtdeutsche)', '&permil;', ''], //testing new "GemeindeLayer" 
-	[datenMigrationenGesamtKommunen, 'Zu-/Fortzüge', '&permil;', ''],
+	[datenMigrationenGesamtKommunen, 'Zu-/Fortzüge (gesamt)', '&permil;', ''],
 	[datenNichtdeutscheKommunen, 'Nichtdeutsche', '&#037;', ''], //testing new "GemeindeLayer"
-	[datenEinkommenKommunen, 'Einkommen', '&euro;', 'Einheit: &euro; je Einwohner'], //testing new "GemeindeLayer"
+	[datenEinkommenKommunen, 'Einkommen', '&euro;', 'Einheit: Euro je Einwohner'], //testing new "GemeindeLayer"
 	[datenKonfessionenKommunen, 'Konfessionen 2011', '&#037;', ''], //testing new "GemeindeLayer"
 	[datenBeschäftigteKommunen, 'Beschäftigte 2014', '', ''],
 	[datenPendlersaldoKommunen, 'Pendlersaldo', '', ''],

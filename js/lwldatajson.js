@@ -2789,7 +2789,7 @@ var datenKonfessionen = [
 var datenAbschlüsse = [
   {
   'Name': 'Jahre',
-  'Data': ['Berufsausbildung im dualen System', 'Fachschulabschluss', 'Fachhochschul- / Hochschulabschluss / Promotion', 'kein beruflicher Bildungsabschluss', 'keine Angabe']
+  'Data': ['Lehre / Berufsausbildung im dualen System', 'Fachschulabschluss', 'Fachhochschul- / Hochschulabschluss / Promotion', 'kein beruflicher Bildungsabschluss', 'keine Angabe']
   },
   {
     'Name': 'Bottrop',
