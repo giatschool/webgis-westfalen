@@ -464,29 +464,29 @@ function addEqualBreaksNew(yearInd, number, colorStart, colorEnd) { //jshint ign
 
 function createColorArrayByLegendArray(legendArray){
     var classificationArray = getLayerData(currentDataframe, yearIndex); // jshint ignore:line
+    
+    for (var j = legendArray.length - 1; j >= 0; j--) {
+        legendArray[j][0] = legendArray[j][0].replace(/[^\d,]/g, '').split(',');
+        legendArray[j][4] = dojo.colorFromRgb(legendArray[j][4]).toHex();
+      }
 
     for (var i = classificationArray.length - 1; i >= 0; i--) {
-        var found = false;
-        for (var j = legendArray.length - 1; j >= 0; j--) {
-            if (j !== 0) {
-                if (classificationArray[i][1] > legendArray[j][1] && classificationArray[i][1] <= legendArray[j][2] && found !== true){
-                    console.log(legendArray[j][1] + ' / ' + classificationArray[i][1] + ' / ' + legendArray[j][2]);
-                    classificationArray[i][1] = [dojo.colorFromHex('#' + legendArray[j][0]).r,dojo.colorFromHex('#' + legendArray[j][0]).g,dojo.colorFromHex('#' + legendArray[j][0]).b,dojo.colorFromHex('#' + legendArray[j][0]).a];
-                    found = true;
-                }
-            }
-            else {
-                if (classificationArray[i][1] >= legendArray[j][1] && classificationArray[i][1] <= legendArray[j][2] && found !== true){
-                    console.log(legendArray);
-                    console.log(legendArray[j][1] + ' / ' + classificationArray[i][1] + ' / ' + legendArray[j][2]);
-                    classificationArray[i][1] = [dojo.colorFromHex('#' + legendArray[j][0]).r, dojo.colorFromHex('#' + legendArray[j][0]).g, dojo.colorFromHex('#' + legendArray[j][0]).b, dojo.colorFromHex('#' + legendArray[j][0]).a];
-                    found = true;
-                }
-            }
-        }
+          classificationArray[i][2] = classificationArray[i][1];
+      for (var j = legendArray.length - 1; j >= 0; j--) {
+        
+            if (classificationArray[i][2] > legendArray[j][1] && classificationArray[i][2] <= legendArray[j][2] ){
+                  classificationArray[i][1] = {r : parseInt(legendArray[j][0][0]), g : parseInt(legendArray[j][0][1]), b : parseInt(legendArray[j][0][2])};
+                  
+              }
+          
+          else {
+            if (classificationArray[i][2] >= legendArray[j][1] && classificationArray[i][2] <= legendArray[j][2] ){
+                  classificationArray[i][1] = {r : parseInt(legendArray[j][1][0]), g : parseInt(legendArray[j][1][1]), b : parseInt(legendArray[j][1][2])};
+                  
+               }   
+          }
+      }
     }
-
-    console.log(classificationArray);
 
     return classificationArray;
 }
@@ -494,18 +494,18 @@ function createColorArrayByLegendArray(legendArray){
 function addIndividualBreaks(){ //jshint ignore:line
 
     activeClassification = 1;
-
-    //hex, min, max
+      
     legendArray = new Array(breakCount); // jshint ignore:line
 
     for (var i = 1; i <= breakCount; i++) { // jshint ignore:line
         legendArray[i-1] = new Array(3);
         var element = document.getElementById('breakFrom' + i);
         if (element) {
-            legendArray[i-1][0] = document.getElementById('myValue' + i).value;
-            console.log(legendArray[i-1][0]);
+            legendArray[i-1][0] = document.getElementById('cp' + i).style.backgroundColor;
             legendArray[i-1][1] = document.getElementById('breakFrom' + i).value;
             legendArray[i-1][2] = document.getElementById('breakTo' + i).value;
+            legendArray[i-1][3] = "indiBreaks";
+            legendArray[i-1][4] = document.getElementById('cp' + i).style.backgroundColor;
         }
     }
     colorizeLayer(createColorArrayByLegendArray(legendArray)); //jshint ignore:line

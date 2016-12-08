@@ -21,7 +21,11 @@ function addLegendItems(classesArray){
 			colorField.style.backgroundColor = '#000000';
 		}
 		else {
-			colorField.style.backgroundColor = '#' + classesArray[i][0];
+			if (classesArray[0][3] === 'indiBreaks') {
+				colorField.style.backgroundColor = classesArray[i][0];	
+			} else {
+				colorField.style.backgroundColor = '#' + classesArray[i][0];
+			}
 		}
 		colorField.style.height = '20px';
 		colorField.style.width = '35px';

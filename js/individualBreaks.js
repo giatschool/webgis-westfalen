@@ -36,9 +36,11 @@ function addIndivBreakField() {
     var valueField = 'myValue' + breakCount;
     var input = document.createElement('INPUT');
     input.setAttribute('style', 'width: 37px;');
+    input.setAttribute('id', idField);
     var picker = new jscolor(input, {
             valueElement:valueField,
             value: 'fff880'
+            /*onFineChange:'update(this)'*/
         });
     breakEntry.appendChild(input);
 

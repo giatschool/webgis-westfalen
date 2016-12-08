@@ -32,3 +32,4 @@ function generateColor(theColorBegin, theColorEnd, theNumSteps) {
 
     return colorArray;
 }
+

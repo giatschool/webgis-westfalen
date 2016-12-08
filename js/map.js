@@ -167,8 +167,8 @@ function initLayers(){
     });
 
     //map.addLayer(featureLayerGemeinde, 1);
-
-    classify('pretty', 0, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor);
+    
+    classify('pretty', getYearsArray(currentDataframe).length-1, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor);
     /*classify('equalInterval', 0, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor);*/
     
     // create a text symbol to define the style of labels
@@ -259,10 +259,15 @@ function colorizeLayer(colorArray){
 
     // bla = DataHandling.getMinMax(datenEinwohner);
     // test = DataHandling.getMinMax(datenEinwohner,2);
+    if (legendArray[0][3] === "indiBreaks") {
+      for (var i = legendArray.length - 1; i >= 0; i--) {
+        legendArray[i][0] = legendArray[i][4];
+      }
+    }
 
     addLegendItems(legendArray); //update the Legend
 
-    featureLayer.setOpacity(0.6); //tests
+    featureLayer.setOpacity(0.6); //tests NOCHMAL ANSCHAUEN (MARC)
   });
 }
 
@@ -279,7 +284,8 @@ function yearChange(value){
   currentYear = currentYearLabel;
   switch(activeClassification) {
     case 1:
-      colorizeLayer(createColorArrayByLegendArray(legendArray));
+      //colorizeLayer(createColorArrayByLegendArray(legendArray));
+      addIndividualBreaks();
       break;
     case 2:
       classify('equalInterval', value, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor);
