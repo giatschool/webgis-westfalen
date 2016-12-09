@@ -472,22 +472,31 @@ function createColorArrayByLegendArray(legendArray){
 
     for (var i = classificationArray.length - 1; i >= 0; i--) {
           classificationArray[i][2] = classificationArray[i][1];
-      for (var j = legendArray.length - 1; j >= 0; j--) {
-        
+      for (var j = legendArray.length - 1; j >= 0; j--) {    
             if (classificationArray[i][2] > legendArray[j][1] && classificationArray[i][2] <= legendArray[j][2] ){
-                  classificationArray[i][1] = {r : parseInt(legendArray[j][0][0]), g : parseInt(legendArray[j][0][1]), b : parseInt(legendArray[j][0][2])};
+                  classificationArray[i][1] = {r : parseInt(legendArray[j][0][0]), g : parseInt(legendArray[j][0][1]), b : parseInt(legendArray[j][0][2])};                
+                  } 
+          else if (classificationArray[i][2] >= legendArray[j][1] && classificationArray[i][2] <= legendArray[j][2] ){
+                  classificationArray[i][1] = {r : parseInt(legendArray[j][0][0]), g : parseInt(legendArray[j][0][1]), b : parseInt(legendArray[j][0][2])}; 
+                  legendArray.push("out_of_bounds");              
+                  } 
+          else if (classificationArray[i][2] < legendArray[j][1]) {
+                  classificationArray[i][1] = {r: 0, g: 0, b: 0}; 
+                  console.log("hallo");
+                  legendArray.push("out_of_bounds");
+                  } 
+        }
                   
-              }
-          
-          else {
-            if (classificationArray[i][2] >= legendArray[j][1] && classificationArray[i][2] <= legendArray[j][2] ){
-                  classificationArray[i][1] = {r : parseInt(legendArray[j][1][0]), g : parseInt(legendArray[j][1][1]), b : parseInt(legendArray[j][1][2])};
-                  
-               }   
-          }
-      }
-    }
+    }  
+    
 
+    /*for (var i = classificationArray.length - 1; i >= 0; i--) {
+      if (classificationArray[i][1] === {r: 0, g: 0, b: 0}) {
+        legendArray.push("out_of_bounds");
+      }
+    }*/
+    console.log(legendArray)
+    console.log(classificationArray);
     return classificationArray;
 }
 

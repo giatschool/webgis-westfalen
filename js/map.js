@@ -264,7 +264,7 @@ function colorizeLayer(colorArray){
         legendArray[i][0] = legendArray[i][4];
       }
     }
-
+    //console.log(legendArray);
     addLegendItems(legendArray); //update the Legend
 
     featureLayer.setOpacity(0.6); //tests NOCHMAL ANSCHAUEN (MARC)

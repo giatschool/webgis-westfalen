@@ -17,7 +17,7 @@ function addLegendItems(classesArray){
 		var listItem = document.createElement('tr');
 		var colortd = document.createElement('td');
 		var colorField = document.createElement('div');
-		if (classesArray[i][0] === 0) {
+		if (classesArray[i] === "out_of_bounds") {
 			colorField.style.backgroundColor = '#000000';
 		}
 		else {
