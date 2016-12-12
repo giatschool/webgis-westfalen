@@ -17,14 +17,23 @@ function addLegendItems(classesArray){
 		var listItem = document.createElement('tr');
 		var colortd = document.createElement('td');
 		var colorField = document.createElement('div');
+
+		colorField.style.height = '20px';
+		colorField.style.width = '35px';
+		colorField.style.opacity = 1;
+		colorField.className = 'legendColorfield';
+
 		if (classesArray[i] === "out_of_bounds") {
 			colorField.style.backgroundColor = '#000000';
+			
 		}
 		else {
 			if (classesArray[0][3] === 'indiBreaks') {
 				colorField.style.backgroundColor = classesArray[i][0];	
+				
 			} else {
 				colorField.style.backgroundColor = '#' + classesArray[i][0];
+				
 			}
 		}
 		colorField.style.height = '20px';
@@ -57,6 +66,7 @@ function addLegendItems(classesArray){
 		listItem.appendChild(unit);
 
 		tbody.appendChild(listItem);
+		
 	}
 
 	legendDiv.appendChild(legendList);
