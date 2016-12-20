@@ -653,4 +653,37 @@ function initPrinter(){
     });
 }
 
+function legendToJSON() {
+    var i = 0;
+    // var legend = new Object();
+    var legend = {};
+    legend.values = [];
+    legend.diagram = [];
+
+    $('div#myLegend table tr').each( function () {
+        legend.values.push(
+            {
+                'bg' : $(this).children('.legendColorfield').css('background-color'),
+                'min' : $(this).children('td:nth-of-type(1)').text(),
+                'l' : $(this).children('td:nth-of-type(3)').text(),
+                'max' : $(this).children('td:nth-of-type(4)').text()
+            }
+        );
+    });
+
+    if($('div#legendDiagrams').length > 0) {
+        $('div#legendDiagrams table tbody tr').each( function () {
+            legend.diagram.push(
+                {
+                    'icon' : $(this).children('td:nth-of-type(1)').children('img').attr('src'),
+                    'text' : $(this).children('td:nth-of-type(2)').text()
+                }
+            );
+        });
+    }
+
+    return legend;
+}
+
+
 /* jshint ignore:end */
