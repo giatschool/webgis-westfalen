@@ -13,7 +13,6 @@ LWL-GIS
 
 - Überprüfen ab welcher zoomstufe die Layer verschwinden.
 - drag&drop future feature
-- bevölkerungsdichte nochmal schauen und header timeslider ist noch stand early statt stand 3
 
 - Kreise Bevölkerungsdichte 2012 auskommentieren - DONE
 - Altersgruppen diagramme 2011 in 2015 ändern - DONE

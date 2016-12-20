@@ -477,17 +477,20 @@ function createColorArrayByLegendArray(legendArray){
                   classificationArray[i][1] = {r : parseInt(legendArray[j][0][0]), g : parseInt(legendArray[j][0][1]), b : parseInt(legendArray[j][0][2])};                
                   } 
           else if (classificationArray[i][2] >= legendArray[j][1] && classificationArray[i][2] <= legendArray[j][2] ){
+            console.log("Hallo");
+            console.log(legendArray);
+            console.log(legendArray[legendArray.length-1] != "out_of_bounds");
                   classificationArray[i][1] = {r : parseInt(legendArray[j][0][0]), g : parseInt(legendArray[j][0][1]), b : parseInt(legendArray[j][0][2])}; 
-                  if(legendArray[legendArray.length-1] != "out_of_bounds" && (classificationArray[i][2] == legendArray[j][1] || classificationArray[i][2] == legendArray[j][2]) ){
+                  if(legendArray[legendArray.length-1] != "out_of_bounds" && (classificationArray[i][2] == legendArray[j][1] || classificationArray[i][2] == legendArray[j][2]) && !(classificationArray[i][2] > legendArray[j][1] && classificationArray[i][2] < legendArray[j][2]) ){
                       console.log(legendArray[legendArray.length-1]!= "out_of_bounds");
                       legendArray.push("out_of_bounds");
                       console.log(legendArray[legendArray.length-1]);
                       console.log(classificationArray[i]);
                     }              
                   } 
-          else if (classificationArray[i][2] < legendArray[0][1]) {
+          else if (classificationArray[i][2] < legendArray[0][1] || classificationArray[i][2] > legendArray[legendArray.length-1][2]) {
                   classificationArray[i][1] = {r: 0, g: 0, b: 0}; 
-      
+                    console.log(classificationArray[i]);
                   if(legendArray[legendArray.length-1] != "out_of_bounds"){
                       legendArray.push("out_of_bounds");
                       console.log(classificationArray[i]);
