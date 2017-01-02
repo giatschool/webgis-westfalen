@@ -427,14 +427,15 @@ function addTooltips() {
 
 
     query('.copyColorRange').on('click', function(e) {
+      
       var colors = [];
       if (self.name === 'frame1') {
         colors = parent.frames[1].getColor();
       } else if (self.name === 'frame2') {
         colors = parent.frames[0].getColor();
       }
-      document.getElementById('eqBrStartColor').color.fromString(colors[0]);
-      document.getElementById('eqBrEndColor').color.fromString(colors[1]);
+      document.getElementById('eqBrStartColor').jscolor.fromString(colors[0]);
+      document.getElementById('eqBrEndColor').jscolor.fromString(colors[1]);
     });
 
     //Klassifikationsmethode

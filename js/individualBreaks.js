@@ -20,7 +20,7 @@ function addIndivBreakField() {
     breakEntry.appendChild(breakFieldFrom);
 
     var breakFieldFromLabel = document.createElement('td');
-    breakFieldFromLabel.innerHTML = '(Min.)';
+    breakFieldFromLabel.innerHTML = ' - < ';
     breakEntry.appendChild(breakFieldFromLabel);
 
     var breakFieldTo = document.createElement('td');
@@ -28,7 +28,7 @@ function addIndivBreakField() {
     breakEntry.appendChild(breakFieldTo);
 
     var breakFieldToLabel = document.createElement('td');
-    breakFieldToLabel.innerHTML = '(Max.)';
+    /*breakFieldToLabel.innerHTML = '(Max.)'*/;
     breakEntry.appendChild(breakFieldToLabel);
 
     var breakColor = document.createElement('td');

@@ -66,7 +66,7 @@
             <div id="quadrat_claim_logo">
                 <div id="lwl-logo">
                     <a href="http://www.lwl.org/" target="_blank">
-                        <img id="quadrat" src="http://www.lwl.org/nozope/LWL/skin11/refresh/logo.png" width="136" height="30" alt="LWL" />
+                        <img id="quadrat" src="/images/lwl_logo.png" width="136" height="30" alt="LWL" />
                     </a>
                 </div>
                 <div id="hauptmenue">
@@ -83,7 +83,7 @@
                 <!-- /hauptmenue -->
             </div>
             <div id="lwl-claim">
-                <img id="logo" src="http://www.lwl.org/nozope/LWL/skin11/refresh/claim.png" width="265" height="20" alt="Für die Menschen. Für Westfalen-Lippe" title="Für die Menschen. Für Westfalen-Lippe">
+                <img id="logo" src="/images/lwl_claim.png" width="265" height="20" alt="Für die Menschen. Für Westfalen-Lippe" title="Für die Menschen. Für Westfalen-Lippe">
             </div>
         </div>
     </div>
@@ -578,7 +578,7 @@
                 </form>
             </p>
             <br>
-            <div id="slider1" data-dojo-type="dijit.form.HorizontalSlider" data-dojo-props='name:"horizontal1", onChange:function(val){ setFeatureLayerOpacity(val) }, value:0.6, maximum:1, minimum:0, pageIncrement:100, showButtons:true, intermediateChanges:true, slideDuration:500, style:{width:"50%", height:"20px"} '>
+            <div id="slider1" data-dojo-type="dijit.form.HorizontalSlider" data-dojo-props='name:"horizontal1", onChange:function(val){ setFeatureLayerOpacity(val) }, value:1, maximum:1, minimum:0, pageIncrement:100, showButtons:true, intermediateChanges:true, slideDuration:500, style:{width:"50%", height:"20px"} '>
                 <div align="center" style="font-size:0.75em">
                     Transparenz
                 </div>
@@ -682,7 +682,7 @@
                 <b>
                 <input class="jscolor {valueElement:'colorPickerValueTwo',value:'ea3313'}" id="eqBrEndColor" style="width:37px;">
               </div>
-              <div class="col-1">
+              <div class="col-1" id="copyColor">
                 <a id="copyColorRange" class="copyColorRange disabled">
                   <img src="images/copy_sm.png">
                 </a>
@@ -739,7 +739,6 @@
         </div>
     </div>
     <!-- Legend Pane End -->
-    <!-- Export Button auskommentiert vorläufig-->  
     <a href="#" class="icons" id="slideAwayButton_export" onclick="showPane('menuPane-export')" style="position: absolute; right:10px; top:352px; z-index: 2;">
         <img id="exportBtnImg" src="images/download.png">
         <div id="labelExport" class="buttonLabel">
@@ -827,7 +826,7 @@
     </div>
     <!-- Loading Icon for the Map -->
     <div id="mapLoading">
-        <img src="images/loading_map.gif"></img>
+        <img src="images/ring-alt.gif"></img>
     </div>
     <div id="copyrightLwl"> <!-- Link im neuen Tab -->
         <a href="http://www.lwl.org/LWL/Kultur/geko" target="_blank"> © Geographische Kommission für Westfalen </a>

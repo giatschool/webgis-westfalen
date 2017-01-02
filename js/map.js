@@ -47,6 +47,8 @@ var fIDeinkommen = 18;
 var fIDkonfessionen = 19;
 var fIDkonfessionenDiagramme20082010 = 2;
 
+
+
 /**
  * in split mode, synchronize zoom levels between both frames
  */
@@ -185,8 +187,9 @@ function initLayers(){
     // add the label layer to the map
     map.addLayer(labels);*/
 
-    //operationalLayer still needs to be figured out 13.06.16
+    //
     operationalLayer = new ArcGISDynamicMapServiceLayer(Globals.getMapServer(), { 'id': 'collection' });
+    operationalLayerKommunal = new ArcGISDynamicMapServiceLayer(Globals.getMapServerKommunal(), { 'id': 'collection' });
     featureLayer.on('update-start', showLoadingIcon);
     featureLayer.on('update-end', hideLoadingIcon);
     //
@@ -195,10 +198,14 @@ function initLayers(){
     //
     operationalLayer.setVisibleLayers([fIDkreisnamen],true);
     map.addLayer(operationalLayer, 1);
+    
     getLayerAttributes();
   });
 }
 
+function removeCheckboxAtLoad(){
+  $('#einwohner_entwicklungCheck').prop('checked', false);
+}
 /**
  * this method check on page creation if this is in split mode
  * if it is then the split-button is removed on the newly created frame
@@ -267,7 +274,7 @@ function colorizeLayer(colorArray){
     //console.log(legendArray);
     addLegendItems(legendArray); //update the Legend
 
-    featureLayer.setOpacity(0.6); //tests NOCHMAL ANSCHAUEN (MARC)
+    //featureLayer.setOpacity(0.6); //tests NOCHMAL ANSCHAUEN (MARC)
   });
 }
 
@@ -330,6 +337,26 @@ function updateLayerVisibility(){
       operationalLayer.setVisibleLayers([activeDiagramLayer]);
     }
   }
+}
+
+function makeKommunLabelLayerVisible() {
+  operationalLayerKommunal.setVisibleLayers([fIDkreisnamen],true);
+  map.removeLayer(operationalLayer);
+  map.addLayer(operationalLayerKommunal, 1);
+  if (labelVisibility) {
+    operationalLayerKommunal.setVisibility(true);  
+  }
+  //operationalLayerKommunal.setVisibility(true);
+}
+
+function reverseKommunLabelLayerVisibility() {
+  operationalLayer.setVisibleLayers([fIDkreisnamen],true);
+  map.removeLayer(operationalLayerKommunal);
+  map.addLayer(operationalLayer, 1);
+  if (labelVisibility) {
+    operationalLayer.setVisibility(true); 
+  }
+  //operationalLayer.setVisibility(true); 
 }
 
 require(['esri/map',
@@ -410,6 +437,8 @@ require(['esri/map',
 
   //Check if split-screen is active:
   onLoadCheck();
+
+  removeCheckboxAtLoad();
 
   initLayers();
 
@@ -512,16 +541,28 @@ function layerChange(layerNr,removeLayer) {
   } else if (layerNr === 60 && (document.getElementById('labelChk').checked)) {
     labelVisibility = true;
     console.log('Labels einblenden' + labelVisibility);
-    updateLayerVisibility();
+    //updateLayerVisibility();
+    
+    operationalLayer.setVisibility(true);
+    operationalLayerKommunal.setVisibility(true);    
+
   } else if (layerNr === 60 && !(document.getElementById('labelChk').checked)) {
     labelVisibility = false;
     console.log('Labels ausblenden' + labelVisibility);
-    updateLayerVisibility();
-  } else if (layerNr === 70 ) { //nochmal alle funktionen prüfen!!!
+    //updateLayerVisibility();
+
+    operationalLayer.setVisibility(false);
+    operationalLayerKommunal.setVisibility(false);
+
+
+
+
+  } else if (layerNr === 70 ) { 
     map.addLayer(featureLayerGemeinde);
     map.removeLayer(featureLayer);
-    labelVisibility = false;
-    updateLayerVisibility();
+    makeKommunLabelLayerVisible();
+    //labelVisibility = false;
+    //updateLayerVisibility();
     $('#demographischPane').hide();
     $('#soziographischPane').hide();
     closeArrow('arrowDemographisch');
@@ -531,8 +572,8 @@ function layerChange(layerNr,removeLayer) {
     document.getElementById('kreisLayerChk').checked = false;
   } else if (layerNr === 80 ) {
     map.removeLayer(featureLayerGemeinde);
-    //testing for adding GemeindeLayer 13.06.16
     map.addLayer(featureLayer);
+    reverseKommunLabelLayerVisibility();
     $('#demographischPaneKommunen').hide();
     $('#soziographischPaneKommunen').hide();
     closeArrow('arrowDemographisch');
@@ -594,7 +635,7 @@ function layerChange(layerNr,removeLayer) {
     //updateLayerVisibility();
     updateTimeslider();
   }
-featureLayerGemeinde.setOpacity(0.6);
+//featureLayerGemeinde.setOpacity(0.6);
 }
 
 /**
@@ -610,6 +651,13 @@ function setFeatureLayerOpacity(opacity) {
       }
   /*featureLayer.setOpacity(opacity);
   $('.legendColorfield').css({ opacity: opacity });*/
+}
+
+
+function getColor() {
+  startColor = document.getElementById('colorPickerValueOne').value;
+  endColor = document.getElementById('colorPickerValueTwo').value;
+  return [startColor,endColor];
 }
 
 /**

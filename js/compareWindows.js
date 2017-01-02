@@ -4,7 +4,7 @@ require(['dojo/on', 'dojo/dom', 'dojo/dom-class', 'dojo/domReady!'],function(on,
 
   var dualView = false;
   var fs, fs2;
-
+  
   on(slideAwayButtonSplit, 'click', function(evt){
     if (dualView) {
       fs.removeChild(parent.document.getElementById('frame2'));
@@ -13,7 +13,6 @@ require(['dojo/on', 'dojo/dom', 'dojo/dom-class', 'dojo/domReady!'],function(on,
       dualView = false;
       domClass.add('copyColorRange','disabled');
       domClass.remove('copyColorRange','enabled');
-      /*$('#copyColorRange').hide();*/
     } else {
       fs = parent.document.getElementById('frameset');
       f2 = top.document.createElement('frame');
@@ -25,7 +24,7 @@ require(['dojo/on', 'dojo/dom', 'dojo/dom-class', 'dojo/domReady!'],function(on,
       dualView = true;
       domClass.remove('copyColorRange','disabled');
       domClass.add('copyColorRange','enabled');
-      /*$('#copyColorRange').show();*/
+
     }
 
     /* jshint ignore:start */
