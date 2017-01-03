@@ -28,7 +28,7 @@ function addIndivBreakField() {
     breakEntry.appendChild(breakFieldTo);
 
     var breakFieldToLabel = document.createElement('td');
-    /*breakFieldToLabel.innerHTML = '(Max.)'*/;
+    /*breakFieldToLabel.innerHTML = '(Max.)';*/
     breakEntry.appendChild(breakFieldToLabel);
 
     var breakColor = document.createElement('td');
@@ -37,13 +37,14 @@ function addIndivBreakField() {
     var input = document.createElement('INPUT');
     input.setAttribute('style', 'width: 37px;');
     input.setAttribute('id', idField);
+    /* jshint ignore:start */
     var picker = new jscolor(input, {
             valueElement:valueField,
             value: 'fff880'
             /*onFineChange:'update(this)'*/
         });
     breakEntry.appendChild(input);
-
+/* jshint ignore:end */
     var breakColorUnvis = document.createElement('td');
     breakColorUnvis.innerHTML = '<input id="' + valueField + '" style="width:0px; visibility:hidden;">';
     breakEntry.appendChild(breakColorUnvis);

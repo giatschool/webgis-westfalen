@@ -53,9 +53,9 @@ function addLegendItems(classesArray){
 		/*unit.innerHTML = getLegendAttributes(currentDataframe, 2);
 		listItem.appendChild(unit);*/
 
-		if (classesArray[i] === "out_of_bounds") {
+		if (classesArray[i] === 'out_of_bounds') {
 			colorField.style.backgroundColor = '#000000';
-			minField.innerHTML = "außerhalb  ";
+			minField.innerHTML = 'außerhalb  ';
 			listItem.appendChild(minField);
 
 			dash.innerHTML = '&ndash;';
@@ -64,7 +64,7 @@ function addLegendItems(classesArray){
 			if (i !== classesArray.length - 1){less.innerHTML = '<';}
 			listItem.appendChild(less);
 
-			maxField.innerHTML = "außerhalb";
+			maxField.innerHTML = 'außerhalb';
 			listItem.appendChild(maxField);
 
 			unit.innerHTML = getLegendAttributes(currentDataframe, 2);

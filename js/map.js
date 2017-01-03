@@ -126,7 +126,7 @@ function initLayers(){
     infoTemplateK.setTitle('<b>${Kreisname}</b>');
     function getInfoContent(graphic) {
        var oberb = graphic.attributes.Oberbürgermeister;
-       if (oberb != null) {
+       if (oberb !== null) {
         return '<b>Verwaltungssitz: </b>'+graphic.attributes.Sitz+'<br/>' +
         '<b>Oberbürgermeister: </b>'+graphic.attributes.Oberbürgermeister+'<br/>' +
         '<b>Einwohner: </b>'+graphic.attributes.Einwohner+'<br/>' +
@@ -136,7 +136,7 @@ function initLayers(){
         '<b>Landrat: </b>'+graphic.attributes.Landrat+'<br/>' +
         '<b>Einwohner: </b>'+graphic.attributes.Einwohner+'<br/>' +
         '<b>Kreisgliederung: </b>'+graphic.attributes.Kreisgliederung;
-       };
+       }
     }
     infoTemplateK.setContent(getInfoContent);
 
@@ -228,6 +228,7 @@ function onLoadCheck() {
  * this function expects an array of colors for the features of the main layer
  *
 */
+/* jshint ignore:start */
 function colorizeLayer(colorArray){
   require(['esri/symbols/SimpleFillSymbol',
            'esri/renderers/UniqueValueRenderer',
@@ -266,7 +267,7 @@ function colorizeLayer(colorArray){
 
     // bla = DataHandling.getMinMax(datenEinwohner);
     // test = DataHandling.getMinMax(datenEinwohner,2);
-    if (legendArray[0][3] === "indiBreaks") {
+    if (legendArray[0][3] === 'indiBreaks') {
       for (var i = legendArray.length - 1; i >= 0; i--) {
         legendArray[i][0] = legendArray[i][4];
       }
@@ -277,6 +278,7 @@ function colorizeLayer(colorArray){
     //featureLayer.setOpacity(0.6); //tests NOCHMAL ANSCHAUEN (MARC)
   });
 }
+/* jshint ignore:end */
 
 function yearChange(value){
   yearIndex = value;
@@ -660,6 +662,7 @@ function getColor() {
   return [startColor,endColor];
 }
 
+/* jshint ignore:start */
 /**
  * function to set the printer, incl. title and author of the map and export it
  */
@@ -733,5 +736,6 @@ function legendToJSON() {
     return legend;
 }
 
+/* jshint ignore:end */
 
 /* jshint ignore:end */

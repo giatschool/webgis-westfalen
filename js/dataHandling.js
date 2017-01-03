@@ -49,10 +49,10 @@ function getLayerData(dataframe, yearIndex){
   } else {
     dataArray = defaultClassificationKommunen;
 
-    for (var i = dataframe.length - 1; i >= 0; i--) {
-        if (dataframe[i].Name !== 'Jahre'){
-            dataArray[helpIndex][0] = dataframe[i].Name;
-            dataArray[helpIndex][1] = dataframe[i].Data[yearIndex];
+    for (var j = dataframe.length - 1; j >= 0; j--) {
+        if (dataframe[j].Name !== 'Jahre'){
+            dataArray[helpIndex][0] = dataframe[j].Name;
+            dataArray[helpIndex][1] = dataframe[j].Data[yearIndex];
             helpIndex++;
         }
     }
