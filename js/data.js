@@ -747,17 +747,17 @@ var allLayerAttributes = [
 	[datenPendlersaldo, 'Pendlersaldo', '', ''],
 	[datenKonfessionen, 'Konfessionen 2011', '&#037;', ''],
 	[datenPflegeheimPersonal, 'Personal in Pflegeheimen: 2007 - 2013', '&#037;', ''],
-	[datenEinwohnerKommunen, 'Einwohner-Entwicklung Absolut', '', ''], //testing new "GemeindeLayer"
+	[datenEinwohnerKommunen, 'Einwohner-Entwicklung (absolut)', '', ''], 
 	[datenEinwohnerEntwicklungKommunen, 'Einwohner-Entwicklung', '&#037;', ''],
-	[datenBevoelkerungsdichteKommunen, 'Bevölkerungsdichte', '', 'Einheit: Einwohner pro km&sup2;'],  //testing new "GemeindeLayer"
-	[datenAltersgruppenKommunen, 'Altersgruppen 2015', '&#037;', ''], //testing new "GemeindeLayer"
-	[datenSterberateKommunen, 'Sterberate', '&permil;', ''], //testing new "GemeindeLayer"
+	[datenBevoelkerungsdichteKommunen, 'Bevölkerungsdichte', '', 'Einheit: Einwohner pro km&sup2;'],  
+	[datenAltersgruppenKommunen, 'Altersgruppen 2015', '&#037;', ''], 
+	[datenSterberateKommunen, 'Sterberate', '&permil;', 'je 1.000 Einwohner (&permil;)'],
 	[datenGeburtenrateKommunen, 'Geburtenrate', '&permil;', 'Einheit: je 1.000 Einwohner (&permil;)'],
-	[datenMigrationenNichtdeutscheKommunen, 'Zu-/Fortzüge (Nichtdeutsche)', '&permil;', ''], //testing new "GemeindeLayer" 
-	[datenMigrationenGesamtKommunen, 'Zu-/Fortzüge (gesamt)', '&permil;', ''],
-	[datenNichtdeutscheKommunen, 'Nichtdeutsche', '&#037;', ''], //testing new "GemeindeLayer"
-	[datenEinkommenKommunen, 'Einkommen', '&euro;', 'Einheit: Euro je Einwohner'], //testing new "GemeindeLayer"
-	[datenKonfessionenKommunen, 'Konfessionen 2011', '&#037;', ''], //testing new "GemeindeLayer"
+	[datenMigrationenNichtdeutscheKommunen, 'Zu-/Fortzüge (Nichtdeutsche)', '&permil;', ''], 
+	[datenMigrationenGesamtKommunen, 'Zu-/Fortzüge (gesamt)', '&permil;', 'je 1.000 Einwohner (&permil;)'],
+	[datenNichtdeutscheKommunen, 'Zu-/Fortzüge (Nichtdeutsche)', '&permil;', 'je 1.000 Einwohner (&permil;)'], 
+	[datenEinkommenKommunen, 'Einkommen', '&euro;', 'Einheit: Euro je Einwohner'],
+	[datenKonfessionenKommunen, 'Konfessionen 2011', '&#037;', ''], 
 	[datenBeschäftigteKommunen, 'Beschäftigte 2014', '', ''],
 	[datenPendlersaldoKommunen, 'Pendlersaldo', '', ''],
 ];

@@ -170,8 +170,8 @@ function initLayers(){
 
     //map.addLayer(featureLayerGemeinde, 1);
     
-    classify('pretty', getYearsArray(currentDataframe).length-1, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor);
-    /*classify('equalInterval', 0, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor);*/
+    classify('equalInterval', getYearsArray(currentDataframe).length-1, autoClassesBreaks, autoClassesStartColor, autoClassesEndColor);
+    
     
     // create a text symbol to define the style of labels
     /*var labelField = 'Kreisname';
