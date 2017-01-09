@@ -522,6 +522,9 @@ function addIndividualBreaks(){ //jshint ignore:line
  * method for automatic (equal) breaks
  */
 function classify(classification, yearInd, number, colorStart, colorEnd) {
+  console.log("classify Hallo");
+  console.log(parseInt(document.getElementById('equalBreaksText').value));
+  console.log(parseInt(document.getElementById('equalBreaksText').value)-1);
   console.log(self.name);
   switch (classification) {
     case 'equalInterval':
