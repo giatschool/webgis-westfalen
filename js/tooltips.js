@@ -168,7 +168,7 @@ function addTooltips() {
     //Migrationen Layer
     new Tooltip({
       connectId: ['migrationen_gesamtInfo'],
-      label: 'Zu-/Fortzüge der gesamten Bevölkerung der der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Zu-/Fortzüge der gesamten Bevölkerung der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
@@ -238,7 +238,7 @@ function addTooltips() {
     //Einkommen Layer
     new Tooltip({
       connectId: ['einkommenInfo'],
-      label: 'Verfügbares Einkommen der <br>privaten Haushalte <br><b>Einheit: </b>Euro je Einwohner',
+      label: 'Verfügbares Einkommen der privaten Haushalte <br><b>Einheit: </b>Euro je Einwohner',
       showDelay: 0
     });
 
@@ -307,7 +307,7 @@ function addTooltips() {
 
     //Konfessionen Layer
     new Tooltip({
-      connectId: ['konfessionenGInfo'],
+      connectId: ['konfessionenInfo'],
       label: 'Konfessionszugehörigkeit: Anteile an der Gesamtbevölkerung im Jahr 2011 in &#037;',
       showDelay: 0
     });
@@ -365,7 +365,7 @@ function addTooltips() {
     //Migrationen Nichtdeutsch Layer
     new Tooltip({
       connectId: ['migrationen_nichtdeutschInfoKommunal'],
-      label: 'Zu-/Fortzüge von Nichtdeutschen<br>der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Zu-/Fortzüge von Nichtdeutschen der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
@@ -379,7 +379,7 @@ function addTooltips() {
      //Sterberate Layer
     new Tooltip({
       connectId: ['sterberateInfoKommunal'],
-      label: 'Sterberate der Jahre und 2007, 2009, 2011, 2013 und 2015<br>im Durchschnitt<br><b>Einheit: </b>&permil;',
+      label: 'Sterberate der Jahre und 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
@@ -404,13 +404,6 @@ function addTooltips() {
       showDelay: 0
     });
 
-    //konfessionen
-    new Tooltip({
-      connectId: ['konfessionenInfo'],
-      label: 'Konfessionszugehörigkeit: Anteile an der Gesamtbevölkerung<br>Jahr 2011 in &#037;',
-      showDelay: 0
-    });
-
     //beschäftigte
     new Tooltip({
       connectId: ['beschäftigteInfoKommunal'],
@@ -422,6 +415,13 @@ function addTooltips() {
     new Tooltip({
       connectId: ['pendlersaldoInfoKommunal'],
       label: 'Pendlersaldo: Zahl der Einpendler minus Zahl der Auspendler',
+      showDelay: 0
+    });
+
+    //NichtdeutscheKommunal Layer
+    new Tooltip({
+      connectId: ['NichtdeutscheKommunenInfo'],
+      label: 'Nichtdeutsche: Anteil an der Gesamtbevölkerung in &#037;',
       showDelay: 0
     });
 
