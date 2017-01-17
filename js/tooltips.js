@@ -372,14 +372,14 @@ function addTooltips() {
     //Migrationen Gesamt Layer
     new Tooltip({
       connectId: ['migrationen_gesamtInfoKommunal'],
-      label: 'Zu-/Fortzüge der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Zu-/Fortzüge der gesamten Bevölkerung der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
      //Sterberate Layer
     new Tooltip({
       connectId: ['sterberateInfoKommunal'],
-      label: 'Sterberate der Jahre und 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: je 1.000 Einwohner (&permil;)',
+      label: 'Sterberate der Jahre und 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
