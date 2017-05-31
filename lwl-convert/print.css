@@ -65,6 +65,13 @@ div#info {
 	text-align: justify;
 }
 
+div#geko {
+	text-align: center;
+	padding:15px;
+	margin-bottom: 10px;
+	font-size: 6;
+}
+
 div#lwl-claim img {
 	vertical-align: middle;
 }
@@ -96,6 +103,7 @@ div#lwl-claim img {
 
 	div#bottom {
 		position: relative;
+		display: flex;
 	}
 
 	div#logos img {
@@ -128,6 +136,7 @@ div#lwl-claim img {
 
 	div#bottom {
 		position: relative;
+		display: flex;
 	}
 }
 

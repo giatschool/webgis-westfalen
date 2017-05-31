@@ -165,17 +165,24 @@ function addTooltips() {
       showDelay: 0
     });
 
+    //Natürliche Bevölkerungsentwicklung Layer
+    new Tooltip({
+      connectId: ['natBevEntwInfo'],
+      label: 'Natürliche Bevölkerungsentwicklung (Saldo der Geburten- und Sterberate) der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      showDelay: 0
+    });
+
     //Migrationen Layer
     new Tooltip({
       connectId: ['migrationen_gesamtInfo'],
-      label: 'Zu-/Fortzüge der gesamten Bevölkerung der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Zu-/Fortzüge der gesamten Bevölkerung (Saldo) der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
     //Migrationen Nichtdeutsch Layer
     new Tooltip({
       connectId: ['migrationen_nichtdeutschInfo'],
-      label: 'Zu-/Fortzüge von Nichtdeutschen der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Zu-/Fortzüge von Nichtdeutschen (Saldo) der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
@@ -365,21 +372,28 @@ function addTooltips() {
     //Migrationen Nichtdeutsch Layer
     new Tooltip({
       connectId: ['migrationen_nichtdeutschInfoKommunal'],
-      label: 'Zu-/Fortzüge von Nichtdeutschen der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Zu-/Fortzüge von Nichtdeutschen (Saldo) der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
     //Migrationen Gesamt Layer
     new Tooltip({
       connectId: ['migrationen_gesamtInfoKommunal'],
-      label: 'Zu-/Fortzüge der gesamten Bevölkerung der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      label: 'Zu-/Fortzüge der gesamten Bevölkerung (Saldo) der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 
-     //Sterberate Layer
+     //Sterberate Kommunal Layer
     new Tooltip({
       connectId: ['sterberateInfoKommunal'],
       label: 'Sterberate der Jahre und 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      showDelay: 0
+    });
+
+    //Natürliche Bevölkerungsentwicklung Kommunal Layer
+    new Tooltip({
+      connectId: ['natBevEntwInfoKommunal'],
+      label: 'Natürliche Bevölkerungsentwicklung (Saldo der Geburten- und Sterberate) der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
       showDelay: 0
     });
 

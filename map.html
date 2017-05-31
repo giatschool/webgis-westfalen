@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/css/esri.css">
     <link rel="stylesheet" href="css/lwl-style.css">
     <link rel="stylesheet" href="css/menuPane.css">
+
+    <link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
     <!--dojo config settings-->
     <script type="text/javascript">
         var dojoConfig = {
@@ -24,6 +26,8 @@
     </script>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
     <!-- ArcGIS Server Script -->
     <script type="text/javascript" src="https://js.arcgis.com/3.18/"></script>
     <!-- Menu behaviour (icons, sliding etc.) -->
@@ -201,8 +205,18 @@
                             </a>
                         </div>
                         <div>
+                            <input type="radio" id="natBevEntwKommunenCheck" name="Layer" value="Natuerliche Bevoelkerungsentwicklung" onchange="layerChange(datenNatuerlicheBevoelkerungsentwicklungKommunen)">
+                            <label for="natBevEntwKommunenCheck">Natürliche Bevölkerungsentwicklung</label>
+                            <a id="natBevEntwKommunenInfoKommunal" class="help">
+                                <img src="images/Help_sm.png">
+                            </a>
+                            <a class="gridview disabled">
+                                <img src="images/grid_sm.png">
+                            </a>
+                        </div>
+                        <div>
                             <input type="radio" id="MigrationenGesamtKommunenCheck" name="Layer" value="Migrationen Gesamt" onchange="layerChange(datenMigrationenGesamtKommunen)">
-                            <label for="MigrationenGesamtKommunenCheck">Zu-/Fortzüge (gesamt) </label>
+                            <label for="MigrationenGesamtKommunenCheck">Zu-/Fortzüge (gesamt, Saldo) </label>
                             <a id="migrationen_gesamtInfoKommunal" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
@@ -212,7 +226,7 @@
                         </div>
                         <div>
                             <input type="radio" id="MigrationenNichtdeutscheKommunenCheck" name="Layer" value="Migrationen Nichtdeutsch" onchange="layerChange(datenMigrationenNichtdeutscheKommunen)">
-                            <label for="MigrationenNichtdeutscheKommunenCheck">Zu-/Fortzüge (Nichtdeutsche) </label>
+                            <label for="MigrationenNichtdeutscheKommunenCheck">Zu-/Fortzüge (Nichtdeutsche, Saldo) </label>
                             <a id="migrationen_nichtdeutschInfoKommunal" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
@@ -300,8 +314,18 @@
                             </a>
                         </div>
                         <div>
+                            <input type="radio" id="natBevEntwCheck" name="Layer" value="Natuerliche Bevoelkerungsentwicklung" onchange="layerChange(datenNatuerlicheBevoelkerungsentwicklung)">
+                            <label for="natBevEntwCheck">Natürliche Bevölkerungsentwicklung</label>
+                            <a id="natBevEntwInfo" class="help">
+                                <img src="images/Help_sm.png">
+                            </a>
+                            <a class="gridview disabled">
+                                <img src="images/grid_sm.png">
+                            </a>
+                        </div>
+                        <div>
                             <input type="radio" id="migrationen_gesamtCheck" name="Layer" value="Migrationen Gesamt" onchange="layerChange(datenMigrationenGesamt)">
-                            <label for="migrationen_gesamtCheck">Zu-/Fortzüge (gesamt) </label>
+                            <label for="migrationen_gesamtCheck">Zu-/Fortzüge (gesamt, Saldo) </label>
                             <a id="migrationen_gesamtInfo" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
@@ -311,7 +335,7 @@
                         </div>
                         <div>
                             <input type="radio" id="migrationen_nichtdeutschCheck" name="Layer" value="Migrationen Nichtdeutsch" onchange="layerChange(datenMigrationenNichtdeutsche)">
-                            <label for="migrationen_nichtdeutschCheck">Zu-/Fortzüge (Nichtdeutsche) </label>
+                            <label for="migrationen_nichtdeutschCheck">Zu-/Fortzüge (Nichtdeutsche, Saldo) </label>
                             <a id="migrationen_nichtdeutschInfo" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
@@ -768,7 +792,7 @@
                 Achtung: Das exportieren der Karte kann einige Sekunden in Anspruch nehmen.
             </div>
             <br>
-            <input type="button" id="mapExportChange" onclick="initPrinter();" value="Drucken">
+            <input type="button" id="mapExportChange" onclick="printJS('map_gc', 'html')" value="Drucken">
             <a href="#" id="printButton"></a>
         </div>
     </div>

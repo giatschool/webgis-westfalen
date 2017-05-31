@@ -56,16 +56,26 @@ if(isset($_GET["map"]) && ctype_alnum($_GET["map"])) {
 				if(count($legend) > 0) {
 					echo '<span style="font-weight:bold;line-height:150%;">Legende</span><br>';
 					echo '<div id="legendinner">';
+					echo "<table><tbody>";
 				
 					foreach($legend["values"] as $entry) {
 						if(preg_match('/rgb\((?<r>[0-9]{1,3}), (?<g>[0-9]{1,3}), (?<b>[0-9]{1,3})\)/', $entry["bg"], $pregmatchresults)) {
-							echo '<img src="color.php?r='.$pregmatchresults["r"].'&g='.$pregmatchresults["g"].'&b='.$pregmatchresults["b"].'" style="width:20px;height:20px;">&nbsp;';
+							echo '<tr><td><img src="color.php?r='.$pregmatchresults["r"].'&g='.$pregmatchresults["g"].'&b='.$pregmatchresults["b"].'" style="width:20px;height:20px;"></td>';
 						}
+						echo "<td>";
 						echo htmlspecialchars($entry["min"]);
+						echo "<td>";
+						echo "<td>";
 						echo " - ";
+						echo "</td>";
+						echo "<td>";
 						echo htmlspecialchars($entry["l"]);
+						echo "</td>";
+						echo "<td>";
 						echo htmlspecialchars($entry["max"]);
-						echo "<br>";
+						echo "</td>";
+						echo "</tr>";
+						
 					}
 
 					if(isset($legend["diagram"])) {
@@ -78,7 +88,8 @@ if(isset($_GET["map"]) && ctype_alnum($_GET["map"])) {
 							echo "<br>";
 						}
 					}
-
+					
+					echo "</table></tbody>";
 					echo '</div>';
 				}
 				?>
@@ -89,6 +100,9 @@ if(isset($_GET["map"]) && ctype_alnum($_GET["map"])) {
 			<div id="logos">
 				<img id="ifgilogo" src="img/logo-rgb-ifgi-text-de.jpg">
 				<img id="lwllogo" src="img/logo-giatschool.png">
+				<div id="geko">
+					Geographische Kommission<br> für Westfalen
+				</div>
 			</div>
 			</div>
 

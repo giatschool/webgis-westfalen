@@ -34,9 +34,11 @@ if(isset($_POST["svg"]) && isset($_POST["overlay"])) {
 		$overlay_saved = file_put_contents($folder_in.$uid.".png", file_get_contents($overlay));
 
 		// combine SVG map and district names PNG into one PNG image with ImageMagick
-		// $cmd = $imagick_folder.'convert.exe -page 2526x1785 -density 296 "'.$folder_in.$uid.'.svg" -resize 2526x1785 -page 2526x1785 "'.$folder_in.$uid.'.png" -resize 2526x1785 -composite -trim "'.$folder_out.$uid.'.png"';
-		$cmd = $imagick_folder.'convert -page 2526x1785 -density 296 "'.$folder_in.$uid.'.svg" -resize 2526x1785 -page 2526x1785 "'.$folder_in.$uid.'.png" -resize 2526x1785 -composite -trim "'.$folder_out.$uid.'.png"';
-		passthru($cmd);
+		$cmd = $imagick_folder.'convert.exe -page 2526x1785 -density 296 "'.$folder_in.$uid.'.svg" -resize 2526x1785 -page 2526x1785 "'.$folder_in.$uid.'.png" -resize 2526x1785 -composite -trim "'.$folder_out.$uid.'.png"';
+		//$cmd = '"'.$imagick_folder.'magick.exe" -page 2526x1785 -density 296 "'.$folder_in.$uid.'.svg" -resize 2526x1785 -page 2526x1785 "'.$folder_in.$uid.'.png" -resize 2526x1785 -composite -trim "'.$folder_out.$uid.'.png"';
+		//$cmd = '"'.$imagick_folder.'magick.exe" "'.$folder_in.$uid.'.png" "'.$folder_out.$uid.'.png"';
+		//echo $cmd;
+		exec($cmd, $outp, $retval);
 
 		// check if the image was generated successfully by probing the resulting file
 		$new_image_created = is_file($folder_out.$uid.'.png');
@@ -52,7 +54,10 @@ if(isset($_POST["svg"]) && isset($_POST["overlay"])) {
 							"overlay saved" => $overlay_saved,
 							"svg saved" => $svg_saved,
 							"json created" => $legend_saved,
-							"output created" => $new_image_created)
+							"output created" => $new_image_created,
+							"cmd"=>$cmd,
+							"outp"=>$outp,
+							"retval"=>$retval)
 				)
 			);
 		}

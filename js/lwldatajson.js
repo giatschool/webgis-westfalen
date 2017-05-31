@@ -3691,7 +3691,121 @@ var datenBeschäftigte = [{
 }, {
   'Name': 'Unna',
   'Data': [423, 33885, 34168, 47811]
-}, ];
+},];
+
+var datenNatuerlicheBevoelkerungsentwicklung = [{
+    'Name': 'Jahre',
+    'Data': ['2007', '2009', '2011', '2013', '2015']
+  },
+  {
+    'Name': 'Bottrop',
+    'Data': [-3.5, -4.8, -4.4, -5.3, -4.9]
+  },
+  {
+    'Name': 'Gelsenkirchen',
+    'Data': [-4.4, -4.8, -5.7, -5.4, -3.8]
+  },
+  {
+    'Name': 'Münster',
+    'Data': [0.8, 0.4, 0.9, 1.2, 1.6]
+  },
+  {
+    'Name': 'Borken',
+    'Data': [0.6, -0.1, -0.5, -0.7, -0.5]
+  },
+  {
+    'Name': 'Coesfeld',
+    'Data': [-0.7, -1.2, -2, -2.4, -1.5]
+  },
+  {
+    'Name': 'Recklinghausen',
+    'Data': [-3.9, -4.8, -4.9, -5.1, -4.6]
+  },
+  {
+    'Name': 'Steinfurt',
+    'Data': [-0.1, -0.9, -1.2, -1.5, -1.4]
+  },
+  {
+    'Name': 'Warendorf',
+    'Data': [-0.1, -1.4, -1.8, -2.5, -1.1]
+  },
+  {
+    'Name': 'Bielefeld',
+    'Data': [-1, -1.9, -0.9, -1.7, -0.9]
+  },
+  {
+    'Name': 'Gütersloh',
+    'Data': [0.2, -0.6, -0.1, -1.1, -0.5]
+  },
+  {
+    'Name': 'Herford',
+    'Data': [-2.3, -3, -3.1, -3.7, -3.2]
+  },
+  {
+    'Name': 'Höxter',
+    'Data': [-1.9, -3.5, -3.9, -5, -4.2]
+  },
+  {
+    'Name': 'Lippe',
+    'Data': [-2.2, -2.9, -3.6, -3.6, -3.4]
+  },
+  {
+    'Name': 'Minden-Lübbecke',
+    'Data': [-2.3, -3.1, -3.5, -3.7, -3.1]
+  },
+  {
+    'Name': 'Paderborn',
+    'Data': [1.5, 1.2, 0.9, 0.4, 1]
+  },
+  {
+    'Name': 'Bochum',
+    'Data': [-3.8, -4.5, -4.8, -4.8, -4.5]
+  },
+  {
+    'Name': 'Dortmund',
+    'Data': [-3.1, -3.4, -3.6, -3.5, -2.9]
+  },
+  {
+    'Name': 'Hagen',
+    'Data': [-3.8, -4.6, -5.2, -5.2, -4.2]
+  },
+  {
+    'Name': 'Hamm',
+    'Data': [-2.1, -2.7, -3.3, -2.6, -2.8]
+  },
+  {
+    'Name': 'Herne',
+    'Data': [-4.6, -5.3, -5.6, -6, -5.3]
+  },
+  {
+    'Name': 'Ennepe-Ruhr-Kreis',
+    'Data': [-4.8, -5.2, -5.5, -6, -5.6]
+  },
+  {
+    'Name': 'Hochsauerlandkreis',
+    'Data': [-2.4, -3.2, -4.1, -4.3, -4.8]
+  },
+  {
+    'Name': 'Märkischer Kreis',
+    'Data': [-2, -3.1, -3, -4.1, -3.6]
+  },
+  {
+    'Name': 'Olpe',
+    'Data': [-0.7, -1.7, -2.4, -2.9, -1.7]
+  },
+  {
+    'Name': 'Siegen-Wittgenstein',
+    'Data': [-2.6, -3.1, -3.2, -3.8, -2.8]
+  },
+  {
+    'Name': 'Soest',
+    'Data': [-2, -2.5, -3, -4.3, -3.2]
+  },
+  {
+    'Name': 'Unna',
+    'Data': [-2.5, -3.5, -4.2, -4.7, -4.7]
+  },
+];
 
 var datenEinwohnerKommunen = [
   {
@@ -15882,7 +15996,7 @@ var datenPendlersaldoKommunen = [
    'Name': 'Versmold',
    'Data': [-609, -1470, -1484]
  }, {
-   'Name': 'Werther',
+   'Name': 'Werther (Westf.)',
    'Data': [-1605, -1702, -1826]
  }, {
    'Name': 'Bünde',
@@ -16302,5 +16416,244 @@ var datenPendlersaldoKommunen = [
    'Name': 'Werne',
    'Data': [-2038, -1534, -1013]
  }
+
+];
+
+var datenNatuerlicheBevoelkerungsentwicklungKommunen = [
+ {
+   'Name': 'Jahre',
+   'Data': ['2007', '2009', '2011', '2013', '2015']
+ }, 
+ { 'Name': 'Bottrop', 'Data': [-3.5, -4.8, -4.4, -5.3, -4.9 ]  },
+{ 'Name': 'Gelsenkirchen', 'Data': [-4.4, -4.8, -5.7, -5.4, -3.8 ]  },
+{ 'Name': 'Münster', 'Data': [0.8, 0.4, 0.9, 1.2, 1.6 ]  },
+{ 'Name': 'Ahaus', 'Data': [2.3, 1, 1.3, 0.8, 1 ]  },
+{ 'Name': 'Bocholt', 'Data': [-0.9, -1.3, -1.2, -2.2, -1.7 ]  },
+{ 'Name': 'Borken', 'Data': [0.8, 0.4, -0.1, -1, -0.2 ]  },
+{ 'Name': 'Gescher', 'Data': [1.2, 0.1, -2.9, 0.2, 0.6 ]  },
+{ 'Name': 'Gronau', 'Data': [0.5, -0.3, -0.4, 0.3, -0.6 ]  },
+{ 'Name': 'Heek', 'Data': [5.8, 3.7, 1.7, 1.7, 0.9 ]  },
+{ 'Name': 'Heiden', 'Data': [0, -0.4, -0.5, -1.7, -2.1 ]  },
+{ 'Name': 'Isselburg', 'Data': [-3, -0.1, -1.4, -2.7, -4.1 ]  },
+{ 'Name': 'Legden', 'Data': [4, -1.2, -0.6, 0.7, 5.1 ]  },
+{ 'Name': 'Raesfeld', 'Data': [0.4, -2.4, 1.2, 2, 0.4 ]  },
+{ 'Name': 'Reken', 'Data': [-1.6, -3.8, -2.9, -1.7, -2.8 ]  },
+{ 'Name': 'Rhede', 'Data': [2, 1.8, 0.3, -1.3, -2.4 ]  },
+{ 'Name': 'Schöppingen', 'Data': [0, 1.9, 1.3, 0.4, -2.9 ]  },
+{ 'Name': 'Stadtlohn', 'Data': [1.8, 1.4, 0.4, -1.1, 1 ]  },
+{ 'Name': 'Südlohn', 'Data': [-0.9, -1.3, -3, 0, -3.1 ]  },
+{ 'Name': 'Velen', 'Data': [1.7, 1.2, -0.3, -2.2, 1.3 ]  },
+{ 'Name': 'Vreden', 'Data': [0.7, 0, -1, -0.4, 1.5 ]  },
+{ 'Name': 'Ascheberg', 'Data': [0, 0.3, -1.5, -0.3, 0.1 ]  },
+{ 'Name': 'Billerbeck', 'Data': [-1, -2.3, -3.1, -4.6, -3.2 ]  },
+{ 'Name': 'Coesfeld', 'Data': [-1.8, -1.7, -3.2, -1.8, -0.7 ]  },
+{ 'Name': 'Dülmen', 'Data': [-0.8, -2.2, -2.6, -4.6, -2 ]  },
+{ 'Name': 'Havixbeck', 'Data': [-0.8, -2.6, -2.9, -3.2, -3.4 ]  },
+{ 'Name': 'Lüdinghausen', 'Data': [-1.7, -2, -2.4, -3.3, -3.2 ]  },
+{ 'Name': 'Nordkirchen', 'Data': [-2.4, -1.5, -0.9, -1.2, -1.7 ]  },
+{ 'Name': 'Nottuln', 'Data': [0.4, 0.3, -0.5, -0.6, -1.7 ]  },
+{ 'Name': 'Olfen', 'Data': [-3.3, -3.4, -3.4, -4.3, -1.1 ]  },
+{ 'Name': 'Rosendahl', 'Data': [2.2, 1.7, 0.4, -1.2, -2.2 ]  },
+{ 'Name': 'Senden', 'Data': [2.2, 1.5, -0.1, 0.5, 2.1 ]  },
+{ 'Name': 'Castrop-Rauxel', 'Data': [-5.4, -5.8, -6.9, -7.2, -6.4 ]  },
+{ 'Name': 'Datteln', 'Data': [-3.6, -4.7,  -4.3, -5.5, -3.6 ]  },
+{ 'Name': 'Dorsten', 'Data': [-3, -2.8,  -3.8, -4, -4.3 ]  },
+{ 'Name': 'Gladbeck','Data': [-3.4, -4.6,  -4.5, -4.9, -4.1 ]  },
+{ 'Name': 'Haltern am See', 'Data': [-2.1, -2.6,  -3.1, -4.3, -3.6 ]  },
+{ 'Name': 'Herten', 'Data': [-5.9, -6.3,  -6.7, -5.4, -5.5 ]  },
+{ 'Name': 'Marl', 'Data': [-3.8, -5,  -4.3, -5.8, -4.6 ]  },
+{ 'Name': 'Oer-Erkenschwick', 'Data': [-2.8, -4.2,  -4.2, -4.2, -3.8 ]  },
+{ 'Name': 'Recklinghausen', 'Data': [-4, -5.1,  -5.3, -4.4, -4.2 ]  },
+{ 'Name': 'Waltrop', 'Data': [-3.4, -5.6,  -4.5, -6.1, -5.1 ]  },
+{ 'Name': 'Altenberge', 'Data': [1, 0.5,  1.8, -0.1, 2.3 ]  },
+{ 'Name': 'Emsdetten', 'Data': [-1, -0.4,  -2.1, -2.5, -0.2 ]  },
+{ 'Name': 'Greven','Data': [1.2, -1.3,  -1.4, -1.4, 0.2 ]  },
+{ 'Name': 'Hörstel', 'Data': [1.2, 1.3,  1.3, -1.4, 1.6 ]  },
+{ 'Name': 'Hopsten', 'Data': [-0.4, 0.4,  -0.7, 0, -2.2 ]  },
+{ 'Name': 'Horstmar', 'Data': [-3.9, -5.4,  -8.4, -4.9, -6.2 ]  },
+{ 'Name': 'Ibbenbüren', 'Data': [-0.1, -0.8,  -0.8, -2.1, -1.6 ]  },
+{ 'Name': 'Ladbergen', 'Data': [-3.9, -3.3,  -4.4, -3.1, -4.9 ]  },
+{ 'Name': 'Laer', 'Data': [2.4, 5.6,  0.2, 1.2, 3.9 ]  },
+{ 'Name': 'Lengerich', 'Data': [-2.2, -3.4,  -3.8, -2.3, -3.1 ]  },
+{ 'Name': 'Lienen', 'Data': [-1, -4.1,  -2.6, -1.8, -4.2 ]  },
+{ 'Name': 'Lotte', 'Data': [0.3, 0.7,  -0.8, -0.9, 0.1 ]  },
+{ 'Name': 'Metelen', 'Data': [-1.2, 3,  -1.1, -0.8, -7.6 ]  },
+{ 'Name': 'Mettingen', 'Data': [-0.6, -2.7,  0.1, -1.5, -1.6 ]  },
+{ 'Name': 'Neuenkirchen', 'Data': [2.6, -1.5,  -1.2, 1.8, -2.2 ]  },
+{ 'Name': 'Nordwalde', 'Data': [-2.2, -3,  -4.6, -3.8, -3.1 ]  },
+{ 'Name': 'Ochtrup', 'Data': [1.4, 3.1,  1.2, 0.6, 1 ]  },
+{ 'Name': 'Recke', 'Data': [-1.1, -0.9,  -1.9, -3.1, -1.2 ]  },
+{ 'Name': 'Rheine', 'Data': [-0.2, -1.5,  -0.5, -1.2, -1.8 ]  },
+{ 'Name': 'Saerbeck', 'Data': [0.8, 1.7,  0.1, 1, -1.3 ]  },
+{ 'Name': 'Steinfurt', 'Data': [-0.3, -1.6,  -2.4, -1.7, -1.9 ]  },
+{ 'Name': 'Tecklenburg', 'Data': [-2.3, -2.8,  -1.7, -4.4, -5.5 ]  },
+{ 'Name': 'Westerkappeln', 'Data': [-0.7, -3.1,  -0.7, -2.3, -2.9 ]  },
+{ 'Name': 'Wettringen', 'Data': [3.9, 1,  1, -0.1, 0.5 ]  },
+{ 'Name': 'Ahlen', 'Data': [-0.5, -1.8,  -2.7, -4.4, -1.9 ]  },
+{ 'Name': 'Beckum', 'Data': [-1.6, -3.2,  -3.3, -4.9, -3.7 ]  },
+{ 'Name': 'Beelen', 'Data': [-2.7, -0.3,  1.6, -3.1, -0.8 ]  },
+{ 'Name': 'Drensteinfurt', 'Data': [1.4, 0.7,  -1.3, 0.5, 1.2 ]  },
+{ 'Name': 'Ennigerloh', 'Data': [-1.2, -2.7,  -2.7, -2.7, -1.3 ]  },
+{ 'Name': 'Everswinkel', 'Data': [2.8, 0.8,  -0.9, -1.5, 0.3 ]  },
+{ 'Name': 'Oelde', 'Data': [1.3, -1.8,  -2.3, -1.6, 0.6 ]  },
+{ 'Name': 'Ostbevern', 'Data': [2.8, 3.4,  0.4, 3, 1.9 ]  },
+{ 'Name': 'Sassenberg', 'Data': [2.2, 1.1,  -1.4, -1.6, 2 ]  },
+{ 'Name': 'Sendenhorst', 'Data': [-3.1, -1.7,  0.5, -2.6, -0.7 ]  },
+{ 'Name': 'Telgte', 'Data': [-1.1, -0.7,  -1.6, -0.5, -0.5 ]  },
+{ 'Name': 'Wadersloh', 'Data': [-4.6, -6.9,  -3.5, -6.2, -5 ]  },
+{ 'Name': 'Warendorf', 'Data': [1.7, -0.3,  -0.3, -1.1, -1.7 ]  },
+{ 'Name': 'Bielefeld', 'Data': [-1, -1.9,  -0.9, -1.7, -0.9 ]  },
+{ 'Name': 'Borgholzhausen', 'Data': [-0.8, 0.2,  -0.8, 0.1, -1.5 ]  },
+{ 'Name': 'Gütersloh', 'Data': [-0.7, -1.3,  -0.2, -1, -1 ]  },
+{ 'Name': 'Halle (Westf.)', 'Data': [-1.7, -1.5,  -1, -3.2, -0.8 ]  },
+{ 'Name': 'Harsewinkel', 'Data': [4.6, 2.1,  2.5, 0.1, 2.5 ]  },
+{ 'Name': 'Herzebrock-Clarholz', 'Data': [0.3, 0.2,  0.8, -1.8, -1.1 ]  },
+{ 'Name': 'Langenberg', 'Data': [1.3, -2.5,  -2.3, -2.2, -0.2 ]  },
+{ 'Name': 'Rheda-Wiedenbrück', 'Data': [-0.6, -0.2,  0.4, -1.7, -1.8 ]  },
+{ 'Name': 'Rietberg', 'Data': [0.6, 0.7,  1.3, 0, 0.2 ]  },
+{ 'Name': 'Schloß Holte-Stukenbrock', 'Data': [1.3, -0.9,  0.7, 0.8, 1.4 ]  },
+{ 'Name': 'Steinhagen', 'Data': [-0.5, -0.7,  -2.2, -1.9, -2.2 ]  },
+{ 'Name': 'Verl', 'Data': [0.7, 0.2,  1.5, 0.5, 3 ]  },
+{ 'Name': 'Versmold', 'Data': [0.1, -1.9,  -3.3, -4, -3.4 ]  },
+{ 'Name': 'Werther (Westf.)', 'Data': [0.7, -1.4,  -3.1, -2.6, -1.1 ]  },
+{ 'Name': 'Bünde', 'Data': [-2.1, -2,  -1.9, -1.9, -2.6 ]  },
+{ 'Name': 'Enger', 'Data': [0.4, 0.4,  -1.8, -0.8, -0.5 ]  },
+{ 'Name': 'Herford', 'Data': [-0.7, -1.5,  -2.1, -3.8, -2.2 ]  },
+{ 'Name': 'Hiddenhausen', 'Data': [-3.8, -4.2,  -4, -2.9, -4.1 ]  },
+{ 'Name': 'Kirchlengern', 'Data': [-0.8, -1.9,  -3.7, -4.1, -3.4 ]  },
+{ 'Name': 'Löhne', 'Data': [-3.9, -5.7,  -4.5, -5.5, -4.4 ]  },
+{ 'Name': 'Rödinghausen', 'Data': [-3.4, -5.7,  -3.3, -6.4, -4.9 ]  },
+{ 'Name': 'Spenge', 'Data': [-6.7, -5.7,  -3.9, -5.6, -3.5 ]  },
+{ 'Name': 'Vlotho', 'Data': [-3, -4.2,  -5.5, -4.1, -5.6 ]  },
+{ 'Name': 'Bad Driburg', 'Data': [-3.8, -3.6,  -5.1, -5.6, -4.7 ]  },
+{ 'Name': 'Beverungen', 'Data': [-3.6, -6.2,  -6, -6.6, -5.6 ]  },
+{ 'Name': 'Borgentreich', 'Data': [-2.2, -3,  -4, -5.7, -1.6 ]  },
+{ 'Name': 'Brakel', 'Data': [0.2, -0.6,  -1, -4.4, -2.7 ]  },
+{ 'Name':'Höxter', 'Data': [-2.7, -3.8, -6, -4.7,  -5.4 ]  },
+{ 'Name':'Marienmünster', 'Data': [-0.5,  -7.9, -4.7, -7.3,  -9.8 ]  },
+{ 'Name':'Nieheim', 'Data': [-3.7,  -7.1, -5.1, -6.5,  -5.8 ]  },
+{ 'Name':'Steinheim', 'Data': [0.7,  -0.9, -0.8, -3,  -2.6 ]  },
+{ 'Name':'Warburg', 'Data': [-2.5,  -4.8, -3.6, -5.4,  -4 ]  },
+{ 'Name':'Willebadessen', 'Data': [2.9,  1.6, 0.2, -1.5,  -0.7 ]  },
+{ 'Name':'Augustdorf', 'Data': [5,  5.2, 3.1, 3.9,  3.3 ]  },
+{ 'Name':'Bad Salzuflen', 'Data': [-5.4,  -5.8, -6.5, -6.4,  -6.9 ]  },
+{ 'Name':'Barntrup', 'Data': [-2.1,  -3.2, -3.6, -6.2,  -2.7 ]  },
+{ 'Name':'Blomberg', 'Data': [-0.6,  -2.3, -3.8, -3.5,  -2.7 ]  },
+{ 'Name':'Detmold', 'Data': [-1.9,  -2.3, -2.5, -3.2,  -1.7 ]  },
+{ 'Name':'Dörentrup', 'Data': [-3.8,  -4.6, -6.2, -4.5,  -6.9 ]  },
+{ 'Name':'Extertal', 'Data': [-4,  -5.7, -5.9, -5.6,  -6.3 ]  },
+{ 'Name':'Horn-Bad Meinberg', 'Data': [-3.6,  -6, -7.4, -5.1,  -6.4 ]  },
+{ 'Name':'Kalletal', 'Data': [-1.9,  -4.4, -7.5, -5.8,  -6 ]  },
+{ 'Name':'Lage', 'Data': [0.2,  0.5, -0.4, -1.2,  -1.1 ]  },
+{ 'Name':'Lemgo', 'Data': [-2.1,  -2.9, -3.5, -3.1,  -3.5 ]  },
+{ 'Name':'Leopoldshöhe', 'Data': [-1.2,  -0.7, -3.2, -0.1,  -0.8 ]  },
+{ 'Name':'Lügde', 'Data': [-3.2,  -4.9, -3, -8.9,  -8 ]  },
+{ 'Name':'Oerlinghausen', 'Data': [-1.6,  -2.5, -1.6, -3,  -3.3 ]  },
+{ 'Name':'Schieder-Schwalenberg', 'Data': [-2.2,  -2.6, -6, -1.9,  -1.5 ]  },
+{ 'Name':'Schlangen', 'Data': [0.1,  -1.8, -0.4, 0.2,  -0.1 ]  },
+{ 'Name':'Bad Oeynhausen', 'Data': [-4.2,  -5.3, -5.9, -5.4,  -4.6 ]  },
+{ 'Name':'Espelkamp', 'Data': [0.1,  0, 1, 0,  0.5 ]  },
+{ 'Name':'Hille', 'Data': [-1.6,  -1.9, -3.1, -3,  -0.9 ]  },
+{ 'Name':'Hüllhorst', 'Data': [0,  0.7, -1.4, -1.2,  -2.1 ]  },
+{ 'Name':'Lübbecke', 'Data': [-1.3,  -1.2, -1.6, -2.7,  -3.7 ]  },
+{ 'Name':'Minden', 'Data': [-2.4,  -3.1, -2.8, -2.9,  -2.2 ]  },
+{ 'Name':'Petershagen', 'Data': [-4.2,  -4.5, -4.6, -6.7,  -4.4 ]  },
+{ 'Name':'Porta Westfalica', 'Data': [-3,  -3.7, -2.9, -3,  -2.7 ]  },
+{ 'Name':'Preußisch Oldendorf', 'Data': [-0.5,  -1, -4, -2.7,  -2.3 ]  },
+{ 'Name':'Rahden', 'Data': [-0.9,  -3.1, -5.5, -7.5,  -5.3 ]  },
+{ 'Name':'Stemwede', 'Data': [-3.4,  -7.5, -9.8, -8,  -8.3 ]  },
+{ 'Name':'Altenbeken', 'Data': [-2.3,  -3.6, -5, -5.4,  -2.8 ]  },
+{ 'Name':'Bad Lippspringe', 'Data': [-4.1,  -6.7, -6.6, -6.7,  -4.5 ]  },
+{ 'Name':'Borchen', 'Data': [1.1,  0.7, 0.5, -1.3,  -1.1 ]  },
+{ 'Name':'Büren', 'Data': [1.7,  1.2, -0.4, -0.2,  -2.3 ]  },
+{ 'Name':'Delbrück', 'Data': [3.3,  2.8, 2.6, 2.2,  1.3 ]  },
+{ 'Name':'Hövelhof', 'Data': [0.3,  2.9, 1, 1.2,  3 ]  },
+{ 'Name':'Lichtenau', 'Data': [0.4,  0.9, -1, -3.8,  -2 ]  },
+{ 'Name':'Paderborn', 'Data': [2,  2.3, 2.1, 1.5,  2.5 ]  },
+{ 'Name':'Salzkotten', 'Data': [3.2,  0.3, 3.2, 2,  1.3 ]  },
+{ 'Name':'Wünnenberg', 'Data': [-0.1,  -0.6, -4.2, -1.2,  -0.2 ]  },
+{ 'Name':'Bochum', 'Data': [-3.8,  -4.5, -4.8, -4.8,  -4.5 ]  },
+{ 'Name':'Dortmund', 'Data': [-3.1,  -3.4, -3.6, -3.5,  -2.9 ]  },
+{ 'Name':'Hagen', 'Data': [-3.8,  -4.6, -5.2, -5.2,  -4.2 ]  },
+{ 'Name':'Hamm', 'Data': [-2.1,  -2.7, -3.3, -2.6,  -2.8 ]  },
+{ 'Name':'Herne', 'Data': [-4.6,  -5.3, -5.6, -6,  -5.3 ]  },
+{ 'Name':'Breckerfeld', 'Data': [-1.4,  -4.1, -4, -4.8,  -4.9 ]  },
+{ 'Name':'Ennepetal', 'Data': [-5.7,  -4.8, -6.2, -6,  -4.6 ]  },
+{ 'Name':'Gevelsberg', 'Data': [-6.2,  -6.9, -6.5, -7.9,  -7.8 ]  },
+{ 'Name':'Hattingen', 'Data': [-4.3,  -4.6, -5.2, -5,  -4.8 ]  },
+{ 'Name':'Herdecke', 'Data': [-6,  -7.8, -7.5, -9.3,  -7.9 ]  },
+{ 'Name':'Schwelm', 'Data': [-5.2,  -8.5, -6.7, -8.2,  -6.4 ]  },
+{ 'Name':'Sprockhövel', 'Data': [-4.8,  -3.2, -3.6, -6.6,  -4.5 ]  },
+{ 'Name':'Wetter (Ruhr)', 'Data': [-4.4,  -3.7, -4.8, -2.7,  -5.3 ]  },
+{ 'Name':'Witten', 'Data': [-4.4,  -4.5, -5.3, -5.6,  -5.3 ]  },
+{ 'Name':'Arnsberg', 'Data': [-3.5,  -3, -4.4, -4.7,  -3.8 ]  },
+{ 'Name':'Bestwig', 'Data': [-2.2,  -2.4, -2.5, -2.8,  -7.6 ]  },
+{ 'Name':'Brilon', 'Data': [-2.9,  -5.5, -5.6, -6.1,  -4.3 ]  },
+{ 'Name':'Eslohe (Sauerland)', 'Data': [-0.9,  -3.6, -2.1, -1.6,  -5.9 ]  },
+{ 'Name':'Hallenberg', 'Data': [-2.7,  -6.1, -2.4, -7.1,  -3.1 ]  },
+{ 'Name':'Marsberg', 'Data': [-3.5,  -4.9, -4.7, -4.5,  -5.9 ]  },
+{ 'Name':'Medebach', 'Data': [-0.4,  -0.6, -4.8, -5.6,  -7.7 ]  },
+{ 'Name':'Meschede', 'Data': [-2.7,  -3.6, -4.1, -4.6,  -5.5 ]  },
+{ 'Name':'Olsberg', 'Data': [-1.2,  -3.3, -2.5, -1.7,  -4 ]  },
+{ 'Name':'Schmallenberg', 'Data': [-0.2,  -2.9, -4.2, -3.3,  -5.4 ]  },
+{ 'Name':'Sundern (Sauerland)', 'Data': [-0.3,  0.4, -2.7, -3.2,  -3.6 ]  },
+{ 'Name':'Winterberg', 'Data': [-5.6,  -5.3, -6.9, -4.9,  -7 ]  },
+{ 'Name':'Altena', 'Data': [-2.8,  -7.5, -6.3, -6.8,  -5.6 ]  },
+{ 'Name':'Balve', 'Data': [-1.8,  -3.9, -5.8, -4.4,  -4.7 ]  },
+{ 'Name':'Halver', 'Data': [-3.3,  -1.7, -3.3, -2.7,  -5 ]  },
+{ 'Name':'Hemer', 'Data': [-1.5,  0.6, -0.4, -1.5,  -2.9 ]  },
+{ 'Name':'Herscheid', 'Data': [-5.2,  -5.9, -5.1, -2.5,  -4.7 ]  },
+{ 'Name':'Iserlohn', 'Data': [-2.9,  -3.9, -3.5, -5.5,  -3.2 ]  },
+{ 'Name':'Kierspe', 'Data': [2.5,  -1, 0.7, -1.1,  -1.5 ]  },
+{ 'Name':'Lüdenscheid', 'Data': [-2.3,  -2.6, -3, -4.4,  -3.2 ]  },
+{ 'Name':'Meinerzhagen', 'Data': [-0.1,  -2, -0.8, -1.7,  -2.4 ]  },
+{ 'Name':'Menden (Sauerland)', 'Data': [-1.6,  -3.1, -2.8, -4,  -4.5 ]  },
+{ 'Name':'Nachrodt-Wiblingwerde', 'Data': [-2.4,  -6.6, -6.8, -7.1,  -0.3 ]  },
+{ 'Name':'Neuenrade', 'Data': [-1.1,  -1.3, -0.7, -2.3,  -3.7 ]  },
+{ 'Name':'Plettenberg', 'Data': [-2.3,  -5.1, -3.7, -5.3,  -4 ]  },
+{ 'Name':'Schalksmühle', 'Data': [-3.2,  -5.1, -5.7, -4,  -5 ]  },
+{ 'Name':'Werdohl', 'Data': [-1,  -3.6, -2.1, -4.3,  -3.6 ]  },
+{ 'Name':'Attendorn', 'Data': [0.2,  -2.5, -2.5, -2.3,  -1.3 ]  },
+{ 'Name':'Drolshagen', 'Data': [-2.5,  -2.5, -2.3, -3.5,  -0.8 ]  },
+{ 'Name':'Finnentrop', 'Data': [-0.9,  -1.2, -1.3, -3.3,  -2.7 ]  },
+{ 'Name':'Kirchhundem', 'Data': [-2.1,  -2.9, -3.2, -4.8,  -1.9 ]  },
+{ 'Name':'Lennestadt', 'Data': [-1.1,  -2.7, -4.1, -4.1,  -3.8 ]  },
+{ 'Name':'Olpe', 'Data': [-0.1,  -0.4, -1.8, -2.5,  -0.6 ]  },
+{ 'Name':'Wenden','Data': [0.2,  -0.1, -1, -0.8,  -0.4 ]  },
+{ 'Name':'Bad Berleburg', 'Data': [-2,  -3.5, -4.1, -6,  -5.4 ]  },
+{ 'Name':'Burbach','Data': [-2.9,  -1.2, -2.2, -3.9,  -3.5 ]  },
+{ 'Name':'Erndtebrück', 'Data': [-1.2,  -2.8, -3.7, -4.8,  -3.5 ]  },
+{ 'Name':'Freudenberg', 'Data': [-1.8,  -1.7, 0.2, -3.9,  -2.8 ]  },
+{ 'Name':'Hilchenbach', 'Data': [-2.9,  -7.2, -6.3, -5.2,  -6.1 ]  },
+{ 'Name':'Kreuztal', 'Data': [-0.6,  -2.1, -1.9, -2.8,  -1.1 ]  },
+{ 'Name':'Bad Laasphe', 'Data': [-7.3,  -6.5, -5.5, -4.1,  -5.8 ]  },
+{ 'Name':'Netphen','Data': [-1.6,  -2.6, -2.8, -1.4,  -2.3 ]  },
+{ 'Name':'Neunkirchen', 'Data': [-4.6,  -4.7, -4.3, -5.9,  -3.8 ]  },
+{ 'Name':'Siegen', 'Data': [-2.9,  -2.9, -3.1, -3.6,  -1.8 ]  },
+{ 'Name':'Wilnsdorf', 'Data': [-2.7,  -2.4, -4.2, -4.3,  -2.5 ]  },
+{ 'Name':'Anröchte', 'Data': [-2.2,  -1.2, 0, -1.1,  -1.7 ]  },
+{ 'Name':'Bad Sassendorf', 'Data': [-10.7,  -7.6, -5.8, -10.2,  -8.4 ]  },
+{ 'Name':'Ense', 'Data': [1.6,  0.5, -2.4, -4.2,  -2 ]  },
+{ 'Name':'Erwitte', 'Data': [-1.6,  -3.2, -3.2, -3.8,  -1.3 ]  },
+{ 'Name':'Geseke', 'Data': [-2.7,  -2.3, -4.7, -5.2,  -4.2 ]  },
+{ 'Name':'Lippetal', 'Data': [-1.8,  -2.6, -2.2, -2,  -1.5 ]  },
+{ 'Name':'Lippstadt', 'Data': [-0.9,  -1.5, -1.5, -3,  -2.4 ]  },
+{ 'Name':'Möhnesee', 'Data': [-3.3,  -5.9, -4.8, -11.8,  -8.3 ]  },
+{ 'Name':'Rüthen', 'Data': [-4.5,  -5.2, -6.1, -6.3,  -2.1 ]  },
+{ 'Name':'Soest', 'Data': [-0.9,  -1.2, -2.7, -2.8,  -2.3 ]  },
+{ 'Name':'Warstein', 'Data': [-3,  -3.7, -5, -5.8,  -5.2 ]  },
+{ 'Name':'Welver', 'Data': [-2.4,  -3.1, -4.5, -5.3,  -6.6 ]  },
+{ 'Name':'Werl', 'Data': [-0.7,  -2.6, -1.7, -2.8,  -3.5 ]  },
+{ 'Name':'Wickede (Ruhr)', 'Data': [-3.7,  -4.2, -5.1, -5.7,  -0.6 ]  },
+{ 'Name':'Bergkamen','Data': [-2,  -3.2, -2.1, -3.7,  -4.1 ]  },
+{ 'Name':'Bönen', 'Data': [-2.6,  -1.7, -2.8, -5.8,  -2.7 ]  },
+{ 'Name':'Fröndenberg/Ruhr', 'Data': [-3.4,  -5.5, -7.4, -7.8,  -9.4 ]  },
+{ 'Name':'Holzwickede', 'Data': [-2.9,  -4, -4.2, -4.7,  -3.7 ]  },
+{ 'Name':'Kamen', 'Data': [-2.2,  -3.1, -3.8, -5,  -5.5 ]  },
+{ 'Name':'Lünen', 'Data': [-2.4,  -3.5, -4.4, -4.4,  -4 ]  },
+{ 'Name':'Schwerte', 'Data': [-3.9,  -4.5, -3.8, -4.7,  -4.5 ]  },
+{ 'Name':'Selm', 'Data': [-0.4,  -1.2, -4.1, -4.8,  -3.7 ]  },
+{ 'Name':'Unna', 'Data': [-1.5,  -2.9, -4.5, -4.2,  -4.9 ]  },
+{ 'Name':'Werne', 'Data': [-4.5,  -6.5, -6.5, -5.5,  -6.4 ]  },
 
 ];

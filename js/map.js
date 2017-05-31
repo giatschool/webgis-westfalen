@@ -372,7 +372,11 @@ require(['esri/map',
   'dijit/form/Button',
   'data/Printer',
   'dojo/dom-construct',
-  'dojo/domReady!'], function(Map, Popup, SimpleFillSymbol, SimpleLineSymbol, Color, Extent, SpatialReference, OpenStreetMapLayer, Button, Printer, domConstruct) {
+  'dojo/dnd/Moveable',
+  'dojo/dom',
+  'dojo/on',
+  'dojo/domReady!'
+  ], function(Map, Popup, SimpleFillSymbol, SimpleLineSymbol, Color, Extent, SpatialReference, OpenStreetMapLayer, Button, Printer, domConstruct, Moveable, dom, on) {
 
   addTooltips(); //the mouse-over tooltips are created programmatically
 
@@ -449,6 +453,15 @@ require(['esri/map',
   yearChange(0); //set the init-year to 2012  WARUM?!
 
   fullExtent();
+
+  /////drag and drop/////
+
+  //var dnd = new Moveable(dom.byId("menuPane-layer"));
+
+  //var dnd = new Moveable(dom.byId("menuPane-legend"));
+  
+
+  //////////////////////
 
 
 
@@ -666,6 +679,7 @@ function getColor() {
 /**
  * function to set the printer, incl. title and author of the map and export it
  */
+
 function initPrinter(){
     console.log('initPrinter called');
 

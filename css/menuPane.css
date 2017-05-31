@@ -31,6 +31,7 @@
 	width: 275px;
 	display: none;
 	max-height: 75%;
+
 }
 
 .menuPaneContent {
@@ -48,6 +49,10 @@
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     font-size: small;
+}
+
+#menuPane-layer {
+	cursor: move;
 }
 
 #individualClassesPane {
@@ -91,6 +96,7 @@
 	bottom: 55px;
 	top: auto;
 	width: 25em;
+	cursor: move;
 }
 
 #menuPane-classes {
