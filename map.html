@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/css/esri.css">
     <link rel="stylesheet" href="css/lwl-style.css">
     <link rel="stylesheet" href="css/menuPane.css">
-
-    <link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
     <!--dojo config settings-->
     <script type="text/javascript">
         var dojoConfig = {
@@ -27,7 +25,6 @@
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 
-    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
     <!-- ArcGIS Server Script -->
     <script type="text/javascript" src="https://js.arcgis.com/3.18/"></script>
     <!-- Menu behaviour (icons, sliding etc.) -->
@@ -792,7 +789,7 @@
                 Achtung: Das exportieren der Karte kann einige Sekunden in Anspruch nehmen.
             </div>
             <br>
-            <input type="button" id="mapExportChange" onclick="printJS('map_gc', 'html')" value="Drucken">
+            <input type="button" id="mapExportChange" onclick="initPrinter()" value="Drucken">
             <a href="#" id="printButton"></a>
         </div>
     </div>

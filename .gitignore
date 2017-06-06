@@ -2,6 +2,7 @@
 lwl-convert/conf.php
 lwl-convert/temp/in/*
 lwl-convert/temp/out/*
+.well-known
 
 node_modules/
 dist/

@@ -51,10 +51,6 @@
     font-size: small;
 }
 
-#menuPane-layer {
-	cursor: move;
-}
-
 #individualClassesPane {
 	display: none;
 }
