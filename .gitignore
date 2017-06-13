@@ -3,6 +3,6 @@ lwl-convert/conf.php
 lwl-convert/temp/in/*
 lwl-convert/temp/out/*
 .well-known
-
+web.config
 node_modules/
 dist/
