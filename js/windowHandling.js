@@ -43,7 +43,7 @@ function hidePane(layer){
 }
 
 function showPane(layer){
-	console.log(document.getElementById(layer));
+	//console.log(document.getElementById(layer));
 	
 	if (document.getElementById(layer).style.display === 'block'){
 		hidePane('#'+layer);

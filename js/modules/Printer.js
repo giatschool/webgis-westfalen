@@ -37,7 +37,7 @@ define(['dojo/query'], function(query) {
 
   return {
     printMap: function() {
-      console.log('initPrinter called');
+      //console.log('initPrinter called');
 
       var svgElement = $('#map_gc')[0];
       var xmlSerializer = new XMLSerializer();

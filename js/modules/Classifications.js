@@ -190,7 +190,7 @@ define(['data/DataHandling'], function(DataHandling) {
         legendArray[i][2] = minmax[0] + (breakStep * (i + 1));
       }
 
-      console.log(legendArray);
+      //console.log(legendArray);
 
       var colorIndex;
       for (var j = classificationArray.length - 1; j >= 0; j--) {
@@ -206,7 +206,7 @@ define(['data/DataHandling'], function(DataHandling) {
         classificationArray[j][1] = [dojo.colorFromHex('#' + colorArray[colorIndex]).r,dojo.colorFromHex('#' + colorArray[colorIndex]).g,dojo.colorFromHex('#' + colorArray[colorIndex]).b,dojo.colorFromHex('#' + colorArray[colorIndex]).a];
       }
 
-      console.log(classificationArray);
+      //console.log(classificationArray);
 
       return classes;
     },

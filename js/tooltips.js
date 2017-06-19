@@ -4,7 +4,7 @@ function selectGrid(e){
     'esri/symbols/SimpleLineSymbol',
     'esri/tasks/query',
     'esri/Color'],function(FeatureLayer, SimpleFillSymbol, SimpleLineSymbol, Query, Color){
-    console.log(e);
+    //console.log(e);
     var id = e.graphic.attributes.Kreisname;
     var query = new Query();
     query.where = 'Kreisname = \'' + id + '\'';
@@ -312,9 +312,16 @@ function addTooltips() {
       showDelay: 0
     });
 
-    //Konfessionen Layer
+    //Konfessionen Layer konfessionenInfo
     new Tooltip({
       connectId: ['konfessionenInfo'],
+      label: 'Konfessionszugehörigkeit: Anteile an der Gesamtbevölkerung im Jahr 2011 in &#037;',
+      showDelay: 0
+    });
+
+    //Konfessionen Layer Kreise
+    new Tooltip({
+      connectId: ['konfessionenKrInfo'],
       label: 'Konfessionszugehörigkeit: Anteile an der Gesamtbevölkerung im Jahr 2011 in &#037;',
       showDelay: 0
     });

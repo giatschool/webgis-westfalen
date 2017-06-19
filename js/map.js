@@ -53,14 +53,14 @@ var fIDkonfessionenDiagramme20082010 = 2;
  * in split mode, synchronize zoom levels between both frames
  */
 function syncZoom(extent) {
-  console.log(self.name);
+  //console.log(self.name);
   for (var i = 0; i < parent.frames.length; i++) {
     if (parent.frames[i].name !== self.name) {
       try {
         parent.frames[i].counter = 0;
         parent.frames[i].map.setLevel(extent.level);
       } catch (err) {
-        console.log('zoom failed');
+        //console.log('zoom failed');
       }
     }
   }
@@ -283,7 +283,7 @@ function colorizeLayer(colorArray){
 function yearChange(value){
   yearIndex = value;
   currentYearLabel = getYearsArray(currentDataframe)[value];
-  console.log('aktuell: ' + currentLayer);
+  //console.log('aktuell: ' + currentLayer);
   var appendix = '';
   var lineBreak = '';
   if (layerAttributes[1].indexOf('Altersgruppen') !== -1) { appendix = ' J.';}
@@ -555,7 +555,7 @@ function layerChange(layerNr,removeLayer) {
     //handling checkbox for the operationalLayer
   } else if (layerNr === 60 && (document.getElementById('labelChk').checked)) {
     labelVisibility = true;
-    console.log('Labels einblenden' + labelVisibility);
+    //console.log('Labels einblenden' + labelVisibility);
     //updateLayerVisibility();
     
     operationalLayer.setVisibility(true);
@@ -563,7 +563,7 @@ function layerChange(layerNr,removeLayer) {
 
   } else if (layerNr === 60 && !(document.getElementById('labelChk').checked)) {
     labelVisibility = false;
-    console.log('Labels ausblenden' + labelVisibility);
+    //console.log('Labels ausblenden' + labelVisibility);
     //updateLayerVisibility();
 
     operationalLayer.setVisibility(false);
@@ -681,7 +681,7 @@ function getColor() {
  */
 
 function initPrinter(){
-    console.log('initPrinter called');
+    //console.log('initPrinter called');
 
     var svgElement = $('#map_gc')[0];
     var xmlSerializer = new XMLSerializer();

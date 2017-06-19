@@ -108,7 +108,7 @@ function jenks(yearInd, number, colorStart, colorEnd) {
   autoClassesBreaks = number;
   yearIndex = yearInd;
 
-  console.log('classification: jenks');
+  //console.log('classification: jenks');
   activeClassification = 4; // 2 = automatic
   classificationArray = getLayerData(currentDataframe, yearIndex); // jshint ignore:line
   var minmax = getMinMax(currentDataframe,yearIndex); // jshint ignore:line
@@ -322,7 +322,7 @@ function standardDeviation(yearInd, number, colorStart, colorEnd) {
   autoClassesBreaks = number;
   yearIndex = yearInd;
 
-  console.log('classification: standard deviation');
+  //console.log('classification: standard deviation');
   activeClassification = 5;
   classificationArray = getLayerData(currentDataframe, yearIndex); // jshint ignore:line
 
@@ -379,7 +379,7 @@ function pretty(yearInd, number, colorStart, colorEnd) {
   autoClassesBreaks = number;
   yearIndex = yearInd;
 
-  console.log('classification: pretty');
+  //console.log('classification: pretty');
   activeClassification = 6;
   classificationArray = getLayerData(currentDataframe, yearIndex); // jshint ignore:line
   var minmax = getMinMax(currentDataframe,yearIndex); // jshint ignore:line
@@ -420,7 +420,7 @@ function addEqualBreaksNew(yearInd, number, colorStart, colorEnd) { //jshint ign
     autoClassesBreaks = number;
     yearIndex = yearInd;
 
-    console.log('classification equal breaks');
+    //console.log('classification equal breaks');
     activeClassification = 2; // 2 = automatic
     classificationArray = getLayerData(currentDataframe, yearIndex); // jshint ignore:line
 
@@ -442,7 +442,7 @@ function addEqualBreaksNew(yearInd, number, colorStart, colorEnd) { //jshint ign
       legendArray[i][2] = minmax[0] + (breakStep * (i + 1));
     }
 
-    console.log(legendArray);
+    //console.log(legendArray);
 
     var colorIndex;
     for (var j = classificationArray.length - 1; j >= 0; j--) {
@@ -458,7 +458,7 @@ function addEqualBreaksNew(yearInd, number, colorStart, colorEnd) { //jshint ign
       classificationArray[j][1] = [dojo.colorFromHex('#' + colorArray[colorIndex]).r,dojo.colorFromHex('#' + colorArray[colorIndex]).g,dojo.colorFromHex('#' + colorArray[colorIndex]).b,dojo.colorFromHex('#' + colorArray[colorIndex]).a];
     }
 
-    console.log(classificationArray);
+    //console.log(classificationArray);
     return classificationArray;
 }
 /* jshint ignore:start */
