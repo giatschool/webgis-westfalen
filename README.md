@@ -5,10 +5,10 @@ LWL-GIS
 
 
 
-###Installation Notes
+#Installation Notes
 
 
-##Print:
+#Print:
 # Windows with IIS
 
 - Download and extract PHP7 to C:\php7 http://windows.php.net/download#php-7.1
