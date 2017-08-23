@@ -28,15 +28,20 @@
 	font-size: 12px;
 	top: 75px;
 	right: 120px;
-	width: 275px;
+	width: 300px;
 	display: none;
 	max-height: 75%;
-
+	cursor: move;
 }
 
 .menuPaneContent {
 	padding:0.5em;
 	max-height: 100%;
+}
+
+.menuPaneContent img {
+	height: 12px;
+	width:12;	
 }
 
 .subMenuPane {
@@ -49,6 +54,7 @@
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     font-size: small;
+    cursor: pointer;
 }
 
 #individualClassesPane {
@@ -92,10 +98,12 @@
 	bottom: 55px;
 	top: auto;
 	width: 25em;
-}
+	height: 15em;
+	overflow-y: visible;
+ }
 
 #menuPane-classes {
-	width: 375px;
+	width: 422px;
 }
 
 .menuPaneContent .table {
@@ -194,3 +202,24 @@
 /*#copyColorRange {
 	display: none;
 }*/
+/*$snappy: cubic-bezier(0.55, 0, 0.1, 1);
+
+i.material-icons {
+	box-sizing: border-box;
+  font-weight: 200;
+  font-family: 'Cairo', sans-serif;
+  font-size: 30px;
+    color: #00559D;
+    position: absolute;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    cursor: pointer;
+}*/
+.download {
+	cursor: pointer;
+}

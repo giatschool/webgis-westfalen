@@ -5,23 +5,24 @@ LWL-GIS
 
 
 
-
-pendlersaldo kommunen, Werther (Westf.) fehlt die einfärbung - DONE
-- Schriftzug kommission in die druckansicht hinzufügen
-
-- Eingabemaske und csv im und export für eigene daten
-- export von bestehenden daten
-
-- server umzug 
-
-- drag & drop feature
-
-- andere auswahlmöglichkeit zur auswahl bsp.: konfessionen
-
-- 24.04. nächstes meeting LWL 10 uhr
+###Installation Notes
 
 
------------
-Kommunen bei denen der Servicename sich vom Datenname unterscheidet:
-Werther (Westf.), Halle (Westf.), Wünnenberg, Eslohe (Sauerland), Sundern (Sauerland), Menden (Sauerland), Wickede (Ruhr), Fröndenberg/Ruhr, Wetter (Ruhr)
+##Print:
+# Windows with IIS
+
+- Download and extract PHP7 to C:\php7 http://windows.php.net/download#php-7.1
+- Configure PHP7 for FastCGI mode in IIS
+- Enable and configure ImageMagick for PHP7 (php.ini)
+- Install ImageMagick separately as well https://www.imagemagick.org/script/download.php#windows
+- Configure folder permission for `lwl-convert/temp`, `C:\Windows\Temp`: Read+Write permissions for IIS users `IUSR` and website's AppPool 
+  - https://stackoverflow.com/questions/34283038/imagemagic-permission-denied-on-iis/34344023#34344023
+  - https://stackoverflow.com/questions/7334216/iis7-permissions-overview-applicationpoolidentity
+- Edit `conf.php` (Template: `conf.php-dist`)
+
+# Linux with Apache
+
+- Install Apache, php7 and php7 ImageMagick modules
+- Make sure that the apache/www user has read+write permissions to `lwl-convert/temp`
+- Edit `conf.php` (Template: `conf.php-dist`)
 

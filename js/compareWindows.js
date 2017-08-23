@@ -6,6 +6,16 @@ require(['dojo/on', 'dojo/dom', 'dojo/dom-class', 'dojo/domReady!'],function(on,
   var fs, fs2;
   
   on(slideAwayButtonSplit, 'click', function(evt){
+    //reposition menuPane-layer, needed if the user drags it to far left before issueing a split
+    $('#menuPane-layer').css({'left': '85px', 'top': '75px'});
+    //reposition menuPane-legend, ...,
+    $('#menuPane-legend').css({'left': '65px', 'top': '731px'});
+    //reposition menuPane-export, ...,
+    $('#menuPane-export').css({'left': '85px', 'top': '75px'});
+    //reposition menuPane-classes, ...,
+    $('#menuPane-classes').css({'left': '85px', 'top': '75px'});
+    //reposition menuPane-classes, ...,
+    $('#menuPane-grid').css({'left': '85px', 'top': '75px'});
     if (dualView) {
       fs.removeChild(parent.document.getElementById('frame2'));
       fs = parent.document.getElementById('frameset');

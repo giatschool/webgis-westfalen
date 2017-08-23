@@ -41,6 +41,7 @@
     <script type="text/javascript" src="js/individualBreaks.js"></script>
     <script type="text/javascript" src="js/jscolor/jscolor.js"></script>
     <script type="text/javascript" src="js/generateColorRamp.js"></script>
+    <!-- <script type="text/javascript" src="js/jsontocsv.js"></script> -->
     <script type="text/javascript" src="js/map.js"></script>
     <!-- Google Analytics Script: -->
     <script type="text/javascript">
@@ -150,6 +151,10 @@
                             <a class="gridview">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo" class="help" href="/xlsData/Einwohner Kommunen(absolut).xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenEinwohnerKommunen, 'Einwohner-Entwicklung (absolut)')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="einwohner_entwicklungKommunenCheck" name="Layer" checked=true value="Einwohner-Entwicklung" onchange="layerChange(datenEinwohnerEntwicklungKommunen)">
@@ -159,6 +164,10 @@
                             </a>
                             <a class="gridview">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo1" class="help" href="/xlsData/Einwohner-Entwicklung Kommunen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenEinwohnerEntwicklungKommunen, 'Einwohner-Entwicklung')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <div>
@@ -170,6 +179,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo2" class="help" href="/xlsData/Bevölkerungsdichte Kommunen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenBevoelkerungsdichteKommunen, 'Bevölkerungsdichte')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="altersgruppenKommunenCheck" name="Layer" value="Altersgruppen" onchange="layerChange(datenAltersgruppenKommunen)">
@@ -179,6 +192,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo3" class="help" href="/xlsData/Altersgruppen Kommunen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenAltersgruppenKommunen, 'Altersgruppen')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <div>
@@ -190,6 +207,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo4" class="help" href="/xlsData/Geburtenrate Kommunen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenGeburtenrateKommunen, 'Geburtenrate')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="SterberateKommunenCheck" name="Layer" value="Sterberate" onchange="layerChange(datenSterberateKommunen)">
@@ -199,6 +220,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo5" class="help" href="/xlsData/Sterberate Kommunen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenSterberateKommunen, 'Sterberate')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <div>
@@ -210,6 +235,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo6" class="help" href="/xlsData/Natürliche Bevölkerungsentwicklung Kommunen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenNatuerlicheBevoelkerungsentwicklungKommunen, 'Natürliche Bevölkerungsentwicklung')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="MigrationenGesamtKommunenCheck" name="Layer" value="Migrationen Gesamt" onchange="layerChange(datenMigrationenGesamtKommunen)">
@@ -220,6 +249,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo7" class="help" href="/xlsData/Zuzüge und Fortzüge Kommunen (gesamt, Saldo).xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenMigrationenGesamtKommunen, 'Zu-/Fortzüge (gesamt, Saldo)')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="MigrationenNichtdeutscheKommunenCheck" name="Layer" value="Migrationen Nichtdeutsch" onchange="layerChange(datenMigrationenNichtdeutscheKommunen)">
@@ -229,6 +262,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo8" class="help" href="/xlsData/Zuzüge und Fortzüge Kommunen (Nichtdeutsche, Saldo).xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenMigrationenNichtdeutscheKommunen, 'Zu-/Fortzüge (Nichtdeutsche, Saldo)')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <!-- auskommentiert da nur absolute Zahlen vorliegen derzeit -->
@@ -253,6 +290,11 @@
                             <a class="gridview">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo9" class="help" href="/xlsData/Einwohner-Entwicklung(absolut).xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenEinwohner, 'Einwohner-Entwicklung (absolut)')"> -->
+                                <img class="download" src="images/download_icon.svg">
+
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="einwohner_entwicklungCheck" name="Layer" checked=true value="Einwohner-Entwicklung" onchange="layerChange(datenEinwohnerEntwicklung)">
@@ -262,6 +304,10 @@
                             </a>
                             <a class="gridview">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo10" class="help" href="/xlsData/Einwohner-Entwicklung.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenEinwohnerEntwicklung, 'Einwohner-Entwicklung')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <div>
@@ -273,6 +319,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo11" class="help" href="/xlsData/Bevölkerungsdichte.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenBevoelkerungsdichte, 'Bevölkerungsdichte')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="altersgruppenCheck" name="Layer" value="Altersgruppen" onchange="layerChange(datenAltersgruppen)">
@@ -282,6 +332,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo12" class="help" href="/xlsData/Altersgruppen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenAltersgruppen, 'Altersgruppen')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                             <!-- <br> &nbsp;&nbsp;&nbsp; DIAGRAMME VORERST RAUS!
                             <input type="checkbox" id="altersgruppenDiagramme2011Check" value="Altersgruppen Diagramme 2011" onchange="layerChange(fIDaltersgruppenDiagramme2011)">
@@ -299,6 +353,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo13" class="help" href="/xlsData/Geburtenrate.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenGeburtenrate, 'Geburtenrate')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="sterberateCheck" name="Layer" value="Sterberate" onchange="layerChange(datenSterberate)">
@@ -308,6 +366,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo14" class="help" href="/xlsData/Sterberate.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenSterberate, 'Sterberate')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <div>
@@ -319,6 +381,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo15" class="help" href="/xlsData/Natürliche Bevölkerungsentwicklung.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenNatuerlicheBevoelkerungsentwicklung, 'Natürliche Bevölkerungsentwicklung')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="migrationen_gesamtCheck" name="Layer" value="Migrationen Gesamt" onchange="layerChange(datenMigrationenGesamt)">
@@ -329,15 +395,23 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo16" class="help" href="/xlsData/Zuzüge und Fortzüge (gesamt, Saldo).xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenMigrationenGesamt, 'Zu-/Fortzüge (gesamt, Saldo)')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
-                            <input type="radio" id="migrationen_nichtdeutschCheck" name="Layer" value="Migrationen Nichtdeutsch" onchange="layerChange(datenMigrationenNichtdeutsche)">
+                            <input type="radio" id="migrationen_nichtdeutschCheck" name="Layer" value="Migrationen Nichtdeutsch"onchange="layerChange(datenMigrationenNichtdeutsche)">
                             <label for="migrationen_nichtdeutschCheck">Zu-/Fortzüge (Nichtdeutsche, Saldo) </label>
                             <a id="migrationen_nichtdeutschInfo" class="help">
                                 <img src="images/Help_sm.png">
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo17" class="help" href="/xlsData/Zuzüge und Fortzüge (Nichtdeutsche, Saldo).xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenMigrationenNichtdeutsche, 'Zu-/Fortzüge (Nichtdeutsche, Saldo)')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                     </div>
@@ -355,6 +429,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo18" class="help" href="/xlsData/Nichtdeutsche Kommunen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenNichtdeutscheKommunen, 'Nichtdeutsche')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="konfessionenKommunenCheck" name="Layer" value="Konfessionen" onchange="layerChange(datenKonfessionenKommunen)">
@@ -364,6 +442,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo19" class="help" href="/xlsData/Konfessionen Kommunen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenKonfessionenKommunen, 'Konfessionen')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <div>
@@ -375,6 +457,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo20" class="help" href="/xlsData/Beschäftigte Kommunen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenBeschäftigteKommunen, 'Beschäftigte')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="EinkommenKommunenCheck" name="Layer" value="Einkommen" onchange="layerChange(datenEinkommenKommunen)">
@@ -385,6 +471,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo21" class="help" href="/xlsData/Einkommen Kommunen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenEinkommenKommunen, 'Einkommen')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="PendlersaldoKommunenCheck" name="Layer" value="Pendlersaldo" onchange="layerChange(datenPendlersaldoKommunen)">
@@ -394,6 +484,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo22" class="help" href="/xlsData/Pendlersaldo Kommunen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenPendlersaldoKommunen, 'Pendlersaldo')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <!-- ende neuer kommunaler soziographischPane -->
@@ -418,6 +512,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo23" class="help" href="/xlsData/Pflegebedürftige in Pflegeheimen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenPflegebeduerftigePflegeheim, 'Pflegebedürftige in Pflegeheimen')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div><div>
                             <input type="radio" id="pflegeheimPersonalCheck" name="Layer" value="Personal in Pflegeheimen 2007 - 2013" onchange="layerChange(datenPflegeheimPersonal)">
                             <label for="pflegeheimPersonalCheck">Personal in Pflegeheimen</label>
@@ -426,6 +524,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo24" class="help" href="/xlsData/Personal in Pflegeheimen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenPflegeheimPersonal, 'Personal in Pflegeheimen')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <!-- <div>
@@ -447,6 +549,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo25" class="help" href="/xlsData/Haushaltsgrössen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenHaushaltsgroesse, 'Haushaltsgrößen')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="single_haushalteCheck" name="Layer" value="Single-Haushalte" onchange="layerChange(datenSingleHaushalte)">
@@ -456,6 +562,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo26" class="help" href="/xlsData/Single-Haushalte.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenSingleHaushalte, 'Single-Haushalte')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <div>
@@ -467,6 +577,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo27" class="help" href="/xlsData/Nichtdeutsche.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenNichtdeutsche, 'Nichtdeutsche')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="konfessionenCheck" name="Layer" value="Konfessionen" onchange="layerChange(datenKonfessionen)">
@@ -476,6 +590,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo28" class="help" href="/xlsData/Konfessionen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenKonfessionen, 'Konfessionen')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                             <!-- <br> &nbsp;&nbsp;&nbsp; DIAGRAMME VOERST AUSKOMMENTIERT
                             <input type="checkbox" id="konfessionenDiagramme2008Check" value="Konfessionen Diagramme 2008 - 2010" onchange="layerChange(fIDkonfessionenDiagramme20082010)">
@@ -503,6 +621,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo29" class="help" href="/xlsData/Abschlüsse.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenAbschlüsse, 'Berufliche Ausbildungsabschlüsse')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="arbeitslosenquoteCheck" name="Layer" value="Arbeitslosenquote" onchange="layerChange(datenArbeitslosenquote)">
@@ -512,6 +634,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo30" class="help" href="/xlsData/Arbeitslosenquote.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenArbeitslosenquote, 'Arbeitslosenquote')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <div>
@@ -523,6 +649,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo31" class="help" href="/xlsData/Arbeitslosenquote_unter_25.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenArbeitslosenquote25, 'Arbeitslosenquote unter 25 Jahre')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="arbeitslosenquote55Check" name="Layer" value="Arbeitslosenquote über 55 Jahre" onchange="layerChange(datenArbeitslosenquote55)">
@@ -532,6 +662,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo32" class="help" href="/xlsData/Arbeitslosenquote_über_55.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenArbeitslosenquote55, 'Arbeitslosenquote über 55 Jahre')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                          <div>
@@ -543,6 +677,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo33" class="help" href="/xlsData/Arbeitslosenquote_Nichtdeutsche.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenArbeitslosenquoteND, 'Arbeitslosenquote Nichtdeutsche')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="beschäftigteCheck" name="Layer" value="Beschäftigte" onchange="layerChange(datenBeschäftigte)">
@@ -552,6 +690,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo34" class="help" href="/xlsData/Beschäftigte.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenBeschäftigte, 'Beschäftigte')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <div>
@@ -563,6 +705,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo35" class="help" href="/xlsData/Erwerbstätige.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenErwerbstätige, 'Erwerbstätige')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="bipCheck" name="Layer" value="BIP" onchange="layerChange(datenBIP)">
@@ -572,6 +718,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo36" class="help" href="/xlsData/BIP.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenBIP, 'Bruttoinlandsprodukt')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         <div>
@@ -583,6 +733,10 @@
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
                             </a>
+                            <a id="downloadInfo37" class="help" href="/xlsData/Einkommen.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenEinkommen, 'Einkommen')"> -->
+                                <img class="download" src="images/download_icon.svg">
+                            </a>
                         </div>
                         <div>
                             <input type="radio" id="pendlerCheck" name="Layer" value="Pendlersaldo" onchange="layerChange(datenPendlersaldo)">
@@ -592,6 +746,10 @@
                             </a>
                             <a class="gridview disabled">
                                 <img src="images/grid_sm.png">
+                            </a>
+                            <a id="downloadInfo38" class="help" href="/xlsData/Pendlersaldo.xlsx" download>
+                                <!-- <img class="download" src="images/download_icon.svg" onClick="download(datenPendlersaldo, 'Pendlersaldo')"> -->
+                                <img class="download" src="images/download_icon.svg">
                             </a>
                         </div>
                         
@@ -614,7 +772,7 @@
                     <input type="checkbox" id="baseMapChk" name="Layer" value="Basemap" onchange="layerChange(50)" checked="checked">
                     <!-- autocomplete="off" -->
                     <label for="baseMapChk">Hintergrundkarte einblenden</label>
-                    <br> <!-- VORERST AUSKOMMENTIERT BIS ArcGIS SERVER WIEDER LÄUFT -->
+                    <br> 
                     <input type="checkbox" id="labelChk" name="Layer" value="Label" onchange="layerChange(60)" checked="checked">
                     <label for="labelChk">Beschriftungen einblenden</label>
                 </div>
@@ -622,14 +780,26 @@
         </div>
     </div>
     <!-- Layer Pane End -->
+    <!-- Grid Button -->
+    <a href="#" class="icons" id="slideAwayButton_classes" onclick="showPane('menuPane-grid'); fillGrid();" style="position: absolute; right:10px; top:352px; z-index: 3;">
+        <img id="classesBtnImg" src="images/grid.png">
+        <div id="labelClass" class="buttonLabel" style="padding-top: 2px;">
+            Tabelle
+        </div>
+    </a>
+    <!-- Grid Button End -->
     <!-- GridView Pane -->
-    <div id="menuPane-grid" class="menuPane">
+    <div id="menuPane-grid" class="menuPane" style="width: 54em; height: inherit;">
         <a href="#" id="hideButton_classes" onclick="hidePane('#menuPane-grid')" style="position: absolute; top:5px; right:7px; z-index: 4;">
             <img src="images/close12.png">
         </a>
         <div class="menuPane-head">
-        </div>
-        <div id="grid">
+            Tabellenansicht:
+        </div>        
+        <div class="menuPaneContent">
+            <div id="grid" style="margin-top: 20px;">
+                
+            </div>
         </div>
     </div>
     <!-- GridView Pane End -->
@@ -649,9 +819,9 @@
         <a id="klasseneinteilungInfo" style="position: absolute; top:5px; right:21px; z-index: 4; cursor: help;">
             <img src="images/Help_sm.png">
         </a>
-        <div class="menuPane-head">
-            Klasseneinteilung
-        </div>
+            <div class="menuPane-head">
+                Klasseneinteilung
+            </div>
         <div>
             <div class="menuPane-head subMenuPane" onClick="switchClassificationPane('manual')" style="font-style:italic;">
                 <img id="arrowManual" class="submenuArrow" src="images/arrow20.png"> Individuell
@@ -760,7 +930,7 @@
         </div>
     </div>
     <!-- Legend Pane End -->
-    <a href="#" class="icons" id="slideAwayButton_export" onclick="showPane('menuPane-export')" style="position: absolute; right:10px; top:352px; z-index: 2;">
+    <a href="#" class="icons" id="slideAwayButton_export" onclick="showPane('menuPane-export')" style="position: absolute; right:10px; top:420px; z-index: 2;">
         <img id="exportBtnImg" src="images/download.png">
         <div id="labelExport" class="buttonLabel">
             Drucken
@@ -800,7 +970,7 @@
     </a>
     <!-- Full Extent Button End -->
     <!-- Info Button -->
-    <a href="http://www.lwl.org/LWL/Kultur/geko/1383213708/" target="_blank" class="icons" id="infoButton" style="position: absolute; right:10px; top:452px; z-index: 2;">
+    <a href="http://www.lwl.org/LWL/Kultur/geko/1383213708/" target="_blank" class="icons" id="infoButton" style="position: absolute; right:10px; top:490px; z-index: 2;">
         <img id="infoBtnImg" src="images/chalkboard.png">
     </a>
     <!-- Info Button End -->
@@ -850,7 +1020,7 @@
         <img src="images/ring-alt.gif"></img>
     </div>
     <div id="copyrightLwl"> <!-- Link im neuen Tab -->
-        <a href="http://www.lwl.org/LWL/Kultur/geko" target="_blank"> © Geographische Kommission für Westfalen </a>
+        <a href="http://www.lwl.org/LWL/Kultur/geko/kontakt" target="_blank"> © Geographische Kommission für Westfalen </a>
     </div>
     <a href="http://ifgi.uni-muenster.de/" target="_blank" id="ifgi_logo_map" style="position: absolute; right:10px; bottom:2px; z-index: 2; height:45px;">
         <img src="images/ifgi_logo_map.png">

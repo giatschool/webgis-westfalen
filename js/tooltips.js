@@ -446,6 +446,249 @@ function addTooltips() {
       showDelay: 0
     });
 
+    //natürliche bev.-entw. kommunal
+    new Tooltip({
+      connectId: ['natBevEntwKommunenInfoKommunal'],
+      label: 'Natürliche Bevölkerungsentwicklung (Saldo der Geburten- und Sterberate) der Jahre 2007, 2009, 2011, 2013 und 2015<br><b>Einheit: </b>je 1.000 Einwohner (&permil;)',
+      showDelay: 0
+    });
+
+
+    ////Download info tooltips
+    new Tooltip({
+      connectId: ['downloadInfo'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo1'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo2'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo3'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo4'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo5'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo6'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo7'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo8'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo9'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo10'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo11'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo12'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo13'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo14'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo15'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo16'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo17'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo18'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo19'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo20'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo21'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo22'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo23'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo24'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo25'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo26'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo27'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo28'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo29'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo30'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo31'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo32'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo33'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo34'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo35'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo36'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo37'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
+    new Tooltip({
+      connectId: ['downloadInfo38'],
+      label: 'Download als excel Datei.',
+      showDelay: 0
+    });
+
 
     query('.copyColorRange').on('click', function(e) {
       

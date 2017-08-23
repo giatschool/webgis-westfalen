@@ -18,7 +18,8 @@ var activeDiagramLayer = 0; //Aktuell angezeigter Diagrammlayer, 0=keiner
 var labelVisibility = true; //zum überprüfen, ob die Label angezeigt sind
 
 var legend;
-var grid, store;
+//var grid, store;
+var grid;
 
 /**
  * due to a bug in ArcGIS where invoking any method that re-centers the map a onPan() event is fired,
@@ -361,6 +362,91 @@ function reverseKommunLabelLayerVisibility() {
   //operationalLayer.setVisibility(true); 
 }
 
+//////////////
+function createGrid() {
+  require([
+      "dojo/ready",
+      "dgrid/OnDemandGrid",
+      "dgrid/Selection",
+      "dojo/store/Memory",
+      "dojo/_base/declare"
+      ], function(
+        ready,
+        Grid,
+        Selection,
+        Memory,
+        declare
+      ) {
+        ready(function() {
+         
+          // create the dgrid
+          grid = new (declare([Grid, Selection]))({
+            bufferRows: Infinity,
+            sortable: false,
+            selectionMode: 'single'
+          }, "grid");
+
+        }
+      );
+    });  
+}
+
+
+function fillGrid() {
+
+  require([
+    "dojo/store/Memory",
+    "dgrid/OnDemandGrid"
+  ], function(Memory, Grid) {
+
+  var columnsNew;
+
+  function generateColumns(data){    
+            var headers = {};
+            var itemsNotFormatted = [];
+
+            for (var i = 0; i < data[0].Data.length; i++) {
+              //headers['ort'] = 'Ort';
+              headers[data[0].Data[i]] = data[0].Data[i];
+            }
+
+
+            for (var i = 0; i < data.length; i++) {
+              for (var k = 0; k < data[0].Data.length; k++) {
+                headers[data[0].Data[k]] = data[i].Data[k];
+              }
+              var headersCopy = Object.assign({}, headers);
+              itemsNotFormatted.push(headersCopy);
+            }
+
+            for (var k = 0; k < itemsNotFormatted.length; k++) {
+              itemsNotFormatted[k].ort = data[k].Name;
+            }
+
+            var itemsFormatted = itemsNotFormatted.slice(1);
+
+            for (var i = 0; i < data[0].Data.length; i++) {
+              headers['ort'] = 'Ort';
+              headers[data[0].Data[i]] = data[0].Data[i].toString();
+            }
+
+            memStore = new Memory({ data: itemsFormatted});      
+
+            return headers;           
+          };  
+
+  columnsNew = generateColumns(currentDataframe);
+  grid.set("columns", columnsNew);
+  grid.setStore(memStore);
+  grid.startup();
+
+  });
+};
+
+//////////////
+
+
+
 require(['esri/map',
   'esri/dijit/Popup',
   'esri/symbols/SimpleFillSymbol',
@@ -372,11 +458,11 @@ require(['esri/map',
   'dijit/form/Button',
   'data/Printer',
   'dojo/dom-construct',
-  'dojo/dnd/Moveable',
+  'dojo/dnd/move',
   'dojo/dom',
   'dojo/on',
   'dojo/domReady!'
-  ], function(Map, Popup, SimpleFillSymbol, SimpleLineSymbol, Color, Extent, SpatialReference, OpenStreetMapLayer, Button, Printer, domConstruct, Moveable, dom, on) {
+  ], function(Map, Popup, SimpleFillSymbol, SimpleLineSymbol, Color, Extent, SpatialReference, OpenStreetMapLayer, Button, Printer, domConstruct, move, dom, on) {
 
   addTooltips(); //the mouse-over tooltips are created programmatically
 
@@ -455,12 +541,54 @@ require(['esri/map',
   fullExtent();
 
   /////drag and drop/////
+  /*
+  var cursor = document.querySelectorAll('.menuPane');
 
-  //var dnd = new Moveable(dom.byId("menuPane-layer"));
+  function pointerGrab() {
+    this.style.cursor = "move";
+  } 
 
-  //var dnd = new Moveable(dom.byId("menuPane-legend"));
+  function pointerPoint() {
+    this.style.cursor = "pointer";
+    console.log("hallo");
+  }
+
+  cursor.forEach(cursor => cursor.addEventListener('mousedown', pointerGrab));
+  cursor.forEach(cursor => cursor.addEventListener('mouseup', pointerPoint));
+  */
   
+  var dnd = new move.parentConstrainedMoveable(dom.byId("menuPane-layer"), {
+    area: "content",
+    within: true
+  });
+  
+  var dnd = new move.parentConstrainedMoveable(dom.byId("menuPane-classes"), {
+    area: "content",
+    within: true,
+    skip: true
+  });
 
+  var dnd = new move.parentConstrainedMoveable(dom.byId("menuPane-grid"), {
+    area: "content",
+    within: true,
+    skip: true
+  });
+
+  var dnd = new move.constrainedMoveable(dom.byId("menuPane-export"), {
+    constraints: function() {
+        return dojo.coords(dom.byId("map_root"))
+    },
+    within: true,
+    skip: true
+  });
+  
+  var dnd = new move.constrainedMoveable(dom.byId("menuPane-legend"), {
+    constraints: function() {
+        return dojo.coords(dom.byId("map_root"))
+    },
+    within: true
+  });
+  
   //////////////////////
 
 
@@ -480,7 +608,15 @@ require(['esri/map',
       }
   }, 'printMap').startup();
 
-});
+
+  ////grid creation
+
+  createGrid();
+
+  //////
+    
+
+  });
 
 /**
  * Method for changing the active overlay layer
@@ -649,6 +785,8 @@ function layerChange(layerNr,removeLayer) {
     //activeLayer = layerNr; //setting the new layer
     //updateLayerVisibility();
     updateTimeslider();
+
+
   }
 //featureLayerGemeinde.setOpacity(0.6);
 }

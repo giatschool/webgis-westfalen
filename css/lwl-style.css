@@ -315,3 +315,9 @@ a {
 
 a:visited {color:black}
 a:hover {color:#00559D;}
+
+
+#grid {
+    width: 53em;
+    height: 53em;/*20em;*/
+}

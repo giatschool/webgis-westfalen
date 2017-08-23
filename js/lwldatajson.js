@@ -1,4 +1,4 @@
-var datenEinwohner = [ //werden aktuell nicht genutzt
+var datenEinwohner = [
   {
     'Name': 'Jahre',
     'Data': [1990, 2015, 2040]

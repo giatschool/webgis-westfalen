@@ -65,11 +65,14 @@ function showPane(layer){
 		hidePane('#menuPane-layer');
 		hidePane('#menuPane-grid');
 		$('#'+layer).show('slow');
+		$('#exportWarning').html('<i></i>');
 	}
 	else if (layer === 'infoWindow'){
 		$('#'+layer).show('slow');
 		$('#welcomeBackground').show('slow');
 	} else if (layer === 'menuPane-grid') {
+		hidePane('#menuPane-layer');
+		hidePane('#menuPane-classes');
 		hidePane('#menuPane-layer');
 		$('#'+layer).show('slow');
 	} else {

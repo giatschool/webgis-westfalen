@@ -3,9 +3,9 @@ define([], function() {
   //the MapServer for the whole app:
   //var mapServer = 'https://giv-learn2.uni-muenster.de/ArcGIS/rest/services/LWL/lwl_service/MapServer';
   //var mapServer = 'https://ags.webgis-westfalen.de/arcgis/rest/services//LWL/lwl_kreise/MapServer';
-  var mapServer = 'https://webgis-westfalen.de:6443/arcgis/rest/services/LWL/LWL_Kreise/MapServer';
+  var mapServer = 'https://webgis-westfalen.de/lwl/arcgis/rest/services/LWL/LWL_Kreise/MapServer';
   //var mapServerKommunal = 'https://ags.webgis-westfalen.de/arcgis/rest/services//LWL/lwl_kommunen/MapServer';
-  var mapServerKommunal = 'https://webgis-westfalen.de:6443/arcgis/rest/services/LWL/LWL_Gemeinden/MapServer';
+  var mapServerKommunal = 'https://webgis-westfalen.de/lwl/arcgis/rest/services/LWL/LWL_Gemeinden/MapServer';
 
   //the Server for the feature Layer:
   var featureLayerServer = 'https://services1.arcgis.com/W47q82gM5Y2xNen1/arcgis/rest/services/westfalen_kreise/FeatureServer';
